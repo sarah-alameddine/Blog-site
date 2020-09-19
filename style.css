@@ -1,0 +1,288 @@
+@charset "utf-8";
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
+@import <link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" rel="stylesheet">
+@import <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+@import <link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+@import <link href="https://fonts.googleapis.com/css?family=Cutive+Mono&display=swap" rel="stylesheet">
+@import <link href="https://fonts.googleapis.com/css?family=Amiri&display=swap" rel="stylesheet"> /*font-family: 'Amiri', serif;*/
+@import <link href="https://fonts.googleapis.com/css?family=Merriweather&display=swap" rel="stylesheet">
+
+/*
+=====================
+	Common
+=====================
+*/
+
+
+html {
+		height: 100%;
+}
+
+/* CHANGES BODY FONT AND PARAGRAH */
+body {
+		height: 100%;
+		margin: 0;
+		/* font-family: 'Open Sans', sans-serif; */
+		font-family: 'Roboto Mono', monospace;
+		font-size: 16px;
+		color : white;
+		background-image: radial-gradient(circle, #340609, #2d0708, #260607, #200506, #180304);
+}
+
+.container {
+		height: 100%;
+}
+
+/* CHANGES SIDEBAR FONT AND background */
+.sidebar {
+		float: left;
+		left: 20px;
+		width: 20%;
+}
+
+.main {
+		float: right;
+		width: 80%;
+		height: 100%;
+
+}
+
+.content {
+		/* padding: top right; */
+		padding: 10px 100px;
+}
+
+/*line PARAGRAH divider */
+hr {
+		border: 1px solid #c3073f;
+}
+
+h1 {
+		/* font-family: 'Share Tech Mono', monospace; */
+		font-family: 'Merriweather', serif;
+}
+
+/* h2 {
+		font-family: 'Cutive Mono', monospace;
+		font-size: 35px;
+		/* color: #c3073f; */
+		/* color: #F3E0DC; */
+} */
+
+h3 {
+		font-family: 'Cutive Mono', monospace;
+		color: lightgrey;
+}
+
+
+.date {
+		font-family: 'Amiri', serif;
+		color: darkgrey;
+		padding: 0px;
+		margin: 0px;
+		font-size: 17px;
+		font-style: italic;
+}
+
+.Header {
+	/* font-family: 'Cutive Mono', monospace; */
+	font-family: 'Merriweather', serif;
+	font-size: 40px;
+	/* color: #c3073f; */
+	color: #F3E0DC;
+}
+.subHeader {
+	font-size: 25px;
+	color: #F3E0DC;
+	padding: 0px;
+	margin: 0px;
+}
+
+.sub {
+	font-size: 21px;
+	color: white;
+	/* padding: 0px;
+	margin: 0px; */
+	text-decoration: underline;
+}
+
+.sub2 {
+	font-size: 15px;
+	color: white;
+	/* padding: 0px;
+	margin: 0px; */
+}
+
+pre {
+ white-space: pre-wrap;       /* css-3 */
+ white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+ white-space: -pre-wrap;      /* Opera 4-6 */
+ white-space: -o-pre-wrap;    /* Opera 7 */
+ word-wrap: break-word;       /* Internet Explorer 5.5+ */
+}
+
+/*
+=====================
+	Sidebar
+=====================
+*/
+
+.sitename {
+		text-align: center;
+		padding: 20px;
+}
+
+.sitename a {
+		text-decoration: none;
+		color: white;
+		font:normal 20px Sans-serif;
+}
+
+ul li:hover {
+		background: #2d0708;
+		color:#fff !important;
+		-webkit-transition: all 0.4s linear;
+		-moz-transition: all 0.4s linear;
+		transition: all 0.4s linear;
+}
+
+/* SIDEBAR BOXES  */
+ul li {
+		margin-left: -3.3em;
+		padding:8px;
+		display: block;
+		background: #6F2232;
+		margin-bottom: 5px;
+		border-radius: 5px;
+		text-transform: uppercase;
+		text-align:center;
+		letter-spacing:3px;
+		font-family: 'Amiri', serif;
+		font-size: 12px;
+		color:#fff;
+}
+
+/* SIDEBAR BOXES  TEXT */
+ul a {
+		letter-spacing:3px;
+		/*this changes inside the box*/
+		font-family:normal 12px 'Roboto Mono', monospace;
+		text-align:center;
+		text-decoration: none;
+		text-transform: uppercase;
+		color:#fff;
+}
+
+/*
+============================
+    Header
+============================
+*/
+.header {
+		padding: 10px;
+		text-align: center;
+		background: #230506;
+		color: #F3E0DC;
+		font-size: 30px;
+}
+
+
+/*put links to diff page colour */
+p1 {
+		color: white;
+}
+
+
+/*
+============================
+    Contents
+============================
+*/
+
+#contents {
+		width: 40%;
+		float: right;
+		margin: 0 auto;
+		padding: 5px 0 130px 0;
+}
+
+
+.top {
+		bottom: 50px;
+		right: 50px;
+		position: fixed;
+		z-index: 100;
+		color: #f1c40f;
+}
+
+/*
+============================
+    border of paragraph
+============================
+*/
+
+.bordere {
+		border-style:solid;
+		border-width: 30px;
+		border-radius: 5px;
+		border-color: #6F2232;
+		background-color: #6F2232;
+}
+
+/*
+============================
+    Text Selection Color
+============================
+https://css-tricks.com/almanac/selectors/s/selection/
+ */
+
+ ::-moz-selection {
+	  background-color: #52d868;
+	}
+ ::selection {
+	   background-color: #52d868;
+ }
+
+/*CHANGE COLOUR OF LINKS*/
+   a {
+	 color: #f0dddd;
+  font-style: italic;
+	}
+ /*
+ ============================
+     Table
+ ============================
+  */
+ table {
+   font-family: arial, sans-serif;
+   border-collapse: collapse;
+   width: 100%;
+	 color: white;
+ }
+
+ td, th {
+	border: 2px solid #c3073f;
+	/* background-color: #f0dddd; */
+	text-align: left;
+	padding: 8px;
+ }
+
+ /*
+ ============================
+	 Images
+ ============================
+  */
+
+ /* Three image containers (use 25% for four, and 50% for two, etc) */
+ .column {
+   float: left;
+   width: 33.33%;
+   padding: 5px;
+ }
+
+ /* Clear floats after image containers */
+ .row::after {
+   content: "";
+   clear: both;
+   display: table;
+ }
