@@ -1,0 +1,894 @@
+<!--SOME CODE USED IN THIS FILE IS FROM 'CODINGWITHSARA'
+http://codingwithsara.com/how-to-create-a-simple-website-with-html-css-and-jquery-typeb-fixed-header-footer/#Sample_Code -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-142492871-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-142492871-1');
+</script>
+
+	<meta charset="utf-8">
+	<title>Sarah - Comp6441 Blog</title>
+<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
+  <!-- helps to scale for phones and tables -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../style.css">
+  <link href="https://fonts.googleapis.com/css?family=Staatliches&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<!-- favicon below -->
+<link href="data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAA
+AAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAUSS9AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABEREQAAAAABEREREAAAAA
+ERERERAAAAAQAAABEAAAAAAAAAEQAAAAAAAAARAAAAAAEREREAAAABEREREAAAAAEQAAAAAAAAARAAA
+AAAAAABEAAAAAAAAAEQAAARAAAAABERERAAAAAAERERAAAAAAAAAAAAAADgPwAAwB8AAMAPAADABwAA
+wAcAAO/HAAD4BwAA4AcAAMAPAADAHwAAw/8AAMOPAADABwAA4A8AAOAfAADwPwAA" rel="icon"
+ type="image/x-icon" />
+
+</head>
+		<body>
+    <div class="header">
+		  <h1 style="font-size: 50px;"><a href="../index.html" style="text-decoration: none; color:#F3E0DC">MISC.</a></h1>
+			<h1 style="font-size: 8px;"> sarah_alamedDine</h1>
+      <!-- <p1>Put links to different site pages here</p1> -->
+    </div>
+
+			<!-- ================= EDIT THE SIDEBAR HERE!!!!! =================== -->
+  	<div class="container">
+  		<div class="sidebar">
+				<h2 class="sitename" style="font-size: 20px;">About this Site</h2>
+				<p style="text-align: center;font-size: 13px;">Currently this site is just my Comp6441 blogs.</p>
+				<p style="text-align: center;font-size: 13px;">In the future it might hold my resume and/or projects,
+					unless i go broke and cant pay my $6 yearly host, idk.</p>
+					<!-- &nbsp; Creates blank space  -->
+					&nbsp;
+  			<h2 class="sitename" style="font-size: 20px;">Categories</h2>
+  			<ul>
+				<li class="link"><a href="../index.html">&diams; HOME</a></li>
+                <li class="link"><a href="/html/jobApp.html">&diams; Job Application</a></li>
+                <li class="link"><a href="../html/project.html">&diams; Awesome Project</a></li>
+                <li class="link"><a href="../html/lecture.html">&diams; Lectures</a></li>
+                <li class="link"><a href="../html/lab.html">&diams; Labs</a></li>
+                <li class="link"><a href="#comment">&diams; Comments</a></li>
+  			</ul>
+				<pre style="font: 6px/3px monospace;color: #F3E0DC;">
+      					<!-- "You know we had to do it to them" was generated using https://picascii.com/ -->
+
+
+
+
+
+
+
+                        .       .       .       .       .       .       .       .       .       .       .       .       .       .       .       .       .       .       .       .       .       .       .       .       .       .       .       .       .       .       .       . .  .
+                        .   . .    .  .    .  .    .  .    .  .    .  .    .  .    .  .    .  .    .  .    .  .    .  .    .  .    .  .    .  .    .  .    .  .    .  .    .  .    .  .    .  .    .  .    .  .    .  .    .  .    .  .    .  .    .  .    .  .    .  .    .  .    .  .    .  .    .  .    .  .    .  .       .  .
+                          .     .    .  .    .  .    .  .    .  .    .  .    .  .    .  .    .  .    .  .    .  .    .  .    .  .    .  .    .  .    .  .    .  .    .  .    .  .    .  .    .  .    .  .    .  .    .  .    .  .    .  .    .  .    .  .    .  .    .  .    .  .    .  .    .  .    .  .    .  .    .  . .
+                        .    .   .       .       .       .       .       .       .       .       .       .       .       .       .       .       .       .       .       .       .       .       .       .       .       .       .       .       .       .       .       .       .       .       .       .       .          .  .
+                           .   .   .  .    .  .    .  .    .  .    .  .    .  .  :;@8tSX:  .  .    .  .    .  .    .  .    .  .    .  .    .  .    .  .    .  .    .  .    .  .    .  .    .  .    .  .    .  .    .  .    .  .    .  .    .  .    .  .    .  .    .  .    .  .    .  .    .  .    .  .    .  .    .  .  .   .   .
+                        .    .      .   .   .   .   .   .   .   .   .   .   .    .S; t;8 .@ .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .  .   .
+                          .     . .   .   .   .   .   .   .   .   .   .   .   .     ;..%;;88X .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .
+                        .   .           .       .       .       .       .       .    . 888:.8;;         .       .       .       .       .       .       .       .       .       .       .       .       .       .       .       .       .       .       .       .       .       .       .       .       .       .        .  . .  .
+                          .   . .  . .     . .     . .     . .     . .     . .    .      @8S.;S..  . :@:   . .     . .     . .     . .     . .     . .     . .     . .     . .     . .     . .     . .     . .     . .     . .     . .     . .     . .     . .     . .     . .     . .     . .     . .     . .     . .  .
+                        .         .    .       .       .       .       .       .   .      :t8:8tt    8S@;      .       .       .       .       .       .       .       .       .       .       .       .       .       .       .       .       .       .       .       .       .       .       .       .       .          . .  .
+                           . .  .    .   . .     . .     . .     . .     . .    .    . .   .%8;; 8  .; 88. .     . .     . .     . .     . .     . .     . .     . .     . .     . .     . .     . .     . .     . .     . .     . .     . .     . .     . .     . .     . .     . .     . .     . .     . .     . .  .       .  .
+                        .          .         . .     . .     . .     . .     .    .      .  ..:8: S  : 88    . .     . .     . .     . .     . .     . .     . .     . .     . .     . .     . .     . .     . .     . .     . .     . .     . .     . .     . .     . .     . .     . .     . .     . .     . .     .  . .
+                          .  . . .    . .  .     .       .       .       .    .     .  .      .X;::% . @.   .     .      .       .       .       .       .       .       .       .       .       .       .       .       .       .       .       .       .       .       .       .       .       .       .       .          .  .
+                        .           .        .     . .     . .     . .     .    . .      .  .  ;X8:8;t :%      .    .  .   . .     . .     . .     . .     . .     . .     . .     . .     . .     . .     . .     . .     . .     . .     . .     . .     . .     . .     . .     . .     . .     . .     . .     .  . .    .   .
+                          . .  .  .    . . .   .  .    .  .    .  .    .  .  .      . .    .  8  ;@.tS@8X .  .   .   .         .  .    .  .    .  .    .  .    .  .    .  .    .  .    .  .    .  .    .  .    .  .    .  .    .  .    .  .    .  .    .  .    .  .    .  .    .  .    .  .    .  .    .  .    .  .       .    .
+                        .       .   .           .    .   .   .   .   .   .     . .      .     S8@tX.:S.88      .   .    . .  .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .  .  .   .
+                           . .        .  .  . .    .   .       .       .    .      .  .   .  . .@8X....88......;t%ttt%ttttt%ttt%ttt;. .    .   .       .       .       .       .       .       .       .       .       .       .       .       .       .       .       .       .       .       .       .       .      .  .   .  .
+                        .      . . .    .        .        . .     . .     .   .  .      .      :;;8::.:X 88888X%8@@@@@@8@@@@@@@@@@@ 888%SXXX8t;;:  . .    . .     . .     . .     . .     . .     . .     . .     . .     . .     . .     . .     . .     . .     . .     . .     . .     . .     . .     . .     .  .     .   .
+                          .  .       .    .  .  .   . . .     .  .    .  .     .    . ;8:X 8.8 tX@8@8@888X:S.8:X:8t8%8%@XXX@X@XXXXXSSS8888SS8@SS%    8XSS;%X8SSt...   .  .    .  .    .  .    .  .    .  .    .  .    .  .    .  .    .  .    .  .    .  .    .  .    .  .    .  .    .  .    .  .    .  .    .  .      .    .
+                        .      .  .    .      .   .        .   .    .      . .    . t@X8%@X88888X88S@88X%%S%S%SXSX8S@S8S8X8@8@8@8X8S8XX%%%@;tS8S88@X88@@@@888@X88@. 8%:S@8%;..      .       .       .       .       .       .       .       .       .       .       .       .       .       .       .       .      .  .   .     .
+                          . .       .    . .         .  .    .    .   . .       .  :8S8SXX8@8X8@8@@X@X@S@S8@8X@8X@S@X@X@8@@@8@8@8@8@@S@XX8S8X@X@@@X@8X8888XSt@XS88X88XX88888X.8:X8t:  . .     . .     . .     . .     . .     . .     . .     . .     . .     . .     . .     . .     . .     . .     . .     . .       .   .  .
+                        .     .  .    .      .  .  .      .     .         .  .     t.@8@@@@@@@@@X@@@@@@@X@8XXXX8@X@@@8XXSX@XSXXXXX@XSXX8@X@X@X@XXX@8XX8@8X8@X@X@@S@X88XX8@X88@X8@8@ St8;. . .     . .     . .     . .     . .     . .     . .     . .     . .     . .     . .     . .     . .     . .     . .     . .
+                           .    .  .    .  .   .     . .    .  .   . .  .      . . t;%88@XXXX@@X@@XX@X@X@@@S8@@XX@@@XX@@@@@@@@@@X@X@X@@XX@X@XXXSX@8@@XX8X8@XXX8XX@@@X8X8X8@8@XX888XSX8XS;@:S8%:.       .       .       .       .       .       .       .       .       .       .       .       .       .       .      . . . . .  .
+                        .    .       .       .   . .     .   .            . .      8S888XX@8XXXXXX@XXXXXXS8XXXXXXXS@XX@XXXXXXX@X@XXX@X@X@XXX@XS@X@X@SX@X@XX@@@XXXX@X@XXX@@X@XSX888@8@8S888S8S@@.8:8S:.   .  .    .  .    .  .    .  .    .  .    .  .    .  .    .  .    .  .    .  .    .  .    .  .    .  .    .  .
+                          .    . .    .  . .          .    .    . .  . .      .  . t88X8X@XX@X@X@XX@@X@X8XXXXXXSS8SS@XXS@XXSSS@SXSXXXSXXXS@XXS@XXS@X@@@XX@@XX@X@XXX@XXX@X8X@8XX@SXX@X@S@8S8S@88@tS@8 :XS.    .    .   .    .  .    .  .    .  .    .  .    .  .    .  .    .  .    .  .    .  .    .  .    .  .       .  .  .  .
+                        .   .      .    .     . .  .    .     .          .:t@@8S :; S88X@@@XXX%XSXXX%XSXX@X@%@S8S%8SX%%@SXS8S8XXXX%@S@S@%SS@SXSXS@XXSXXXS@XXXXS@S@X@X@@X@X@@X@@@@XXXXX@@@X8X88@X@888@888%.8:X:. .       .       .       .       .       .       .       .       .       .       .       .       . . .         .  .
+                          .   .  .   .     .         .    .  .   . . .%S..tX88S%;tt@8@.8:888SSXX@S@SXX@XX%@SXS%S8SS@S8%S8;888S888888%XS@S8SS8S8%XtXSXS@SXXXS@%XXXXXSXXXX@@XXX@XXX@@XX@XX@@X@@XX@@88X@@88X@X8X8t :XS: .    .  .    .  .    .  .    .  .    .  .    .  .    .  .    .  .    .  .    .  .    .  .        . . . .
+                        .          .   .     .  . .    .   .   .    :.X;@.;8.S%:8: ..::.;88XX@%S@X%@SX%XS@SS@S8t%8XX;@888@:@X  . %8 %888X%8S8%@;%8SS@S8S8%@SS@SX%@SXX@SXXX@@XX@@@XXX@XXX@X@X@XX8@8S@X8S@XX8@888888@..X: .     .     .  .    .  .    .  .    .  .    .  .    .  .    .  .    .  .    .  .    .  .  .            .
+                           . . . .       . .        .    .        .@8 S.@@%t::..tS8@....:;;8888@S@%@tXSXSX%8%Xt@%8S8St8 @S;:.:;X8%X88@:8 888%XS8S8%8t@S8S@S8SXtXS%@S8S@SXX@SXXXSXXXS@S@XX@@XX@@XX@X@X@X%8@@888@8@8888@S t;. .   . .      .       .       .       .       .       .       .       .       .          .  .  .  .   .
+                        .           . .      . .  .   .     .  . :;8S.:StttS:8 ..  8X   . ..;8;@8SX%@%Xt@%S%@SSt@8SS8;...:.%:.8;;;;:t@ X;t: @8S8S@S%%@S8XS%S@S@S8S%8S@%@S8S@%@SXS@SXXXXXS@XX@@SX@X@@@X@@X@@8X@X@@8XXX@888;8          .    .  .    .  .    .  .    .  .    .  .    .  .    .  .    .  .    .  .  . .     .      .
+                          .  .  .  .    . .         .   .  .     ;;8..S8.%8%.X    . S .    ...%88XS@SX%@S8X%8tS88 ;..:. ..X:t:.Xt:....;t8.  t88S@XXS8%@SX%8SX;%@S@%@S%8%XS@%XSXSX%@SX%XS@XXSXSXX@XX@XXXXX@X@X@XX8SS@X88888 ;  . .  .   .      . .     . .     . .     . .     . .     . .     . .     . .     .     . .    . .
+                        .     .       .     .  . .    .      . . .@: .%@ .t@;..   . X    .  ..%t8@@SX%S@;%@XS888 .. . .  ; tS.@@@.... ..t .::;@8%XS@%8SX%@%X%8S8t@SX%8S8%@%X%X%@%S@;XSXS8%@SS@S@SXXXX@SXXXSX@@@@XX@X@8X8X@8%.        .   . .       .       .       .       .       .       .       .       .     .       .      .
+                          . .    .  .   .          .     .       ;;:.. ;8.:....  .: X  .   ...tt8XXXt8SS8SS@S%8%%:..    .S@....       ...  ..:X88S@tX%@tS@;%@%X%@tX%%tXS@%%@;XS8@8%@SS@t8;S8SS@XXX@%XS@X@SXXXSXXX@X@X@X@88S    . .     .     .  .   .  .  .  .  .   .  .  .  .  .   .  .  .  .  .   .  .  .  .  .   .  .    .
+                        .      .   .      . . .  .   .  .  .  .  t.@ ...@SS.  . .8S;..     ...:88X@S%%8S%8S8t88%..   .   : :.         ..:. . :8@8SX%@S%8SX%8%8S@t%8S8tS8S8SXSXtXt%@%8SS@t@S8S8S@SXSXXXS8S@%@SXXXX@@X@@XX@@;tS      . .    .       .               .               .               .               .      .    . .
+                           .     .   . .           .        .     @%X....:8;t8@:SS..  . ....:@X@S%S8%@%@%t@%@t88:..    .  8 :..    .. .@8t ...t8XX8%S%@%X%%t@%@t8%8;t8%8t8;%8%XS8S%@%@%%@S@%8%%S8SS@S8S8;%@SXX@SXXXX8XXX@X88@ .  .      .   . . .    .  .  . . .     .  .  . . .     .  .  . . .     .  .  .  .     . .    .
+                        .    . .         .  .  . .    .  .    . .  S:;X.. ..   . .     .. :8888SXX@X@%Xt8%8%8X8S; .  .  ....8S @@SS8S  S:. ..S;XSSXS8SX%%8%8:Xt%8;%8tt@%@S8%t@t%S8S8;@S8%%@S8@X%S8S%8S@%@SXSS8SXSX%@X@SXX@88t  .   .  .            .   .         .  .    .       .  .    .       .  .    .   .  . .     .    . .
+                          .       . .  .      .     .   .  .        .8 ;X:....  .  .....;S S%88@@@XX%X%%t@t8%8X888 .      .    :t%%;     ...;@X%8@@@%X%8%8S%%8t@%8@t8%8%8X%8%%8%@;X%@t@%8%8XSS%8S%8SXS%S@;XS8%S@tXX@SXXXSX8S%    .      . .  .  .    .   . .  .   .   .    .   .   .  .    .   .   .  .    .         .    .      .
+                        .   .  .         . .     .    .      .  . .   :X@;:.S88XSSX8X.XXS8SS@@XX@X@SX%8%@t%X;@888t.;:....             .. .:@S8%@X8@X%@%8;%@t8:%@S%8t8;8;%@t%8tt@t%@S%@%8%@%X%%@%X%%@%8%8%S8S%8SS8S8%@S@%SX@8       . .     .      .             .      .     .   .      .    .   .      .     .  .     .    .  .
+                          .      .  . .      . .   .     .    .     .     :S8%SXX ;8@SSX@88X8X888@XS8%8S%8%X;X%S%88@@t%:.. . . . .... :t8%%8XX8X8@X@X8t@8X%@;%8tX;@;@8;8@t@St8@t8t%X%X;@8%X%8%8;@%@tX%@t8SS%@%@%t@%@%S@S8S@X%:  .      .     . .    .  .  . . :::t@888S:::::;:;:;.88888X.;@@%::     .    .  .      . .   .    .
+                        .    . .        .  .     .   .    . .    .    . . .      ;@@SX888XX@@XXX@X%XS@%8t8S%%@tS@S8%888 t@;.  .   ..S%8S8%@8@@@@@@XS8S8t%@t%8@t%@%%8tt8%%8:%Xt%@t88t@%@;t@t%t@%@;@t%8S8t8%8t%@t8S%8S@SXtS8X8X@    .  .   .       .   . .;@X:;X .:XXX@8@88XX88888888888XS;tX@@: S.8t   .       . .      .   .    .
+                           .     . .  .       .        .       .   .         .   .@8XX@XX88S@88X888X8tXt@t8@S%8S%@X@%8@@@88t 8888  @88S@@8X@8S@@XX@X%@S88%88%8%8t8S%8t%8t;%8:%8;%%8X%%%8@t8S%@%%%@%@;X%@%@t8%%%S8S8t8X%8SS@%@8  .      .   . .:tt@@ ;8%:@888888X:@;%88888888888@@8@8X8X;8@88888.8X; @t@;  . .     . .        .
+                        .    .          . . .   .  . .   .  .        . . . .   . :XS@XX@X@XXtSX 888@%%@%8;%X%%S8SXtXX%XXS8XS@8@@8X888@XXX@XXS8@XX@XXXt@t@St8Xt8;%8t@t8t8;8;;88t8XSt8t88tX;;%8%8t8;@t%@t%8%%%8X%8;X%@%X%S@S888%    . .:S8t @8 ;8@@@@S%888888@88888X%;@88@8888X8S8 8 8 8X8@88X8 8 8 8X88t@ ;%.   .      .  . .   .
+                          .    .  . . .           .    .      . . .          .   .SS8X@@X@X888  S X%S@@tS8t%8X%8%XSXSX%X@@@@X@@8@@@8X@@XX@X@@XX@XXXtXSX%S;@%8Xt8:@8;X:Xt@t8%@t8t%8X%@;@:%8%@;S%8t%@t8t8%8t8@%XS%%%8tXt8%8%8XX@ ..%8 8:8t;Xt%%888;t@88 8%8 8 8%888.XtX@888888888888888t8;S;%S 88888S8 8888@.@     .  .        .   .
+                        .   .   .        .  . .      .    . .       .  .  .    .  XX@@@@@XX8S88  :888@XXSS88t8X%@%@%8%XS8SXXXXXSS@X@XX@@@@@@@X@@@@X@S@SX%%@:tXt%8t@:t@8;8t8;@:88;t@tt@8;8:Xt%@t%8tXt%%8t@X%8tS%8%@%%%%8X%XS8X .X%888@8t8X @S@8X888S%X88888888S888S8S8%8S888X88888888888S8@S8S88888888 ;8888t;. .      . .  .
+                          .   .    .  .         .  .    .      .  .     .   .    :8X8@XX@X8%8tX8.  .888@XX%t@tX%%8%SS@%XX@XX@XX@@8SXXXXXXXXXXXXS@SXSX%Xt8%XXSt8:8:t8S;t8;@t@%Xtt8@t88tt8t%%88t8t;@t88@t@%Xt8;%@tXt8%88%8X%S8X@t:8X88888X888X888 8@8SX888@8 8 SS888X8S8888@8888888Stt%8X8S8@;8S8888888X8888@:X8t  . .          . .
+                        .        .      . .  .   .    .    . .      . .   .   . ; 888X@X@XS88:  .S8.@;8@8XX@;Xt8%8tX%%8SX%XX@SXX@X@@@@@@@X@X@X8XXXXS8XS%X:%%%8:t;88t8;8;%8Xt%XSX%X;;t8t%8t8t%@t8:%@ttt88t@%%8tt@t%8X%8Xt8t8888@8X8@88S88X8S8888@S8 @8;8S88@ 88888888@%@88888888SS8@88888@8 @X@ 8888 X88888X888%      .  . . .
+                           . .  .   . .        .    .    .     . .          .   . 8S@XXX8S8;XX  t 8@@@;8%88S@t%8tt@%8S8%8%X%XXS8XXXXSXXXSXSXSXX@SX%@SS%8%@t88t%8%8t8t8;@Xt8@S%%8Xt88S%8t8Xt%8;tX%8:;@@888S8X%88t8@t8Xt8;8:S@8@88 8%@@@%X88888 88888 88@8 88888888@8S888 888888XSX 888 88888:@@SS88 S@X8888 8 8.%.  .           .
+                        .     .   .      . . .    .    .    .      .  . .      .: 888@XSXX%8X8  .: %8 .%8888XXX%8t%@%X%@%@%@S8%S@XXS@XXS@XXS@XX%X%@%X%SX:%8;t@tt@t@%8;tX:@t8;8@t8%8;8;8St8t8;8:%8;@8t8888X%8t8t8t8Xt8Xt@t@S888 88 8@@X8888888888888888@%%888888888 8 %S@ 888888888S8888@8888t88888@88@8888888 8XX.    . .  .     .
+                          .          .          .    .   .    .  .        .  .  . 88@XSX@S88@8 X :.  .:. X8@X8%X%8tX%%8%8%@tX%8SS8SXSXS@SXSXSXS@SS@SX%8%@t%8Xt8:%8SSt8St%8X%@%8Xt@;@t@%8X;@;t;8.@8;%8%X;88X8;@S;8%;@%8S%%8XXX8X888X8;%@88 8888888888S 88%t888S8888888X88S88888888888@8888888 @8XS@88888@888X88 S@:  .        . .
+                        .   .  . .  .  .  .  .    .    .   .        .  .   .    :SX8@X%@SXS@88:.:.:::..:88 88X8X@tS%8%8t@;%8S%S8SS@SX%@S8S@S@SXS8S%@%@%St8:%@;;8t;t8;8;88t8;8Xt8;@t%8:@t8St8.%8%X;@tS%@8X8X@%S%Xt@t8Xt8@;@@SXXX8S.XX8@SX8@8X8888888@8 8:t;@88X88888888@%S8SX8888%888888888 8 88@%%X888@8@8@888S8t@    .  . .
+                          .   .    .    .      .    .    .   . .  .:tS88@@8%tt..; X8@XSSXt%@SS8  .:8 . 8@8  88@88%X%;X%X%8%8%8%%8S%@%S@t@tXS8t@S8%8tSS8%%8@:%8t8;8@t8;8%8Xt8%X:@St8@t8t@%%@;@Xt@:Xt8%@t8XS8S8tXt%8@t8X;X;;@8%XX88@8S;@@88888888888S8XXS8@@S8888888@ 8 8%@@t88 88888888@8888888XS.@88888X8888@8 @8X .         .  .
+                        .   .    .    .    . .   .    .    .  t8.@ S888;88888@@tXX%8@88St8SX8X@;:888 . 8 ..8@ 888X8S8tSt%8t@;@S8SX%@S8%S8S8%8;t@%@t8%8%8XtX%8t;@StXt%8.@t8;8;@ttXtt8X;@t8:t@t;@t%%8t;t8X8S8@XXt8:t8Xt8St8@t@S%888@@8X@8S888888@8@XSSS888888 888@8@888 t.%S8X888@8@8X8@8@8@88@%:@@88888888888S88X@S   . .  .
+                               .    .    .     .   .    .   .t.S8tS: ;t. :;: :S@88X8888X@8X @%888@@8..88  8@8 .:88888%XSS%@SX%ttX%@%@%8St@%8t8S%8S%S@;S%8;@t;t@t;@t88tX:@t8;@t8@t8@t8Xt;X;@t8:%8X;;t8t%@8@t8%@S8%8%X:t@;;t@%8:8XX8 8 8%SS8888888t%8888888@8S8@88@888S@StS8@88888@8@8@8@8888888@8SX88888888@888@SX@.      .   . .
+                        . .  .    .    .   .     .   .    .8S8S@:  8 8 @8    . 8 88 .8;8:888%@8X@@888@ 8.  88 .  88X8@XtX8tX%8%@tS@%%@%X%XS%X%@%8t88%X;@%@%@X8t8t%8t8:%8.%@tt@.t8t8Xt8XS%@;tSt8;%8X8t8t%@t;8X8%@8t8;8@t@8X%88S8888888XX8 8888X8888888S8 88:888@8888;X88888S888888@8X8X8888;SXXS88S8 8888888 88 888. .  .   .     .
+                            .   .    .   .   .     .   . ::8%:@8 .888    .. ...  8   8@%8@8   @@  %    :.:8 8 ..  8.88%@8X8SX:X%8S%8%8;@%8S@tS8X%@t@;%8tX:Xtt8S%8:;St8:;8St88;@8t@%8StS;Xt8:XXt8@tt8Xt8S88888@8tt@t8t%8;t8t8SS.t88%8888  @; 8S88888S88@888%S8 88888888%8SXS8888888X8X8@ .888@@8S8 888 @8888@888 @8.          .
+                        .     .    .          . .        @8%:8@88@8    .::..:.8   . 8   8         ..:.::. %8 .::..    .S88X88S@%8tX;X%@;@%@t8X%X%%@t8t%8t@t@StX;:8:X.%8:%8%8;8;X8t@t8;Xt%@;t8t8%%8:t@ttX%88@8XS8%Xtt8:@8Xt8S88t; ;% X8S8S@ @SX8 88888888@88S888@8XX8 8%8888X88888@8X88 8X.@8S8@88%8888888888888SXt  . .  .     .
+                          .      .   . .  . .     .  . . S@@X@   88 88 :8 .:  8 8  ...X8; @8:.8S8S;:X@8%S:;;;;:8X ::.... 8XS8S@X%Xt%X:%8tXt%%8;@@%8Xt8;@S%%S;Xt8St%@t@;@:8:X:@8;;@.@t@t8:t8@;@t8.t8@t%8;XXS88@S;@t8:%8;t@t%8SSS; .  t8;8@XSt8t88@888888888%t@88@@8SS888  S8S8888@8@888tX888888 888@888888 8888X8@;      .  .  .  .
+                        .   .  .   .     .     .    .    %8;@88  ..  ..8@ 8 88 :X88@t @8t8X8X88@8S88S@8@88@8888@t8@8;S8  %8 %8XX8S8%%8t%8t8XS%@X88;X%%8:%88;8;8tt8X%8:t@tt@t@;t8@tt@;t8;@Xt8S%X;@St88888888S88X@%tS;8%8@t@X888.      .    .  8@X%%88;S88:XS88@@888X88888 X8X888888%;8@8@88X888 S@X8888888@888@ t.%  .       .
+                          .   .       .     .    .     . 8%888.::::88 8@88X @88@X:8:@  .t8@8X  :.  8 8 8 .;; 8@X@88@S8%8;  . .8%8XS88%8@t@t%X;X8@X:%8t;%@%t8;Xt88%8%8X%t@Stt@SXt8@St8X%8%XSt8;8S@8X88888t8X@S88S@%%8:8t%@tt8@.         .        .:8:X8S@88X8@S888888888888XS8888888X @8 88@88888X 888888@88@%8@8S.    . . .    .
+                        .   .   . .     .     .    .     .8 XX@@88X X;%8888tt@t;8t. .    ;S@88t S       .:   %8@ .;; SS;t.8S @8X8X@%8t%@t%8%S%@888t@%%88%@tS8tXS88@t%X%t8;8@tt8X;8;8;S8S888888888@% X.X@;  :8X8%XXSt%t88;8@88@.  . .         .  ... .8t% :8%8XS88888@8 8 @8S8888XS%88S88@88888 S8S 8888888@8X888t . .        .   .
+                                    . .   . .   .    .  .   :%8 @888X8 :%88;:   .   .. . . .:8%88888X;::.8  %8   :   ..8  X8XS8888S@%88t8tt@%@%X:8XS8@t@:t8:%8t8@8t8@S88;8S88888X@8@8@888%XS ;X8t;.   .     @@88%S%@@t8t8tX88@       . .  .               t8@8888X8888888:@@88@8 X@8888888@8@88@8888@88@88888 88;     .  .  .
+                        . .  . .  .     .     .   .   .      ...  :.          .   .        .....%@8.8888888X.:.::X :X88.888S88S88X@t@t8S;8t@8X@8SSSX%8;Xt8:;X;:888888S8@8888@@@88;8X@SXS@S ..             . :SS8XtSt;@t8;@t888 . .          .  .   .      ..  @@X8 8S88@8@8:X@:@888S@888@88 8%S@8S88888888888S88   .          . .
+                            .       .      .        .         .  . .      .     .    . .  .   .  ..;S8tX@S:X@888@8S888S8tt:t@888S88X@X8@8@@@X8SX8X@Xt@:%8:%@%8X% 88@88@8;.;X88XX88@8@Xt;:    .  .    . .     @:S@SXS8t8t@t8X88     . .  . .   .  .           .. @ 888S8 8tX8%88888@888888@8888 S88S8888@8888;8:. .   . .  .
+                        .      . .    .  .   .  . .    .  . .               . .    .       .   .          . ;tS%t;888X@8X88S88X8%X%t;;t;ttt%SX%.X8@XSS%8:;8;X88.%   ...   .8X@X@8X8888%X;  .   .   .   .  .  .%888S@%St@ttX888 . .     .    .       .      .    .... t888@t8888 88888888888888@88S8888888888@:. .        .  . .  .
+                          .  .     .   .   .         .        . . .       .      .    . .    .         .  . .     % 8%S888@8S888.        .     888XXX%@%Xt%8t88;   .      .: @8@@88S@8%S     .   .   .  .   . .tS8X%S%8%Xt8S8@     .           .  .    .      .  .  .:;SX8X8X8 88888888@888@88X8@S88@88888@8:.    . .  .
+                        .   .   .    .        . .  .   .  .         .   .    .     .      .     . .  .   . .     . @8@88XX@@88X;.  .   .  .  . %.88@XSt@t@8%88SX     .   .:.888888X8@;.t .  .  .      .        % S88%X;St%888@  .    .  . .  .       .   .  .         .S t%%@ 8888888888888888 8SX8888888S8:.             .  . .
+                          .   .   .     . .  .    .     .   . .  .    .    .   . .   .  .   . .        .          .@S@X8X@@XS888     .   .     .SX8XXS@tX;%@S8 .  .;8:X  SXX88%88@888tt8          . .    . .    % 8@SS%@t8%888    .   .        . . .          . . .  .   ;888@X88888888X8@88S8888 @888X8@X@    . .  . . .        .
+                        .       .   .  .        .   . .            .     .   .      .            . .     .  .  .   St888@@XX88;t  .    .    .   :88@8S%%X%8t88; .8X:@SX@t ;..:8S@888888X; . . . .      .     .   8@88X8%X;8t88  .   .    .  .         . . .            .    %8@8888888@8@888@ 88S88@8 8X@; . .    .       . .  .
+                           . .       .    . .            . . . .  .  .  .      .  .    .  .  .       .    .   .  . :X@@XXXX@88   .  .    .    . S%8XX%88tX:X88%. 88%t.: 8 ...X 8@8SS8 @8 .        .  .    .       XXS8t@t%88@8    .    .      .   .         .  .   .  .      :X 88@88@8@8X@@8@88SS88XX@8:      .    .  .      .
+                        .      .  .     .     . . .  .           .     .   .         .         .  .   . .   .       @S88XX@8S8. .    . .   .    ;@SS@@S8X%%88:8@.   8 .  :X   ..;;8   88;%  .  .   .    .   .;8%.X8X%88S%8t8:  .     .   . .    .   .  .  .      .         .    X;X88S88@8888.@%888;tS.   . .   . .      .  .    .
+                          .  .     .  .    .           . .   .      .    .   .  . .     .  .       .           .  . :888%XXS88t    .     .   .   t@8X8%%@XXX@%@@8 . ....8  :::. 8   ..8S         .    .  .St8tX@8%8;@X@88X:8S%8  .  .        .              .  .    .  . .       ::8@888888XS%X@8X@          .      . .        .
+                        .      . .      .    .  .  . .     .   .  .   .    .   .    .     .  .  .    .  . .  .       8@8SXX8%X@..    . .   .   . 8@8@X@X%%%;X8   ::... t8 .:. %88 8@XS8 ;  . . .    . :8X.S88;: t 8@8 8X888@88@:      . .  .    . .  .  .         .        .   .  .@t%X888@XX% :8:. .   .  .  .  .      . .  .
+                          . .       . .   .    .       .        .   .    .   .    .   .           .             .  . :888@@@8X@    .     .      .t 8@XX%@t8St@888:;.:. 88::::   ;8X@ t8          . .88S@%. :.88 :.8   .;8%8t88;S  .       .   .       .   .  .  .    . . .   .      .:%XXtSX%         .        .   .  .     .   .
+                        .     .  .          .    . .     . . .         .        .      .  .  . .    . .  .  .    .%8%t;8@8S888        .     . .   :X8@S%%@88.%%S88S@S .S8 .:tX88X XX:..   . .  .   .88.@888.......  ...8 8   8S@.   . .     .    .  .   .   .      .           . . . . ..  ..      .     . .     .       .    .
+                           .       .  . . .   .      . .       .  .  .    . .  .   . .           .         .  . ;SX@S8S:888%8   . . .   .         X:88X88t8X@. ..X :8888XX8%@8t%X       .         .88@8 8 ... ....8 . 8888 888X8  .     .     .    .      .   .  .    .   . .       .            .   .       . .    .  .   .    .
+                        .    . . .          .   .  .     .  .          .      .         . .  .     .  .  .     :88S@@8X8888X88            . .  .:;S@X8XS@S88S      :8;8;@X.8t8%.     . .   . .  .  8 88  ..::.. @@8 . 8   .@%@..    .    . .    .    . .       .    .   .     .  .      .  .  .        .  .       .   .      .
+                          .        . .  .            .        . . . .    .  .    . .  .    .   .            .  t:8@8@888X@8X.:  .  .  . .     ;8S8XX88SS%@8X;      . .: .:   ..    .     .     .     @Xt88 .. @8 88..8888X% .S   .    .      .    .      . . .    .        .      .  .   .      .  .     .  .  .    .   . .    .
+                        .   .  .          .  . . .     .  . .         .   .    .        .    .   .  .  . .    . SS88XXX@X8X@%    .        .  .S%X;X8S88S8@8;  . .   .     .   .      . .    .    .   . S t@%;8@@88;@88%t .X .   .  .   .  .    .    .  .        .    .  .    .  .      .   .  .      . .      .  .          .    .
+                          .      .  . . .   .      . .   .     .  .     .    .   .  . .   .    .   .       .    ;S8S%;S88X X: .    . .  .     % 8S8X8X@@@@ .     .     .       . .        .   .    .    .:8 888X88;.S.@t  .          .      .    .   .    .  .    .   .   .        .             .        .        .  .  .    .
+                        .    . .   .      .    .  .    .    .      . .     .   .        .   .    .   . .  .  .   . .::;@@:     . .     .   .   t@S@X888@88  . .   .  .   . . .     . .  .   .   .     .     ::t@XS:   .        . .     . .    .    .    .      .    .      .  .  .   .  .  . .     .  .    . .  .   .   .  .    .
+                           .     .    .      .      .     .   . .      . .   .    . .     .   .                .             .      .    .   . .@tX%8@@XX.      .              . .     .      .   .     .  .        .    .  .      . .     .   .  .   .    . .   .     . .     .      .        .  .     .      .  .   .      .
+                        .    .      .   .  .   . .    .  .        .  .     .    .     .     .   .  . .  . .  .       . .   .   . .    .    .      :%SS%. . .  .    .  . .  .       .     . .       .  .      .   .     .     .  .       .    .      .    .     .   . .     . .    . .    .  .       . .   .  .           .  .  .
+                          .    .  .   .   .        .       . .  .      .      .   .    . .        .    .        . .     .    .     .    .     .          .   .   .           . .     .  .    .  .       . .    .   .  .   .       .  .    .     .     .    .     .     .        .      .      . .       .       .  . .  .        .
+                        .   .   .       .   .  .     . .          . .    .  .       .      .  . .    .    . . .      .    .    .  .  .    .     . .  . .   .       .  .  .       . .   .   .     .  .       .    .   .   .  . .  .     .    . .   .     .    .      .    .  . .   .  .    .       . .     . . .           .  .  .
+                          .   .    . .        .  .  .    .  . . .     .   .    . .   .  .    .     .    .        . .    .   .   .      .    . .          .    . .          .  .      .       . .     .  .     .    .               . .   .      .   . .   .   . .  .   .   .            .   .  .      . .       . .  . .    .
+                        .        .     .  . .     .    .   .       .    .    .     .      .     .     .    .  .       .   .   .    .     .       . . .      .     . .  .  .     .  .    . .       .      . .    .     . .  .  . .      .   .  .   .     .   .        .   .    . .  .  .          .  .      .  .          .    .
+                           . .  .   .    .     .     .   .    .  .   .     .   .     . .    .  .  . .    .      .  .        .    .   . .   .  .        .  .    .      .     . .      .      .  .   .  .      .    .  .    .       .  .      .       .     .    . .     .    .     .     . .  . .      .  .       . . .    .    .
+                        .     .   .   .     .    .          .      .   .  .      . .     .    .        .   . .       . . .    .    .        .   .  .  .      .   .  .   .       . .    .  .      .   .  .  .   .   .    .   .  .        . .    . .    .      .     . .    .    .    . .     .    . .       . .  .      .    .    .
+                          .         .   .     .    . . .  .    . .      .   . .       .    .     .  .    .     . . .       .    .    .  . .      .      .  .          .   . .       .   .   . .    .         .   .    .      .   . .  .      .     .   . . .    .       .    .   .       .     .     . .           .  .  .   .
+                        .   .  . .        . .   .        .   .      . .         .  .    .    .  .     .     .         .  .   .    .          . .    .    .    . . .     .     .  .    .         .     .  .     .    .    . .         .   .     .     .        .   .  .    .    .   .  .    . .    .      . .  .  .         .   .
+                          .   .    .  . .     .   .  .     .   .  .      . .  .     .     .       . .   .     .  .  .      .   .    . .  .        .   .    .        .     .    .   .     . .  .   .  .    .  .    .    .      . .  .   .   . .   . .    .  .    .     .     .           .       .   .  .       .   .  . .       .
+                        .   .    .        .     .      .     .      .  .        . .   . .   . .       .   . .         . .    .   .      .  . .  .   .   .    .  .  .  . .   .    .   . .        .      .        .    .   .  .     .                   .      .     .    . .   .  . . .    .  .    .      .  .    .        . . .
+                               .    . .     .     . .   . .     .        .  .             .    . .  .    .     . . .      .        .  .           .   .   .   .              .     .      . .     . .    . .  .    .          .     .  . . .  . .  .    . .    . .   .      .   .      .      .     . .      .      . .          .
+                        . .  .    .     .  .  .       .     .  .  . . .      . .  . . .      .         .    .        .  .   .  . .       .  . . .       .   .    .  .  .  .    . .    .  .    .       .      .   .    . . . .   .    .              .       .      .   .  .        .    .  .    . .     . .    .  .     . .  .
+                            .   .    .   .     . .  .    .    .         . .             .  .    . .  .    .   .  .        .        . . .           . .         .   .    .   .       .       .   . .     .  .        .         .   .    .  . .  . .    .  .   .  .    .       . .  .  .    .  .       .      .   .   .  .       .
+                        .     .    .   .    .         .    .    .  .  .     .  . .  .  .     .      .   .      .   . . .     . .         . .  .  .     .  . .    .   .    .   .  .    . .     .     . .      . .  .   .  .  .   .   .         .    .   .   .      .     .  .     .     .       .  .    .  .   .          . .  .  .
+                          .      .   .    .   .  . .    .    .      .    .    .      .   . .   .  .   .    . .    .      .  .    .  .  .           .     .    .        .    .     .       . .   .       . .      .        .       .   . .  .     .   .       . .    .  .     .      .    .  .   .   .       .    . . .
+                        .   .  .   .    .   .        .    .    . .     .   .     . .                    .       .    .     .   .   .      . . . .    . .    .   . . .    .    . .   .  .          . .       .  .   . . .     . .    .        . .        . .      .       . .   .  .   .    .  .       . .      .      . .  . .  .
+                          .   .       .        . .     .    .      .  .      .        . .  . . . . . .    .  .     .   . .       .   .  .         .       .           .    .         .   .  . . .     .  .               .  .    .     . .  .     . . .     .  .   . .          .   .   .        . .      . .    .  .          .
+			</pre>
+  		</div>
+			</div>
+
+			<!-- ================= EDIT THE BLOG HERE!!!!! =================== -->
+
+			<div class="main">
+			<div class="content">
+			<h1 style="color:#F3E0DC;font-size: 20px;">Comp6441 - Security engineering and c*ber security   </h1>
+			<div id="contents"> <!-- This is used to go back to top dont delete - i should fix this tho --> </div>
+			<div class="bordere">
+
+
+        				<!-- =================================================================
+        				    	LINUX/ MISC STUFF
+        				================================================================= -->
+        		<h2 class="Header" id="linux">Linux/seminars/misc.</h2>
+<h5 class="date" id="fork" >4/08/19</h5>
+<pre>
+<a href="https://itsworsethanthat.tumblr.com/post/24698219417/chicken-run-is-clearly-the-greatest-marxist">
+https://itsworsethanthat.tumblr.com/post/24698219417/chicken-run-is-clearly-the-greatest-marxist</a>
+
+<a href="http://www.editionspapiers.org/publications/flip-flop-fly">
+http://www.editionspapiers.org/publications/flip-flop-fly</a>
+
+<a href="http://farragomagazine.com/2017/09/22/a-marxist-commentary-of-chicken-run/">
+http://farragomagazine.com/2017/09/22/a-marxist-commentary-of-chicken-run/</a>
+
+<a href="https://liberapedia.wikia.org/wiki/Chicken_Run#Political_Points">
+https://liberapedia.wikia.org/wiki/Chicken_Run#Political_Points</a>
+
+<a href="http://www.aidaf-ey.unibocconi.eu/wps/allegatiCTP/chicken_run_1.pdf">
+http://www.aidaf-ey.unibocconi.eu/wps/allegatiCTP/chicken_run_1.pdf</a>
+
+</pre>
+<h5 class="date" id="fork" >25/07/19</h5>
+<pre>
+
+    https://www.ey.com/au/en/careers/students/apply-here#fragment-6-na
+    https://github.com/lord-cypher/security-resources/blob/master/resources.md
+try to find a way you can count the amount of blogs in your blogs- Puneeth suggest
+using a python library that works with html to try and count it for me.
+
+THE problem is i don't know what differentiates a blog.
+
+SOLUTION: use id's to differentiate each blog. Ive used id's before as anchors in my Job Application.
+</pre>
+<h5 class="date" id="fork" >25/07/19</h5>
+<h2 class="sub"><i class='fas fa-bomb' style='font-size:24px'></i>  Fork BOMB  <i class='fas fa-bomb' style='font-size:24px'></i></h2>
+<pre>
+In comp1521 we were learning about <a href="http://man7.org/linux/man-pages/man2/fork.2.html" target="_blank">fork()</a>, but my interest really peaked when
+my tutor briefly mentioned a fork bomb.
+
+A <u><b>fork</b></u> is a system call in Unix and Linux systems that takes an parent(existing) process,
+and creates a child (duplicate) process. While the child is a duplicate of the parent,
+its memory and ID is its own. This allows processes to carry out unique tasks simultaneously.
+
+A <u><b>fork bomb</b></u> is basically a DoS attack which crashes a system, forcing
+a user to reboot to get rid of the bomb. So it can used to annoy
+the crap out of people. However, this is not the only use, sysadmins use it to test user process limitations on server.
+Furthermore, as this attack is very effective in reducing a system's available resources
+and making the system inaccessible and unusable, it does have room for malicious use.
+
+One method of preventing fork bombs is to limit the amount of processes each user can open.
+For example, if a user was limited to having 40 processes running, the fork bomb would hit
+the 40 process limit quickly. Therefore, it would be unable to cause the system to run out of resources.
+
+<u><b>How it Works?</b></u> (taken directly from <a href="https://www.geeksforgeeks.org/fork-bomb/" target="_blank">geeksforgeeks</a>)
+
+Fork bombs operate both by consuming CPU time in the process of forking, and by
+saturating the operating system’s process table. A basic implementation of a fork
+bomb is an infinite loop that repeatedly launches new copies of itself.
+To incapacitate a system, they rely on the assumption that the number of programs
+and processes which may execute simultaneously on a computer. fork() will generate
+new process but if you put this process in while true loop, then it will create many
+processes and when the limit is crossed, your system will crash.
+
+<b>How to create a fork bomb?</b>
+
+I looked it online - its quite simple:
+You're just creating an infinite loop that keeps calling fork()
+
+<table>
+<tr><td>
+    #include &#060stdio.h&#060
+    #include &#060sys/types.h&#060
+
+    int main()
+    {
+        while(1)
+           fork();
+        return 0;
+    }
+  </td>
+</tr>
+</table>
+
+UPDATE: I gave the fork bomb a try:
+
+        <video width="630" height="540" controls>
+          <source src="../extra/fork.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+        </video>
+
+The site also shows how to write a bash script, but bash script still confuses me.
+
+<b><u>CHALLENGE FOR MYSELF</u></b>:
+Don't look at given bash script in the site above, rather learn how to write
+bash script then create a bash script fork bomb myself.
+
+<h2 class="sub">Simple Bash Scrip</h2>
+
+I'll be following this guide<a href="https://www.linux.com/learn/writing-simple-bash-script" target="_blank">here</a>)
+
+
+</pre>
+<hr>
+
+<h5 class="date" id="ctf">23/07/19</h5>
+<pre>
+<h2 class="sub">UNSW SEC SOCIETY CTF</h2>
+I wasn't able to make it to the UNSW Security society CTF on Saturday the 20th, so I've teamed up
+with Colossal Mess (Alex) to try and complete as many as we can.
+
+<b>
+Team Name: STRUGGLESTREET
+
+Team Members : Me, Alex
+</b>
+
+<h2 class="sub" id="web">Challenges:</h2>
+
+<b>web/dtijhm :</b> http://does-the-internet-just-hate-me.unswsecurity.com/#
+
+We are given a website and it should tell me if its up or not,
+
+So far I'm trying to put the site itself but I've just gone into a loop.
+
+<b>forensic/ YIN :</b>
+
+We are given a seemingly white picture and we need to find the flag.
+
+First thing I tried to do was invert the colours of the picture and also tried messing around with the saturation
+and colouring.
+
+        <b><i>H A C K I N G   W I T H   M I C R O S O F T   P A I N T </i></b>
+
+HOWEVER, Colossal Mess came up with the idea to open the picture in Paint.
+She then zoomed in on the top right corner and we found blue boxes chilling there.
+
+
+	<img src="../extra/ctfYIN.png" alt="ctf yin" style="width:700px;height:287px;">
+
+From there we used paint dropper on each box and copied the red (highlighted in yellow)
+number of each blue box.
+
+After that it was a matter of finding this number for each box and converting
+it to letters using the Decimal ASCII Chart.
+
+1  2  3  4   5    6   7   8     9    10   11   12   13  14   15  16    17 18 19
+<b>70 76 65 71 123   121 73 110   103   95   77   97   73  78   95  98   116 119 125</b>
+F   L  A G  {      y  I   n     g     _   M    a     I   N    _   b    t   w    }
+
+SOLUTION:
+
+<b>FLAG{yIng_MaIN_btw}</b>
+
+		<img src="../extra/ctfYIN1.png" alt="ctf yin" style="width:400px;height:287px;">
+
+</pre>
+
+<hr>
+
+<h5 class="date">18/07/19</h5>
+<pre>
+<u><b>List of Sites</b></u>
+
+https://blog.skullsecurity.org/2010/the-ultimate-faceoff-between-password-lists
+</pre>
+
+<hr>
+
+<h5 class="date" id="game">18/07/19</h5>
+<h2 class="sub">GAME HACKING</h2>
+<pre>
+
+This is an introduction to game cheat hacking. Now I'm not a person that cheats in games,
+unless its I'm playing monopoly or Uno, but this sounds like a really cool way
+to start doing some actual hacking. The great thing is that the tutorial uses c
+Programming (which I kinda know) and dives a lot into computers memory - which is something I'm not
+confident in.
+
+I read through some pages on the site below, and the community is really helpful.
+There are quite a few easy to follow tutorials, here are some that I want to try:
+
+https://www.unknowncheats.me/forum/programming-for-beginners/267073-coding-hacking-introduction-guide-practical-external-game-hacking.html
+https://www.unknowncheats.me/forum/programming-for-beginners/257420-started-video-game-hacking-ultimate-answer.html
+
+So please follow the tutorial and maybe do a lightning talk on it ??
+</pre>
+
+<h5 class="date">12/07/19</h5>
+<pre>
+Was searching for some 1521 midsem answers and stumbled upon Bennett's blog:
+https://www.openlearning.com/u/andrew.bennett/blog/?cohort=All&posts=10&page=2
+its pretty good.
+</pre>
+
+<h5 class="date" id="tay">10/07/19</h5>
+<h2 class="sub">TAY AI -extra mark$$$</h2>
+<pre>
+		<img src="../extra/tay.jpg" alt="Tay's twitter pics" style="width:206px;height:287px;">
+
+On March 23, 2016, Microsoft unleashed an innocent chatbot by the name of Tay onto Twitter.
+It was presented as “The AI with zero chill" and was designed Tay to mimic language patterns
+of a teenage girl and to interact and learn from other users through tweets and direct messages.
+This started off all innocent and well, until people started feeding custom phrases and words
+to Tay. Tay began repeating and building onto what people were tweeting her. After releasing
+it only took Tay a couple of hours to begin spitting out racist, sexist, and genocidal tweets/thoughts.
+
+		<img src="../extra/tayTweet.png" alt="Tay's twitter pics" style="width:500px;height:350px;">
+
+ On the 25th of March, only a couple days later, Microsoft ended the teenage bots’ life.
+
+ 		<img src="../extra/tayTweet2.png" alt="Tay's twitter pics" style="width:650px;height:287px;">
+
+Source:
+https://chatbotslife.com/the-accountability-of-ai-case-study-microsofts-tay-experiment-ad577015181f
+</pre>
+
+<hr>
+  <h5 class="date" id="bside">08/07/19</h5>
+ <h2 class="sub">B-SIDE SYDNEY TICKETS</h2>
+<pre>
+I bought 1 B-side ticket today ($116- quite expensive but I think security society will
+subsidise half the cost or something) and it's on the 7th of September. It's basically a
+security conference where they get different people to come talk about topics in security. I think its meant to
+also be a place where you can networking. I read about it a while back, but there wasn't any in Sydney.
+So this will be the first one to run here. I can't wait and hopefully it would be
+a little beginner friendly.
+
+</pre>
+
+<hr>
+<h5 class="date" id="mid">06/07/19</h5>
+ <h2 class="sub">MIDSEMESTER EXAMNINATION</h2>
+<pre>
+I just did the Midsem exam, the multiple choice questions were not too bad, got them done
+quickly so I would have more time for the cipher. However, I'm so disappointed in myself,
+I couldn't et the cipher despite doing all the practice ones and more on the cryptogram
+app. I think what threw me off was the 'the', I started looking for it but the most common 3
+letter word ended with undeciphered 'e', since that one couldn't be 'the' I stared to panic.
+I ended up getting pieces of deciphered words, but in the end didn't have enough time to write all
+my answer in the answer box as i needed to include the '?' in place of the ones I couldn't get
+- they need a quicker way to copy answers into the answer box.
+
+<B>STUDY HARD - NEED TO MAKEUP MARKS IN FINALS</b>
+</pre>
+
+<hr>
+
+<h5 class="date" id="ACCENSURE">29/06/19</h5>
+<h2 class="sub">ACCENSURE SEMINAR</h2>
+<pre>
+
+This whole workshop felt a bit rushed and was probably a way for Accensure to grab
+some grad students. DESPITE THIS, IT WAS STILL USEFUL, and the pizza was good.
+It introduced me to rootkits and the different types of attack that come under it.
+
+  <b>Root</b> - admin level access
+  <b>Kit</b> -  tools/ software
+
+So a ROOTKIT is basically software tools that allow you to gain root access in a system
+without being detected. A rootkit install itself through code injection.
+
+-Since it runs with root access it can do anything it wants.
+- since root can hid malware from user
+
+The two that the speaker went over were:
+
+  <b>Zeus boot(CLASSIC DLL INJECTION)</b> - banking trojan
+
+    - target process ie svchost.exe
+    - open Process - API Call
+    - allocate space
+    - write malicious
+    create Thread (APIS)
+
+  <b>Stuxnet(PROCESS HOLLOWING)</b> - targeted Iran's nuclear program
+
+    - launches a process
+    - suspend process(flag)
+    - unmapped memory
+    - allocate memory
+    - set execution flow
+    - continue process
+
+</pre>
+
+<hr>
+
+<h5 class="date" id="heap">27/06/19</h5>
+<h2 class="sub">Heap Exploitation SEMINAR</h2>
+<pre>
+Went to seminar by Adam, there was a lot of technical things I didn't understand (I think it was
+material from 6447), but one really interesting point he made was you don't need to go and call malloc
+through the function, <b>INSTEAD by manipulating the user input i.e. overflowing the input,
+you can exploit the heap.</b>
+
+<b>Below are the notes I wrote during the talk- so they may not make too much sense -
+GO OVER AND FIX THEM</b>
+
+
+browser bugs
+- heap exploits
+- javascrip
+
+
+HEAP  OVERVIEW
+
+- OS PROVIDES ENORY IN MULTIPLES
+- NEED A WAY TO PARTIOTION THESe regios
+
+MALLOC ISNTA A THING
+dlmalloc - outdated
+ptmalloc2 - fast for single threaded appllicatuon
+                 -  fast for small allocation
+
+WHAT IS MALLOC
+syscall are really slow
+- when its first called it sets up a heap - mallc calls a brk
+- it splits up massive memory into chunks - think of it like an array
+- there is no use between a free chucnk and a unused chunk
+MALLOCK CHUNK -
+memory size has to be multiples of 8- ie you cant malloc something of size 1
+
+METADATA
+
+FREEE
+- free needs to be fast
+- malloc keeps track of free chunks by keeping them as a linked list
+- implemented using diff sized bins
+smaller the chunk,less secure the bin
+eg 100 byte chunk you put into a 100 byte bin
+
+
+BINS
+
+FASTBNS
+- there a 10 fastbins - each of these bins maintains a single linked list
+- each bin has chunks of the sam esixe
+- no 2 fast free chunks merge
+
+SMALLBINS
+- slower than fastbins and faster than large bins
+- each bin maintains a double-linked list
+- UNLIKE FAST BINS 2 freed chunks will merge
+
+UNSORTED BIN
+- before anything goes into a small/large bin it goes into unsorted
+- but when u first malloc it will take what it needs one by one
+
+main_arena - where all memory is kept ????
+
+HEAP VULNERABILITIES
+
+
+
+EXPLOTATION
+WHY DO WE WAN TTO EXPLOIT THE HEAP
+- logic bugs
+
+when you free something then u can use it
+- we can exploit this
+- we wan tto be able eto free ot known addressed - we wan tot control where the program reads to
+
+DOUBLE FREE
+- common bug - easy to exploit
+- a points to b points to a
+
+FORGING CHUNKS - CORRUPTION
+- if we have 2 chunks next to each other
+- what if we overwrite the next_ptr of a free chunk
+
+SHRINKING CHUNKS
+
+
+YOU CAN USE MALLOC WITHOUT writing rhe function -  by manipulating the user input - overflowin the input
+
+
+why exploit the heap
+- its used in ios, kernal , browsers (javascript engine)
+
+
+__MALLOC__HOOK
+- a gloobal function
+- clling malloc calls __mallock_hook_
+evr=erytime someone calls maloc, theyre calling code
+-
+
+most of these exploits need us to be abe to create 2 or more chunks sequentially
+= this isnt always possible
+- remember we arent calling malloc - we are the user
+
+HEAP SPRAY
+- eg open a lots of tabs - allocate a bunch of memoery through thiis
+after we do this we sre let eith allocation after each other
+
+  </pre>
+
+<hr>
+<h5 class="date" id="google">22/06/19</h5>
+<h2 class="sub">Google Beginner CTF</h2>
+<pre>
+Adam T put a link in the slack chat about a google CTF, I have never tried
+a CTF before so I’ll try and start off with the beginner challenge offered by google
+<a href="https://capturetheflag.withgoogle.com/#beginners/" target="_blank" style="background-color:#ffffa0">HERE.</a>
+I'll be using Ubuntu running on VMware.
+
+LETS BEGIN!! Rip
+
+Challenges and solutions (ill be writing this as I do the challenges)
+
+(1) It asked me to download a file '768be4f10429f613eb27fa3e3937fe21c7581bdca97d6909e070ab6f7dbf2fbf'
+    <u><b>SOLVED:</b></u> All I did to get the key is I opened it up in an editor and scrolled until I found the key.
+
+(2) I have to download another file,00c2a73eec8abb4afb9c3ef3a161b64b451446910535bfc0cc81c2b04aa132ed
+    This time I unzipped it and was given "init_sat"
+    Some commands I've tried:
+    <b>stat init_sat </b> - stat tells you information about a file.
+    <b>file init_sat</b> - also tells you info on file
+
+    I tried the above command and got <i>ELF 64-bit LSB executable, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/l, not stripped</i>
+
+    <b>NOTE:</b>
+    LSB - least significant byte
+    not stripped - "Generally strip removes all symbols since they're not strictly necessary; it removes debugging info too, but symbols are the big thing"
+
+    Running the file just gave me <i>"permission denied"</i>
+
+    I put the result from file command into google and got something about reverse engineering and gdb. Since I don't
+    know what else to do I'll be learning how to use gdb.
+
+    The way gdb works is it runs on executable files, since the above file doesn't have extensions
+    that mean gdb should be able to run it ??
+    Yeah NO it did not work. I also tried 'strace' which still didn't work.
+    I think I got it, the chmod command should help me change the permission of the file.
+
+    <u><b>SOLVED:</b></u> I used 'chmod' - <i>chmod 777 init_sat</i> IT WORKS!!
+    osmium
+
+There are two types of people that hakk and both attend def(q)(c)on
+
+</pre>
+
+<hr>
+
+<h5 class="date" id="china">17/06/19</h5>
+<h2 class="sub">Hong Kong</h2>
+<pre>
+In the news right now there is large coverage of the protest happening in Hong Kong,
+to summarise its HK vs Chinese Gov. I was reading this  <a href=”https://www.outline.com/d83p49”>article</a>
+that I saw linked online. It talks about how protesters are communicating to one each other.
+Apps such WeChat, which are heavily monitored by the Chinese government, are redundant in
+spreading messages to fellow protestors. This means they need more secure messaging methods
+to communicate to one another. Many are using an app telegram, what’s interesting is
+the response china made to this. Which was to launch DoS attacks to rye and disrupt the activities on the app.
+
+</pre>
+
+<hr>
+
+<h5 class="date" id="terminal">17/06/19</h5>
+<h2 class="sub" >BEFRIENDING THE LINUX</h2>
+<pre>
+I was first introduced to Linux and the terminal through 1511 and thought it was unnecessary
+and overcomplicated. I'm currently better at using it than when I was first introduced. HOWEVER, I'm still
+not fully comfortable with the command line and the structure of the Linux system. To
+combat this I will first learn how the file structure differs from windows.
+
+PATH is an environmental variable in Linux and other Unix-like operating systems
+that tells the shell which directories to search for executable files (i.e., ready-to-run programs)
+in response to commands issued by a user.
+
+<i>
+/bin – Binary - holds basic programs like ls and  cat – I previously thought it was just like the recycling bin on windows.
+/sysbin – system binary
+/boot – 	everything the OS needs to boot - don’t want to play around in this folder
+/dev –
+/ect –
+/home – - each user has their own home folder, also stores hidden files - to see hidden files 'ls -a'
+/lib – libraries are stored
+/Media, /mnt (mount) – other mounted files - a,b or d drive
+/opt – optional folder - manually installed software
+/proc – pseudo files about system processes and resources
+/root  - root home folder
+/sys – way to interact with the kernel
+</i>
+
+<a href="https://www.youtube.com/watch?v=HbgzrKJvDRw" target="_blank" style="background-color:#ffffa0"> I used this video</a>
+
+</pre>
+
+<!-- </div> WHEN I DONT COMMENT THIS OUT THE BORDER DISAPEARS-->
+</div>
+</div>
+
+
+		<div class="bordere">
+		<p id="comment" style ="font: 10px">If you're my tutor you can comment feedback below,	if you're just random also feel free to critcise my work or chuck a hello. </p>
+
+		<a href="#contents" class="top">&#9650; Top</a>
+		<!-- begin wwww.htmlcommentbox.com -->
+		<div id="HCB_comment_box"><a href="http://www.htmlcommentbox.com">HTML Comment Box</a> is loading comments...</div>
+		<link rel="stylesheet" type="text/css" href="https://www.htmlcommentbox.com/static/skins/bootstrap/twitter-bootstrap.css?v=0" />
+		<script type="text/javascript" id="hcb">
+		/*<!--*/ if(!window.hcb_user){hcb_user={};} (function(){var s=document.createElement("script"), l=hcb_user.PAGE ||
+		(""+window.location).replace(/'/g,"%27"), h="https://www.htmlcommentbox.com";s.setAttribute("type","text/javascript");
+		s.setAttribute("src", h+"/jread?page="+encodeURIComponent(l).replace("+","%2B")+"&mod=%241%24wq1rdBcg%24xp0cXw24E4AR9n7djMBPA."+"&opts=16862&num=10&ts=1560603664281");
+		if (typeof s!="undefined") document.getElementsByTagName("head")[0].appendChild(s);})(); /*-->*/ </script>
+		<!-- end www.htmlcommentbox.com -->
+
+		</div>
+		<pre style="font: 2px/1px monospace;">
+																																								++++++++++++++++++++++++##########++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+																																								+''''''''''''''''''+++++++++++++++++++++++'++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++''++++'''''++++++''+
+																																								+''''''''''''''''+''++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++''+''++''+++'''''''+++++
+																																								+''''''''''''''''++'++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+																																								+''''''''''''''''+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++''+''++++++++'++++++'++++
+																																								+'''''''''''''''+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+																																								+'''''''''''''''++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++'''+
+																																								+'''''''''''''''+++++++++++++++###++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+																																								+''''''''''''''++++++++++++++++###+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+																																								+''''''''''''''++++++++++++++++###+#++++++++++++++++++++++#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+																																								+'''''''''''''++++++++++++++#########+++++++++++++++##++++++#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++'+
+																																								+''''''''''''++++++++++++++###########+++++++++++++###########+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++'+
+																																								+''''''''''''++++++++++++++###########+++++++++++++####+######+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++'+
+																																								+''''''''''''++++++++++++##############+++++++++++++###########+++++++++++++++++++++++++++++++++++++++++++'+'+++++++                        IDEA DONATED BY DEBORAH 4CHANDRA
+																																								+''''''''''''++++++++++++###############++++++++###############+++++++++++++++++++++++++++++++++++++++++++'+'++++++++++++++++++++++++++++'+
+																																								+''''''''''''++++++++++############################################+++++++++++++++++####+++++++++++++++++'+++++++++++++++++++++++++++++++''
+																																								+''''''''''''++++++++++###################################################+##+++########+++++++++++++++++++'+++++++++++++++++++++++++++++''
+																																								+''''''''''''+++++++++++#################################################################++++++++++++++++++'+++++++++++++++++++++++++++++++++++++''++
+																																								+'''''''''''++++++++++###################################################################++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+																																								+''''''''''+++++++++#+##################################################################++#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+																																								+''''''''''++++++++#########################################################################++++++++++++++++++++++++++++++++++++++++++++++++++++++++++''+++'+''
+																																								+''''''''++++++++++#################################################################++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++'
+																																								+''''''''+++++++++#############################################+#+#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+																																								+'''''+++++++++++#################################++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++''''
+																																								+'''''+++++++++++###############################+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+																																								+''''+++++++++++############################++++++++++++++++++++'''''''''''''''''''''''''''+''++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+																																								+''''++++++++++########################+++++++++++'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''++++++++++++++++++++++++++++++++++++++++++++++++++
+																																								+''''+++++++++##################+++++++++++++''''''''''''''''''''''''';;;';;;;;;''''''''''''''''''''''''''''''''''++++++++++++++++''''''''++++++++++++++++++++++++++++
+																																								+''''+++++++++#############+++++++++++++++''''''';;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;''';''''''''''''''++++++++++++''''''''''''''+++++++++++++++++++++++++++''
+																																								+''''+++++++++#############+++++++++++++'''''';;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;''''''++++++++++'''''''''''''''''+++++++++++++++++++++++++++++++
+																																								+''''+++++++++############+++++++++++''''''';;;;;;;;;;;;;::::::;;::::::::;:;;::;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;''''++++++++''''';;;;'''''''''+++++++++++++++++++++++++++++++
+																																								+''''++++++++############+++++++++'''''''';;;;;;;::::::::::::::::::::::::::::::::;;;;;;;;;:;:;;;;;;;;;;;;;;;;;;;;''++++++++''''';;;;;;'''''''''++++++++++++++++++++++++++++++'
+																																								+'+++++++++++###########+++++++'''''''';;;;;;;;:::::::::::::::::::::::::::::::::;;;;;;;;;::::::::::;;;;;;;;;;;;;'''''++'''''';;;;;;;;;'''''+++++++++++++++++++++++++++++++++++
+																																								++++++++++++###########+++++'''''';;;;;;;;;;;;;;;:::::::::::::::::::::::::::::::;;;;;;;::::::::::::::;;;;;;;;;;''''++'''''';;;;;::;;;;''''++++++++++++++++++++++++++++++++++++
+																																								#+++++++++++###########+++++'''';;;;;;;;;;;;;;;;;;:::::::::::::::::::::::::::::;;;;;;;;;::::::::::::::;;;;;;;;;'''++++'';;;;:::::::;;;''''++++++++++++++++++++++++++++++++++++++
+																																								#+++++++++++###########++++'''';;;;;;;;;;;;;;;;;;;;;::::::::::::::::::::::::::;;;;;;;;;::::::::::::::::;;;;;;;''''+++''';;::::::::::;;''''++++++++++++++++++++++++++++++++++++++
+																																								#+++++++++++###########+++++''''';;;;;;;;;;;;;;;;;;;;;;:::;::::::::::::::::::;;;;;;;;;;:::::::::::::::::;;;;;''''''+''';;;;:::::::::;;''''++++++++++++++++++++++++++++++++++++++
+																																								#+++++++++++###########++++++'''''';;;;;;;;;;;;;;;;;;;:;::::::::::::::::::::::;;;;;;:::::::::::::::::::;;;;;;'''''''''';;;;:::::::::;;;''''+++++++++++++++++++++++++++++++++++++
+																																								#++++++++++++##########+++++++++'''''';;;;;;;;;;;;;;;;:;::::::::::::::::::::::;;;;;;::::::::::::::::::::;;;;;''''''''';;;::::::::::::;;;''''++++++++++++++++++++++++++++++++++++
+																																								#++++++++++++++#########++#+++++++'''''';;;;;;;;;;;;;;;;::::::::::::::::::::::;;;;;::::::::::::::::::::::;;;''''+'''';;;:::::::::::::;;;;'''+++++++++++++++++++++++++++++++++++'
+																																								#+++++++++++++++##+#+#######++++++++++'''';;;;;;;;;;;;;;::::::::::::::::::::::::;::::::::::::::::::::::::;;;''''+''';;;;:::::::::::::;;;;'''+++++++++++++++++++++++++++++++++++'
+																																								#++++++++++++++++++++##+#########++++++''''';;;;;;;;;;;;:::::::::::::::::::::::::::::::::::::::::::::::::;;;''''''';;;;:::::::::::::::;;;;''''++++++++++++++++++++++++++++++++'
+																																								#++++++++++++++++++++++###########++++++'''''';;;;;;;;;;:::::::::::::::::::::::::::::::::::::::::::::::::;;;'''''';;;;:::::::::::::::::::;;;'''''+++++++++++++++++++++++++++++'+
+																																								+++++++++++++++++++++++++++++++###++++++++''''';;;;;;;;;;::::::::::::::::::::::::::::::::::::::::::::::::;;;;''''';;;;::::::::::::::::::::;;;;'''''''+++++++++++++++++++++++++''
+																																								+''+++++++++++++++++++++++++++++######++++++'''';;;;;;;;;::::::::::::::::::::::::::::::::::::::::::::::::;;;;;''';;;;:::::::::::::::::::::::;;;;''''''+++++++++++++++++++++
+																																								+'''+++++++++++++++++++++++++++#########+++++'''';;;;;;;;;::::::::::::::::::::::::::::::::::::::::::::::::;;;;;'';;;;::::::::::::::::::::::::;;;;;'''''''''+++++++++++++++++++
+																																								+'''+++++++++++++++++++##+++++++#########+++++'''';;;;;;;;::::::::::::::::::::::::::::::::::::::::::::::::;;;;;;;;;;::::::::::::::::::::::::::;;;;;;'''''''''''''''''+''''''''
+																																								+''+++++++++++++#+######+++#++++##########+++++'''';;;;;;;:::::::::::::::::::::::::::::::::::::::::::::::::;;;;;;;;;:::::::::::::::::::::::::::::;;;;;''''''''''''''''''''''''''''';;;;
+																																								+'++++++++++++###################+########+++++'''';;;;;;;::::::::::::::::::::::::::::::::::::::::::::::::::;;;;;;;;::::::::::::::::::::::::::::::;;;;;;;;;'''''''''''''''''''''';;;;;;;;
+																																								+++++++++++++###############################++++'''';;;;;;;::::::::::::::::::::::::::::::::::::::::::::::::::;;;;;;;::::::::::::::::::::::::::::::::;;;;;;;;;;;;''''''''''''''';;;;;;:;;;;
+																																								++++++++++###################################++++'''';;;;;;::::::::::::::::::::::::::::::::::::::::::::::::::::::;;;::::::::::::::::::::::::::::::::::::;;;;;;;;;;;;;;;;;;;;;;;;;;;::::;;;;;
+																																								++++++++++#######################++++++++####++++'''';;;;;;:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::;;;;;;;;;;;;;;;;;;;;;;::::::;;
+																																								++++++++++######################++++++++++###++++''''';;;;;::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::;;;;;;;;;;;;;;;;;;;:::::::::;;;;
+																																								+++++++++######################++++++++++++++++++''''';;;;;:::::::::::::::::::::::::::::::::::::::::::::::::::::;;;;;;;:::::::::::::::::::::::::::::::::::::::;;;;;;;;;;;;;;;;::::::::::::;
+																																								+''++++++####################++++++++++++++++++++''''';;;;;::::::::::::::::::::::::::::::::::::::::::::::::::::;;;;;;;;;;;;;;:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::;;
+																																								+'''+++++++#################+++++++++++++++++++++''''';;;;;;:::::::::::::::::::::::::::::::::::::::::::::::::::;;;;;;;;;;;;;;;;;;:;;:::;;;;:::::::::::::::::::::::::::::::::::::::::::::::::;;;
+																																								+''''+++++++####+#####++++++++++++++++++++++++++'''''';;;;;:::::::::::::::::::::::::::::::::::::::::::::::::::;;;;;;;;;;;;;;;;;;;;;;:;;;;;;;::::::::::::::::::::::::::::::::::::::::::::::::;;;
+																																								+;'''+++++++++++++++++++++++++++++''''''''+++''''''''';;;;;::::::::::::::::::::::::::::::::::::::::::;;;;;:::;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:;;:::::::::::::::::::::::::::::::::::::::::::::;;;
+																																								';;;'''++++++++++++++++++++'''''''''''''''''''''''''';;;;;;:::::::::::::::::::::::::::::::;::;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;::::::::::::::::::::::::::::::::::::::;;;
+																																								':;;;;''''''''''''''''''''''''''';;;;;;'''''''''''''';;;;;;:::::::::::::::::::::;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::::::::::::::::::::::::::::::::::::::;;;
+																																								':::;;;;;'''''''';;;;;;;;;;;;;;;;;;;;;;;;;;;''''''''';;;;;;:::::::::::::::::::::;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;::::::::::::::::::::::::::::::::::::::::;;;
+																																								':::;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;''';;;;;;;:::::::::::::::::::;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::;;;;;;;;;;;;;;;;;;;;:::::::::::::::::::::::::::::::::::;;;
+																																								'::::;;;;;;;;;;;;;;;;;;;;;;;;;;;;:;;;;;;;;;;;;;;;;'';;;;;;;::::::::::::::::::;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::;;;;;:::::;;;;;;;;;;;;;;;;;;;;;;;;::::::::::::::::::::::::::::::::::;;;
+																																								':::::;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;::::::::::::::::::;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;::::::::::::::::::::::::;:;;;;;;;;;;;;;;;;;;;:::::::::::::::::::::::::::::::::;;;;
+																																								':::::;;;;;;;;;;;;;;;;:::;::;;;:;;;;;;;;;;;;;;;;;;;;;;;;;::::::::::::::::::;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;::::::::::::::::::::::::::::::::::;;;;;;;;;;;;;;;;::::::::::::::::::::::::::::::::::;;'
+																																								':::::::::;;:;;::::::::::::::::;;;;;;;;;;;;;;;;;;;;;;;;;::::::::::::::::::;;;;;;;;;;;;;;;;;;;;;;;;;;;::::::::::::::::::::::::::::::::::::::::::::;:;;;;;;;;;;;;;;::::::::::::::::::::::::::::::::;;;
+																																								'::::::::::::::::::::::::::;;;;;;;;;;;;;;;;;;;;;;;;;;;;::::::::::::::::::;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::::::::::::::::::::::::::::::::::::::::::::::;;;;;;;;;;;;;;;:::::::::::::::::::::::::::::::;;'
+																																								'::::::::::::::::::::::::::;;;;;;;;;;;;;;;;;;;;;;;;;;;:::::::::::::::::;;;;;;;;;;;;;;;;;;;;;;;;;;:::::::::::::::::::::::::::::::::::::::::::::::::::::;;;;;;;;;;;;;:::::::::::::::::::::::::::::::;;
+																																								'::::::::::::::::::::::::::::;;;;;;;;;;;;;;;;;;;;;;;;;:::::::::::::;::;;;;;;;;;;;;;;;;;;;;;;;;::::::::::::::::::::::::::::::::::::::::::::::::::::::::;;;;;;;;;;;;:::::::::::::::::::::::::::::::::;;;''
+																																								':::::::::::::::::::::::::::;;;;;;;;;;;;;;;;;;;;;;;;:::::::::::::;;;;:;;;;;;;;;;;;;;;;;;;;;;::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::;::;;;;::::::::::::::::::::::::::::::::::;;;;'
+																																								':::::::::::::::::::::::::::;;;;;;;;;;;;;;;;;;;;;;;::::::::::::;;;;;;;;;;;;;;;;;;;;;;;;;;;::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::;;;::::::::::::::::::::::;:::::::::::;;;;'
+																																								'::::::::::::::::::::::::::;;;;;;;;;;;;;;;;;;;;;;:::::::::::::;::;;;;;;;;;;;;;;;;;;;;;;;;:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::;:::::::::::::::::::;;;::::::::::::::;;'
+																																								':::::::::::::::::::::::::::;;;;;;;;;;;;;;;;;;;;:::::::::::::;::;;;;;;;;;;;;;;;;;::::::::::::::::::::::::::::::::::::::::::::::::;;;:::::::::::::::::::::::::::::::::::::::::::::;;;;;:::::::::::::::;;;
+																																								':::::::::::::::::::::::::::;;;;;;;;;;;;;;;;;;:::::::::::;;;;;;;;;;;;;;;;;;;;;::::::::::::::::::::::::::::::::::::::::::::::;;;;;;;;;;;::::::::::::::::::::::::::::::::::::::::::::::::;::::::::::::::;;
+																																								':::::::::::::::::::::::::;:;;;;;;;;;;;;;;;;;;;:::::;;;;;;;;;;;;;;;;;;;;;;;::::::::::::::::::::::::::::::::::::::::::;;;;;;;;;;;;;;;;;;;;;;;::::::::::::::::::::::::::::::::::::::::::::::::::::::::::;;
+																																								':::::::::::::::::::::::::::;;;;;;;;;::::;;;;;::::;;;;;;;;;;;;;;;;;;;;;;;;;::::::::::::::::::::::::::::::::::::;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;::::::::::::::::::::::::::::::::::::::::::::::::::::;
+																																								':::::::::::::::::::::::::::;;;;;;;;;:::::;;;:::;:;;;;;;;;;;;;;;;;;;;;;;;;;::::::::::::::::::::::::::::::::;;;;;;;;;;;;;;''''''''''''''''''';;;;;;;;;:::::::::::::::::::::::::::::::::::::::;::::::::::;
+																																								'::::::::::::::::::::::::;:::;;;::::::::;;;;;:::::;;;;;;;;;;;;;;;;;;;;;;;;::::::::::::::::::::::::::::::;;;;;;;;;;;;;;;'''''''''''''''''''''''';;;;;;;;::::::::::::::::::::::::::::::::::::::::::::::::;
+																																								':::::::::::::::::::::::::::::;:::::::::;;;;;;;:::;;;;;;;;;;;;;;;;;;;;::::::::::::::::::::::::::::::;;;;;;;;;;;;;;;;;;;;'''''''''''''''''''''''''';;;;;;;;:::::::::::::::::::::::::::::::::::::::::::::;
+																																								'::::::::::::::::;:;;;;;;;;::;:::;;;;;:;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::::::::::::::::::::::::;;;;;;;;;;;;;;;;;;;;;;;;;;;;;'''''''''''''''''''''''';;;;;;;:::::::::::::::::::::::::::::::::::::::::::;
+																																								'::::::::::::::::;;;;;;;;;;:;;:::;;;;;:;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::::::::::::::::::::;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;''''''''''''''''''''';;;;;;;:::::::::::::::::::::::::::::::::::::::::;
+																																								':::::::::::::;;;;;;;;;;:;;::;:::;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;::::::::::::::::::::;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;''''''''''''''''''';;;;;::::::::::::::::::::::::::::::::::::::::;
+																																								':::::::::::::;;;;;;;;;;;;;;;;::;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;::::::::::::::::::;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;'''''''''''''''''';;;;;;::::::::::::::::::::::::::::::::::::::::
+																																								'::::::::::::;;;;;;;;;:;;;;;;;;;:;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;::::::::::::::::::::;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;''''''''''''''''';;;;;;:::::::::::::::::::::::::::::::::::::::
+																																								':::::::::::;;;;;;;;;;;;;;;;;;;;:;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::::::::::::::::::;;;;;;;;;;;;;;;;;;;;;;;;;;;;;::::::::::::::::;;;;;;;;;;;''''''''''''''';;;;;;:::::::::::::::::::::::::::::::::::::
+																																								'::::::::;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::::::::::::::::::;;;;;;;;;;;;;;;;;;;;:::::::::::::::::::::::::::::::::::;;;;;;;'''''''''''''';;;;;:::::::::::::::::::::::::::::::::::
+																																								'::::::::;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::::::::::::::::;;;;;;;;;;;;;;;;:::::::::::::::::::::::::::::::::::::::::::::;;;;;;'''''''''''';;;;;::::::::::::::::::::::::::::::::::
+																																								':::::::;;;;;;;:;;:;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;::::::::::::::::::;;;;;;;;;;;;;;:::::::::::::::::::,:,,,,,,,,,,,,,,,,,,:::::::::::;;;;;''''''''''''';;;;:::::::::::::::::::::::::::::::::
+																																								'::::::::;:::;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;::::::::::::::::::;;;;;;;;;;;::::::::::::::::::,,,,,,,,,,,,,,,,,,,,,,,,,,,::::::::::;;;;;;'''''''''';;;;;::::::::::::::::::::::::::::::::
+																																								'::::::::;::::;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::::::::::::::::;;;;;;;;;:;::::::::::::::::,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,::::::::::;;;;;'''''''''';;;;;:::::::::::::::::::::::::::::::
+																																								':::::::::::::;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:;;::::::::::::::::;;;;;;;;;;;:::::::::::::::,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,:::::::::;;;;'''''''''';;;;;;:::::::::::::::::::::::::::::
+																																								':::::::::::::;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;::::::::::::::::;;;;;;;;;;;;:::::::::::::,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,:::::::;;;;;'''''''''';;;;:::::::::::::::::::::::::::::
+																																								':::::::::::::;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;::::::::::::::;;;;;;;;;;::::::::::::::,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,::::::;;;''''''''''';;;;::::::::::::::::::::::::::::
+																																								':::::;::;:::;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;::::::::::::::;;;;;;;;;;;:::::::::,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,:::::;;;'''''''''';;;;:::::::::::::::::::::::::::
+																																								':::::;::;:::;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::::::::::::::;;;;;;;;;::::::::,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,::::;;;''''''''';;;;;::::::::::::::::::::::::::
+																																								'::::::::;::;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::::::::::::;;;;;;;:;:::::::::,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,:::;;;;'''''''';;;;;:::::::::::::::::::::::::
+																																								'::::::::;:;;;;;;;;;;;;;;;;;;;;;;;;;;:::::::::;;;;;;;::::::::::::::::;;;;;;::::::::::::,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,:::;;;;'''''''';;;;;::::::::::::::::::::::::
+																																								':::::::;;;;;;;;;;;;;;;;;;;;;;;;;;;;::::::::::::;;;;:::::::::::::::::;;;;;;:::::::::,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,::::;;;'''''''';;;;;:::::::::::::::::::::::
+																																								':;::::;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::::::::::::::::::::::::::::::::;;;;;;:::::::,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,::::;;;''''''''';;;;:::::::::::::::::::::::
+																																								':;::::;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::::::::::::::::::::::::::::::::;;;;::::::::,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,::::;;;''''''''';;;;;;;::::::::::::::::::::
+																																								':;::::;;;;;;;;;;;;;;;;;;;;;;;;;;;;;::::::::::::::::::::::::::::::::;;::::::::,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,:::::::::::::::::::::::::::::::::::::::::::;;;'''''''''';;;;;;;:::::::::::::::::::
+																																								':::::;;;;;;;;;;;;;;;;;;;;;;;;;;;::::::::::::::::;::::::::::::::;;;;;:::::::,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,::::::::::::::::::::::::::::::::::::::::::::::::::::::;;;;'''''''''';;;;;;;;::;::::::::::::::
+																																								':::::;;;;;;;;;;;;;;;;;;;;;;;;;;;:;:::::::::::::;:::::::::::::::;;;;::::::,,,,,,,,,,.,..,,,,,,,,,,,,,:::::::::::::::::;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::::::::;;;;;;;''''''+'''';;;;;;;;;;:;;:::::::::::
+																																								'::::;;;;;;;;;;;;;;;;;;;;;;;;;;;:::::::::::;:::;;;::::::::::::::;;;::::::,,,,,,,,,,,,,,,,,,,,,,,,,:::::::::::::;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;''''''''''''';;;;;;;;;;;;;:::::::::
+																																								':::;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::::::::::;::;;;:::::::::::::::::::::::,,,,,,,,,,,,,,,,,,,,:::::::::::;;;;;;;;;;;;;;;;;;;;''';;';;;''''''''''''''';;;;;;;;;;;;;;;;;;''''''''''''';;;;;;;;;;;;::::::::::
+																																								':;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::::::::::;::;;:::::::::::::::::::::,,,,,,,,,,,,,,,,,,,::::::::;;;;;;;;;;;;;;;;;'''''';''''''''''''''''''''''''''''';';;;;;;;;;;''''''''''''''''''';;;;;;;;;;::::::::::
+																																								';;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;::::::::::::::;::::::::::::::::::::::,,,,,,,,,,,,,,,::::::::;;;;;;;;;;;;'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''';;;;;;;;;;;:::::::::
+																																								';;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::::::::::::::::::::::::::::::::::,,,,,,,,,,,,,,::::::::;;;;;;;;;;'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''';;;;;;;;;;:::::::::
+																																								';;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::::::::::::::::::::::::::::::::::,,,,,,,,,,,,::::::::;;;;;;;''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''';;;;;;;;;;;::::::::
+																																								':::;;;;;;;;;;;;;;;;;;;;;;;;;;;:::::::::::::::::::::::::::::::::::,,,,,,,,,::::::::;;;;;;;;'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''+''''''';;;;;;;;;;::::::::
+																																								':::;;;;;;;;;;;;;;;;;;;;;;;;;;;::::::::::::::::::::::::::::::::::::::::::::::::;;;;;;;;;''''''''''''+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''++'''''';;;;;;;;;;::::::::
+																																								';;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::::::::::::::::::::::::::::::::::::::::::;;;;;;;;'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''+++''''''';;;;;;;;;:::::::
+																																								';;;;;;;;;;;;;;;;;;;;;;;;;;;;;::::::::::::::::::::::::::::::::::::::::;;;;;;;'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''+++''''''';;;;;;;;;:::::::
+																																								';;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::::::::::::::::::::::::::::::::::::;;;;;;'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''+++++''''';;;;;;;;;:::::::
+																																								';;;;;;;;;;;;;;;;;;;;;;;;;;;:::::::::::::::::::::::::::::::::::::;;;;;;;'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''++++++''''';;;;;;;;::::::::
+																																								';;;;;;;;;;;;;;;;;;;;;;;;;;;:::::::::::::::::::::::::::::;;;:;;;;;;;;'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''+++''''';;;;;;;;::::::::
+																																								';;;;;;;;;;;;;;;;;;;;;;;;;;;:::::::::::::::::::::::::::;;;;;;;;;;;;''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''++++''''';;;;;;;;::::::::
+																																								'::;;;;;;;;;;;;;;;;;;;;;;:;::::::::::::::::::::::::;;;;;;;;;;;;;'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''++'''''';;;;;;;::::::::
+																																								'::;;;;;;;;;;;;;;;;;;;;;;:;::::::::::::::::::::::::;;;;;;;;;;''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''++'''''';;;;;;;::::::::
+																																								'::;;;;;;;;;;;;;;;;;;;;;;:;::::::::::::::::::::::;;;;;;;;''''''''''''+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''+++'''''';;;;;;;::::::::
+																																								'::;;;;;;;;;;;;;;;;;;;:;;;;:::::::::::::::::::::;;;;;;'''''''''''''''+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''++++''''';;;;;;;::::::::
+																																								'::;;;;;;;;;;;;;;;;;;;::;;;:::::::::::::::::::;;;;;''''''''''''''''''+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''++++'''''';;;;;;::::::::
+																																								':::;;;;;;;;;;;;;;;;;:::::;;::::::::::::::::::;;;;;''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''++++++''''';;;;;;::::::::
+																																								':::;;;;;;;;;;;;;;;;;:::::;;::::::::::::::::;;;;;;'''''''''+'''++++''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''++++++''''';;;;;;::::::::
+																																								':::;;;;;;;;;;;;;;;;;;;;;:;;::::::::::::::::;;;;;''''''''''++''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''+++++++'''';;;;;;::::::::
+																																								';;;;;;;;;;;;;;;;;;;;;;;;:::;::::::::::::::;;;;'''''''''''+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''+++++++'''';;;;;;:;;;::::
+																																								';;;;;;;;;;;;;;;;;;;;;;;;:::;::::::::::::;;;;;'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''+++++++'''';;;;;;:;;;::::
+																																								':::;;;;;;;;;;;;;;;;;;;;;::::::::::::::;;;;;;'''''''+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''+++++++''''';;;;;;:::::::
+																																								':::;;;;;;;;;;;;;;;;;;;;;::::::::::::::;;;;;'''''''+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''+++++++''''';;;;;::::::::
+																																								':::;;;;;;;;;;;;;;;;;;;;;::::::::::::::;;;;;''''''+++'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''++++++''''';;;;;::::::::
+																																								':::;;;;;;;;;;;;;;;;;;;;;::::::::::::::;;;;;'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''+++++++''''';;;;;::::::::
+																																								':::;;;;;;;;;;;;;;;;;;;;::::::::::::::;;;;;;'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''+++++++''''';;;;;::::::::
+																																								':::;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;::;;;;;'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''++++++'''';;;;;;::::::::
+																																								'::;;;;;;;;;;;;;;;;;;;;;;;;;;;::;;;;:::;;;;;''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''++++''''';;;;;;:::::::
+																																								'::;;;;;;;;;;;;;;;;;;;;;;;;;;;::;;;;:::;;;;;''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''++++''''';;;;;;:::::::
+																																								':::;;;;;;;;;;;;;;;;;;;;;;;;;;::;;;;;::;;;;;''''''''+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''++''''''';;;;;;:::::::
+																																								':::;;;;;;;;;;;;;;;;;;;;;;;;;;::;;;;;::;;;;;;'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''+'''''''';;;;;;:::::::
+																																								':::;;;;;;;;;;;;;;;;;;;;;;;;;;::;;;;;::;;;;;;;;''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''';;;;;;::::::::
+																																								':;;;;;;;;;;;;;;;;;;;;;;;;;::::::;;;;;;;;;;;;;;;''''''''''++'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''';;;;;;;:::::::
+																																								':;;;;;;;;;;;;;;;;;;;;;;;;;::::::;;;;;;;;;;;;;;;;;'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''';;;;;;;:::::::
+																																								':;;;;;;;;;;;;;;;;;;;;;;;;;:::::::;;:;;;;;;;;;;;;;;''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''';;;;;;::::::::
+																																								':::;;;;;;;;;;;;;;;;;;;;;:;::::::::::;;;;;;;;;;;;;;''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''';;;;;;;;::::::::
+																																								':::;;;;;;;;;;;;;;;;;;;;;:;:::::::::::;;;;;;;;;;;;;;;''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''';;;;;;;;::::::::
+																																								'::;;;;;;;;;;;;;;;;;;;;;;:::::::::::::;;;;;;;;;;;;;;;;;''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''';;;;;;::::::::::
+																																								':::;;;;;;;;;;;;;;;;;;;;;:::::::::::::;;;;;;;;;;;;;;;;;;;;'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''';;;;;;::::::::::
+																																								'::;;;;;;;;;;;;;;;;;;;;;;:::::::::::::;;;;;;;;;;;;;;;;;;;;;;;'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''';;;;;;:::::::::::
+																																								':::;;;;;;;;;;;;;;;;;;;;;:::::::::::::;;;;;;;;;;;;;;;;;;;;;;;;;''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''';;;;;;;:::::::::::::
+																																								'::;;;;;;;;;;;;;;;;;;;;;;:::::;;;::;::;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''';;;;;;;;:::::::::::::
+																																								'::;;;;;;;;;;;;;;;;;;;;;;:::;;;;;;;;:;;;;;;;;;;;;;;:::::;;;;;;;;;;;;;;;;;''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''';;;;;;;:::::::::::::::
+																																								'::::;;;;;;;;:::;;;;;;;;;:;:;::;;;;;;;;;;;;;;;;;;;;;:::::::;;;;;;;;;;;;;;;'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''';;;;;;;;;;::::::::::::::::
+																																								'::::;;;;;;;;:::;:;;;;;;;:;::::;;;;;;;;;;;;;;;;;;;;;:::::::;;;;;;;;;;;;;;;;;;;''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''';''''''''''''''''''''''''''''';;;;;;;;;;;::::::::::::::::::
+																																								'::;;;;;;;;;;::::;;;;;;;:::::::::::::::::;;:;;;;;;;;;::::::::::;;;;;;;;;;;;;;;;;;;;''''''''''''''''''''''''''''''''''''''''''';;;;;;;;;;;;;;;'''';;;'''''''''''''''''''';;;;;;;;;;;;;:::::::::::::::::::
+																																								'::;;;;;;;;;;:::;;;;;;;;:::::::::::::::::;;:;;;;;;;;;::::::::::::;;;;;;;;;;;;;;;;;;;;;;'''''''''''''''''''''''''''''''''''''';;;;;;;;;;;;;;;;;;;;;;;;;;''''''''';;;;;;;;;;;;;;;;;;;:::::::::::::::::::::
+																																								'::;;;;;;;;;;;::;;;;;::;:::::::::::::::::;;;;;;;;;;;;:::::::::::::::::;;;;;;;;;;;;;;;;;;;;;;;;''''''''''''''''''''''''';;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;::::::::::::::::::::::::::::
+																																								':::;;;;;;;;::::::;;;;;;::::::;;::::::::;;:::;;;;;;;;;;::::::::::::::::::;:::;;;;;;;;;;;;;;;;;;;;;;;''''''''''''''';;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;::::::::::::::::::::::::::::::::::
+																																								':::;;:::::::::::;;;;;;;:::::::::::::::;;;:::;;;;;;;;;;::::::::::::::::::::::::::;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::::::::::::::::::::::::::::::::::::
+																																								':::;;::::;::::::;;;;;;;:::::::::::::::;;;:::;;;;;;;;;;::::::::::::::::::::::::::::::::;;:;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;::::::;;;;;;;;;;;;;;:::::::::::::::::::::::::::::::::::::::::::
+																																								':::::::::;::::::::::::;::::::::::::::::::;;;;;;;;;;;;;::::;:::::::::::::::::::::::::::::::;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+																																								'::::::::;;::::::::::::;::::::::::::::::::;;;;;;;;;;;;;::::;:::::::::::::::::::::::::::::::::::::::;;;;;::;;::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+																																								':::::::;::::::::::::::::::::::::::::::::::::;:::;:;;;;;;:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+																																								'::::::::::::::::::::::::::::::::::::::::::::;:::;;;;;;;;:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+																																														 Note this site was made solely so i dont have to expose myself to tumblr and for those juicy comp marks.
+																																								'::::::::;;:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+		</pre>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script>
+    $(function(){
+        // Click the link starting with #
+        $('a[href^="#"]').click(function(){
+
+            // Scroll speed (ms)
+            var speed = 500;
+
+            // Get href
+            var href = $(this).attr("href");
+
+            // Change backcolor
+            $(".link").css('background-color', '#6F2232');
+
+            if (href != "#contents") {
+                $(this).parent("li").css('background-color', '#390F10');
+            }
+
+            // Set target
+            var target = $(href == "#" || href == "" ? "html" : href);
+
+            // Get the position of target
+            var position = target.offset().top;
+
+            // Start animation
+            $("body,html").animate({scrollTop:position}, speed, 'swing');
+
+            return false;
+        });
+    });
+    </script>
+  </body>
+</html>

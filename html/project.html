@@ -1,0 +1,1352 @@
+<!--SOME CODE USED IN THIS FILE IS FROM 'CODINGWITHSARA'
+http://codingwithsara.com/how-to-create-a-simple-website-with-html-css-and-jquery-typeb-fixed-header-footer/#Sample_Code -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-142492871-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-142492871-1');
+</script>
+
+	<meta charset="utf-8">
+	<title>Sarah - Comp6441 Blog</title>
+  <!-- helps to scale for phones and tables -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../style.css">
+  <link href="https://fonts.googleapis.com/css?family=Staatliches&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<!-- favicon below -->
+<link href="data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAA
+AAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAUSS9AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABEREQAAAAABEREREAAAAA
+ERERERAAAAAQAAABEAAAAAAAAAEQAAAAAAAAARAAAAAAEREREAAAABEREREAAAAAEQAAAAAAAAARAAA
+AAAAAABEAAAAAAAAAEQAAARAAAAABERERAAAAAAERERAAAAAAAAAAAAAADgPwAAwB8AAMAPAADABwAA
+wAcAAO/HAAD4BwAA4AcAAMAPAADAHwAAw/8AAMOPAADABwAA4A8AAOAfAADwPwAA" rel="icon"
+ type="image/x-icon" />
+
+</head>
+		<body>
+    <div class="header">
+		  <h1 style="font-size: 50px;"><a href="../index.html" style="text-decoration: none; color:#F3E0DC">Something Awesome Project</a></h1>
+			<h1 style="font-size: 8px;"> sarah_alamedDine</h1>
+      <!-- <p1>Put links to different site pages here</p1> -->
+    </div>
+
+			<!-- ================= EDIT THE SIDEBAR HERE!!!!! =================== -->
+  	<div class="container">
+  		<div class="sidebar">
+				<h2 class="sitename" style="font-size: 20px;">About this Site</h2>
+				<p style="text-align: center;font-size: 13px;">Currently this site is just my Comp6441 blogs.</p>
+				<p style="text-align: center;font-size: 13px;">In the future it might hold my resume and/or projects,
+					unless i go broke and cant pay my $6 yearly host, idk.</p>
+					<!-- &nbsp; Creates blank space  -->
+					&nbsp;
+  			<h2 class="sitename" style="font-size: 20px;">Categories</h2>
+  			<ul>
+				<li class="link"><a href="../index.html">&diams; HOME</a></li>
+                <li class="link"><a href="/html/jobApp.html">&diams; Job Application</a></li>
+                <li class="link"><a href="../html/lecture.html">&diams; Lectures</a></li>
+                <li class="link"><a href="../html/lab.html">&diams; Labs</a></li>
+                <li class="link"><a href="../html/misc.html">&diams; Linux/misc.</a></li>
+                <li class="link"><a href="#comment">&diams; Comments</a></li>
+  			</ul>
+				<pre style="font: 6px/3px monospace;color: #F3E0DC;">
+      					<!-- "You know we had to do it to them" was generated using https://picascii.com/ -->
+
+
+
+
+
+
+
+
+
+
+.   .:.
+:cc: coc.
+.coc:.ccc:
+.ccc:.ccc:
+.:ccc:cc::.
+...:cc:::c::..
+.::::::::::::...
+::ccc.::::::::::.:.
+::cccc:oooooc:::::...
+.::ccccooooooooocc::::..
+::cccooCoooooooooc::::..
+::cccooooocco:c:coco::::..
+:::coooo:::cc:::::cc:::::.
+::ccooccOCoccccCOCccc:.::.
+:::cooo88OCocc88OOCco:..:.
+:::coo88:.coco@O..cccc::.:
+:::cCo8O. .ocO8o. :c:o:...
+:.:cooOO:.coco8C:.cc:o:...
+...coooCCCoc:cCCCoccco:...
+..coCoooocccocoocccoc:..
+..ooCoo::cooocc::oooc:..
+:oCCCCCoCCCCoocooooc::
+:ooCCCCCCCCCCooccooocccc
+coooCCCCCCCCCCoocccoooooc:
+oooooooCCCCCCCCCoccoocoooocc.
+oCCCCCCCCCCCCCCCCooccoCCCCCooc.
+.CCcoCCCCCCCCCCCCoooccooooc::cc.
+.oooooccoCCCCCCCCCocc.::.:coooc.
+.:cooooooocoCCCCCoc..:coooooc:.
+:ccoccccooooc:....cccccccc::.
+:::ccc::::::::.....::cc:::.
+:::::c:::::::::::::::..
+:c:c:c::::::::::..
+:oococcc:::c:::.
+.oooooooooocc:.
+oooooooooocc:.
+.oCCCooooooc:
+.ooCCCoooocc:
+ooCCCoooooc:
+ooCCCoooocc:
+ooCCCoooocc:
+ooCCCoooocc:.
+:ooCCCoooocc:.
+:oCCCCoooocc:.
+.oCCCCoooooc:.
+.C88CO8CCoooo::.
+.8@O88@O8C8@oCooo.
+O8COO@@CO8OOooOccc
+OC@CO@@@8OOCCCoOooOC
+COO@@@CCOCooOOOcOc:Oo:
+.O8CCCCoCoooC@CC::cc:oc.
+:ooooooCCCCoo88CO:ococcOCc
+:oooooCooooCoo8OOC:cococ:oC:
+:ooooooCoooooCC888C:cccc:ccC::.
+oCoooooooCoooooooO8C:cccco:cOc::
+.ooooCoooooooooooCCOcoccccccc::c::
+:coooooCCooCCoCCocoC:occo:oc:cocc.
+co:oCCoooooooooCooocoo:cccccc:c::::
+.oooo:oCCooCCooCCCooocoo:ccoccc:co:c.
+.oooooc:cooCoooooooooccoc:oo::.:oococ:.
+.oooCoc:ocooooooCCooCcocccoco:..:ooococc.
+.ooCooco:ooooooocococ::::c:c::::..cooooco:.
+.oCCCooc:oooooooooooooooooco:c:::..:ooooooo:.
+.oCCCooo::oooooooooooooooocoocc::::..oooooooo:.
+.oCCCooc::oooooooooCoooooooooccc::::...ooooooooc
+.oCCCoooc::ooooooooCoCoooooocooco:::::..:oooooooo:
+.oCCCoooc:.oooooooooCoCoooooooooocc:::::..oooooooocc
+.ooCCoooc:.coooooooooCoCoooooooococc::::::..cooCCoooo:
+oooooooc:.:ooooooooooCoCoooooooooococ::::::. cooCCCooc:
+ooooccoc:. ooooooooooCCCCooooooooooocc::::::...ooCCCCCo::
+oooocc:::. :oooooooooCoCCCoCooooooococcc::::::: .ooCCCCoc:.
+:ooccc:::.  oooooooooooCCCCCoCooooooooocc::::::.  :ooCCCoo::
+:oooo::::.  :ooooooooooCoCCCCCCooooooooco:c::::::.  ooCCCCoc:
+:ooocc:::.   ooooooooooooCCCCCCCooooooooococc::::::. .ooCCCoo::
+:ooocc:::.   :oooooooooCoCCCCCCCooooooooooccccc:::::: .oooCCCoc:.
+:ooooc:::..  :ooooooooooCCCCCCCCCCooooooooooocccc:::::: oooCCCooc:
+:ooooco:::.   oooooooooCoCoCCCCCCCooooooooooococccc:::::..oooCCCoo:
+:ooooccoc:..  :oooooooooCoCCCCCCCCCoooooooooooococccc:::::.:oooCCCoc:
+oooo::cooc.  :ooooooooCCCCCCCCCCCCCoooooooooooococo:cc::::::oooCCCoo:.
+.oooo:::ooo:  oooooooooCCCCCCCCCCCCCooooooooooooocococ:c:::..oooCCCCoc:
+.oooo:.:oooc.:oooooooooCoCCCCCCCCCCCooooooooooooooco:cc:::::.:oooCCCooc.
+:ooooc.:oooo.ooooooooooCCCCCCCCCCCCCoooooooooooocoococcc::::..oooCCCooo:
+ocoooo::oooo.ooooooooCooCCCCCCCCCCCCooooooooooooocooccocc:::..ooooCCCooc.
+:ooooooc.oooc.ooooooooCooooCCCCCCCCCCoooooooooooooocococccc:::.:ooCCCCCoo:
+.ooooooo:ooo::oooooooooooooCCCCCCCCCoCoooooooooooooococc::::::. ooCCCCCooc.
+.oooooCoo:oc::oooooooooooooCCCCCCCCCooooooooooooocoocccocc::::..oCooCCCCoc.
+.ooo:oCooo::.:ooooCCCoooooooCCCCCCCCooooooooooooooococoocc::::.:oooooCCCoc.
+.oooo:oCoo..:cooCoCoCooooooCCCCCCCCCooooooooooooocococcooc::::.:ooo:oooCo:.
+.ooooo:oo: .:ooooCoooCooooooCCCCoCCooooooooooooooocococ:c::cc:.oCoo.coooo: .
+:oCooc.:  .cooooCoooCCoCCCooCCCooooooooooooooooococcccc::c:::.oooc.:oCoc.::
+o:ooCo:   .coooooCCooCCoCooCCCooooooooooooooocooooccoccccc:::.oCoo..ooo:.c.
+cocooo:   .cooooCCCoCCCooooCCCoooooooooooooooocooc:coccccc:::.oooo..ooo::c.
+.coooo:.  .coooooCooooCCoooooooooooooooocoooooccc:ccc::occ.::.:Coo:oooc.cc.
+cc::.:. .:ooooooooooooooooooooooooooooococoooc:cccc:ccc:.:...oocoooo:.o:.
+cooo:. .oooooooooooCooooooooooocccooocooooooc:cooc:::::::.. :::oooc.oo:
+:c:.   :ccooocooooooocoooooocoooc:ccccoococ:ccoc:::::::: .   oooc::oc:
+::cocc:ooo:::oooocccccc::c:cccc::::cc:c:::c.:cc.
+.cc:cc:ooo:::ocococccccc:coccccccc:cc::::cc....
+:ccoc:coc.:oco:cccococcooc:::::::::cc:.ccc....
+.:cc:::.::coc:::::cc::..:::::c:::ccc......:.:
+c:..:::::.::::::......:...:::::...:::.  ::.
+...:c:..:.....::   . .:.........:::.
+..  .....  ..       ... ...    .
+cc:   .                .     .::.
+.cooocc:                  :oooccc.
+.oooocc:.                 coooccc:
+coocc:.                  :oooccc:
+oCCCooc.                 .oCCoocc.
+:oCCCooc.                 cCCCCooc:
+:CCCoooc.                 :CCCoooc.
+:oCCoooc.                 :CCCoooc.
+.oCCoocc.                  ooCcccc.
+:CCCCooc.                  CCCCooc:
+:CCCoooc.                  CCCCooc:
+:CCCoooc                   CCCoooc:
+:oCCooc:                   ooCoooc:
+:CCCCooc                   oCCCooc:
+:CCCoooc                   CCCCoocc
+:CCCooc:                   oCCCooc:
+:CCCooc.                   :oCCooc:
+:CCCoooc                   :CCCooc:
+:CCCoooc                   CCCCooc:
+cCCCoooc                   CCCCooc:
+.CCoooc:                   oCCoooc.
+:oCCoocc                   oCCCocc.
+cCCCCooc                   CCCCCoc.
+:CCCCooc                   CCCCooc.
+oCCoocc                   CCCCooc.
+oCCoocc                   oCoooo:.
+.CCCCooc                   CCCCooc.
+:oCCoooc                  :CCCCooc.
+ooooocc.                 :CCoooc:
+oCCoocc.                 .oCoooc:
+oCCCooc.                 :CCCCooc.
+ooCoocc                  coCCoocc.
+..ccccococooc:                 oCoooooccc:..
+.ccococooooccccccooooo              .cooCCoooc:oooococcc...
+cCoCoooooooooccccccooCooCoo.         ooCCoCCCCCooc:cCCoCoCCooooocc
+cCCCoCocoCCCooccc:::oooCCCCoc.      .CCCCCCCCCCCCCoccCoCCCCCCCCCCoco.
+CCCCoooooCCCCoc:.:.:oooCCCCooc      oCCCCCCCCCCCCCCc:CCCCCCCCCCCCococ
+CCCCoooooCCCoo:.....oooCCCCoo.      CCCCCCCoCCCCCCoc:oCCCCCCCCCCCo:oc
+CCCoooocoCCooc.  . .coooCCooc.      oCCCCCooooCCCCoc.oooCCCCCCCCoc.c.
+:ooocccc:oooc.      .ccooooc.       .ooooocccooCCoc .coooooooCooc:.
+cc...   ::.         .cccc.          cccc:..ccocc   :cccccccccc.
+chickeen raaaaannnnnn
+
+			</pre>
+  		</div>
+			</div>
+
+			<!-- ================= EDIT THE BLOG HERE!!!!! =================== -->
+
+			<div class="main">
+			<div class="content">
+			<h1 style="color:#F3E0DC;font-size: 20px;">Comp6441 - Security engineering and c*ber security   </h1>
+			<div id="contents"> <!-- This is used to go back to top dont delete - i should fix this tho --> </div>
+			<div class="bordere">
+
+					<!-- =================================================================
+								Something Awesome Project
+					================================================================= -->
+<h2 class="Header" id="awesomeproject">RFID TECHNOLOGY</h2>
+<pre>
+    <h2 class="sub"><a href="#proposal">LINK TO PROJECT PROPOSAL</a></h2>
+
+    <h2 class="sub"><a href="#project">LINK TO START OF PROJECT BLOGS</a></h2>
+
+
+
+
+</pre>
+
+<h5 class="date" id="end">27/07/19</h5>
+<h2 class="sub">Final though and Analysis</h2>
+<pre>
+By the end of the project I was not able to clone a card. However, this project
+was still quite useful in allowing me to understand on a deeper level how Rfid technology
+works from a hardware and security perspective. Its interesting to see how much we rely on
+this technology, yet how easy it is for some people to breakdown the security we greatly trust.
+
+An important lessons I learnt from this project is to always do as much
+research as possible before spending any money. I say this because I quickly started buying
+cards without realising they were block 0 non-writable. So save some money and time and
+<b>DO SOME RESEARCH.</b>
+
+I'm excited to begin, once I have time, another security related project.
+</pre>
+
+<hr>
+
+<h5 class="date" id="8" >25/07/19</h5>
+<h2 class="sub">LAB DEMONSTRATION</h2>
+<pre>
+
+I presented and I think I went alright? maybe.
+
+There were so many interesting projects in my Thursday lab, and in yesterday's Wednesday lab.
+One really creepy/cool project was this guy who was basically able to snoop and
+control features on a phone by socially engineering a person to download his app.
+Once the app was downloaded he was able to have a large amount of access to the
+phone, in this case an android (I think its harder to do on an iPhone). This meant
+he could see all the phones call logs, messages, and all apps downloaded on the phone. As well as
+delete any apps, record conversations using their mic, open up their camera and many more invasive things.
+</pre>
+<pre id="ultralight">
+I also had a chat with another person doing RFID for their project.
+They experimented on a different card type, MIFARE Ultralight, whereas I used a
+MIFARE classic 1K and 4K.
+
+I did a dumpInfo of their card and this was the output:
+
+        <b><i>
+        Firmware Version: 0x92 = v2.0
+        Scan PICC to see UID, SAK, type, and data blocks...
+        Card UID: 04 AD 5B 32 CB 52 80
+        Card SAK: 00
+        PICC type: MIFARE Ultralight or Ultralight C
+        Page  0  1  2  3
+          0   04 AD 5B 7A
+          1   32 CB 52 80
+          2   2B 48 00 00
+          3   E1 10 6D 00
+          4   FE 01 01 09
+          5   46 49 53 48
+          6   32 30 4F 46
+          7   46 00 00 00
+          8   65 61 74 6F
+          9   72 2E 65 78
+         10   61 6D 70 6C
+         11   65 2E 63 6F
+         12   6D 2F 3F 64
+         13   61 74 65 3D
+         14   32 30 31 39
+         15   30 37
+        </i></b>
+
+<u><b>Difference between CLASSIC and ULTRALIGHT?</b></u>
+
+
+<i>"MIFARE ULTRALIGHT are Low-cost ICs that employ the same protocol as MIFARE Classic, but without
+the security part and slightly different commands. The only security is that you can irreversibly lock contents
+so that they cannot be changed. Anyone can read them at any time.
+
+Mifare Classic uses a simple (cabled logic rather than a microprocessor)
+proprietary security algorithm to protect data. This algorithm has been cracked but it
+requires sophisticated methods and as the chip security is rarely the only security barrier
+in a complete system, Mifare Classic continues to be used in many existing transport systems,
+but I assume not many new ones."</i>
+
+https://www.quora.com/Are-MIFARE-cards-secure-and-why
+http://www.oprfid.com/About-Mifare.html
+ </pre>
+
+<hr>
+
+<h5 class="date">20/07/19</h5>
+<h2 class="sub">Key A and Key B</h2>
+<pre>
+I keep seeing these words around, yet I'm still not confident I know what they mean,
+so lets research.
+
+Key A and Key B have to do with the sector trailer. To recap the sector trailer
+is the last block of each sector and contains the keys and the access
+condition bits. The access condition bits can be set e.g. to “read = free”,
+“write = Key A” or “read = Key B” and “write = Key A” etc.
+The level of protection depends on your use case.
+
+Please note that you have to authenticate with the correct key for each sector before you can read or write to it.
+Let us assume you use sectors 1 and 2 for your application. A typical sequence look like:
+
+<table>
+<tr><td>
+    Authenticate( 4, KEY_A )   // Authenticate to sector 1/block 4 with key A
+
+    Read( 4 )        // Read from block 4
+
+    Write( 4, “0011...” )   // Write to block 4
+
+    Authenticate( 8, KEY_B )  // Authenticate to sector 2/block 8 with key B
+
+    Read( 8 ) // Read from block 8
+
+    ...
+  </td>
+</tr>
+</table>
+
+For a blank card both keys are “FFFFFFFFFFFF”. Before you issue the card to
+the end-customer you change the default keys to a new byte sequence. Please note,
+if you write to the sector trailer, you also set the access condition bits. Any
+later access to the sector must comply the new keys and condition bits.
+
+https://www.mifare.net/support/forum/topic/keya-and-keyb-and-how-to-protect-the-contacless-card-from-cloning/
+</pre>
+
+<hr>
+
+<h5 class="date" id="7">15/07/19</h5>
+<h2 class="sub">Writing onto MIFARE Cards</h2>
+<pre>
+
+<!-- I'll be using the dumpInfo file and blockChange file I got from last-minut engg
+ADD THE MODIFIED VERSION OF THE FILE HERE (pun ONE) ADN TALK ABOUT WHAT YOU did
+TO CHANGE IT
+https://lastminuteengineers.com/how-rfid-works-rc522-arduino-tutorial/ -->
+
+<h2 class="sub">MIFARE 1K CARD</h2>
+<img src="../extra/mifare1k.jpg" alt="blank 1K card" style="width:250px;height:150px;">
+
+<u><b>Test 0:</b> Writing <b>Sector 0 - block 2</b> on MIFARE 1K Card</u>
+        <i>
+        Scan a MIFARE Classic card
+        card selected
+        2 is a data block:
+        block was written
+        block was read
+        read block: MAINFRAME-HACKED
+        </i>
+
+        <b>Result(dumpInfo):</b>
+        <i>
+        1      7   00 00 00 00  00 00 FF 07  80 69 FF FF  FF FF FF FF  [ 0 0 1 ]
+               6   00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00  [ 0 0 0 ]
+               5   00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00  [ 0 0 0 ]
+               4   00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00  [ 0 0 0 ]
+        0      3   00 00 00 00  00 00 FF 07  80 69 FF FF  FF FF FF FF  [ 0 0 1 ]
+        <span style="background-color: #FFFF00;color:black">       2   4D 41 49 4E  46 52 41 4D  45 2D 48 41  43 4B 45 44  [ 0 0 0 ]</span>
+               1   00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00  [ 0 0 0 ]
+               0   FE CA 5B DE  B1 08 04 00  02 30 7B EB  2C 34 5A 1D  [ 0 0 0 ]
+        </i>
+<b>Convert Hex to ASCII:</b>
+        <i>
+        4D 41 49 4E  46 52 41 4D  45 2D 48 41  43 4B 45 44
+        MAINFRAME-HACKED
+        </i>
+
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+<u><b>Test 1:</b> Writing <b>Sector 0 - block 0</b> on MIFARE 1K Card</u>
+        <i>
+        Scan a MIFARE Classic card
+        card selected
+        0 is a data block:
+        MIFARE_Write() failed: A MIFARE PICC responded with NAK.
+        PCD_Authenticate() failed (read): Timeout in communication.
+        read block:
+        </i>
+<b>Result(dumpInfo):</b>
+        <i>
+        Cant write onto block 0
+        </i>
+<b>Convert Hex to ASCII:</b>
+
+        N/A
+
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+<u><b>Test 2:</b> Writing <b>Sector 0 - block 1</b> on MIFARE 1K Card</u>
+        <i>
+        Scan a MIFARE Classic card
+        card selected
+        1 is a data block:
+        block was written
+        block was read
+        read block: MAINFRAME-HACKED
+        </i>
+<b>Result(dumpInfo):</b>
+        <i>
+        1      7   00 00 00 00  00 00 FF 07  80 69 FF FF  FF FF FF FF  [ 0 0 1 ]
+               6   00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00  [ 0 0 0 ]
+               5   00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00  [ 0 0 0 ]
+               4   00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00  [ 0 0 0 ]
+        0      3   00 00 00 00  00 00 FF 07  80 69 FF FF  FF FF FF FF  [ 0 0 1 ]
+               2   4D 41 49 4E  46 52 41 4D  45 2D 48 41  43 4B 45 44  [ 0 0 0 ]
+        <span style="background-color: #FFFF00;color:black">       1   4D 41 49 4E  46 52 41 4D  45 2D 48 41  43 4B 45 44  [ 0 0 0 ]</span>
+               1   4D 41 49 4E  46 52 41 4D  45 2D 48 41  43 4B 45 44  [ 0 0 0 ]
+               0   FE CA 5B DE  B1 08 04 00  02 30 7B EB  2C 34 5A 1D  [ 0 0 0 ]
+        </i>
+
+<b>Convert Hex to ASCII:</b>
+        <i>
+        4D 41 49 4E  46 52 41 4D  45 2D 48 41  43 4B 45 44
+        MAINFRAME-HACKED
+        </i>
+
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+<u><b>Test 3:</b> Writing <b>Sector 0 - block 3</b> on MIFARE 1K Card</u>
+
+        <img src="../extra/block1.png" alt="Arduno equipment" style="width:300px;height:150px;">
+
+<b>Result(dumpInfo):</b>
+        <i>
+        1      7   00 00 00 00  00 00 FF 07  80 69 FF FF  FF FF FF FF  [ 0 0 1 ]
+               6   00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00  [ 0 0 0 ]
+               5   00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00  [ 0 0 0 ]
+               4   00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00  [ 0 0 0 ]
+        <span style="background-color: #FFFF00;color:black">0      3   00 00 00 00  00 00 FF 07  80 69 FF FF  FF FF FF FF  [ 0 0 1 ]</span>
+               2   4D 41 49 4E  46 52 41 4D  45 2D 48 41  43 4B 45 44  [ 0 0 0 ]
+               1   4D 41 49 4E  46 52 41 4D  45 2D 48 41  43 4B 45 44  [ 0 0 0 ]
+               0   FE CA 5B DE  B1 08 04 00  02 30 7B EB  2C 34 5A 1D  [ 0 0 0 ]
+
+        </i>
+It doesn't let me write onto block 3 as it is a trailer block.
+
+<!-- *************** TODO THIS *********=-=-=-=- -->
+<!-- *************** TODO THIS *********=-=-=-=- -->
+<!-- *************** TODO THIS *********=-=-=-=- -->
+<!-- *************** TODO THIS *********=-=-=-=- -->
+https://lastminuteengineers.com/how-rfid-works-rc522-arduino-tutorial/
+THIS SITE ANSWERS THESE QUESTIONS!!!!
+
+    <i>
+    <b>What is a sector trailer block?</b>
+    The Block 3 of each sector.
+
+    <b>What is it in charge of ?</b>
+
+    It contains information called Access Bits to grant read and write access to remaining
+    blocks in a sector. That means only the bottom 3 blocks (block 0, 1 & 2) of each sector are actually available for
+    data storage, meaning we have 48 bytes per 64 byte sector available for our own use.
+
+    <b>What is the code that is triggered when you write onto a trailer block?</b>
+    </i>
+
+<b>Convert Hex to ASCII:</b>
+
+        N/A
+
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+<u><b>Test4:</b> Writing <b>Sector 1 block 4</b> on MIFARE 1K Card</u>
+
+        <i>
+        Scan a MIFARE Classic card
+        card selected
+        4 is a data block:
+        block was written
+        block was read
+        read block: MAINFRAME-HACKED
+        </i>
+
+<b>Result(dumpInfo):</b>
+        <i>
+        1      7   00 00 00 00  00 00 FF 07  80 69 FF FF  FF FF FF FF  [ 0 0 1 ]
+               6   00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00  [ 0 0 0 ]
+               5   00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00  [ 0 0 0 ]
+        <span style="background-color: #FFFF00;color:black">       4   4D 41 49 4E  46 52 41 4D  45 2D 48 41  43 4B 45 44  [ 0 0 0 ]</span>
+        0      3   00 00 00 00  00 00 FF 07  80 69 FF FF  FF FF FF FF  [ 0 0 1 ]
+               2   4D 41 49 4E  46 52 41 4D  45 2D 48 41  43 4B 45 44  [ 0 0 0 ]
+               1   4D 41 49 4E  46 52 41 4D  45 2D 48 41  43 4B 45 44  [ 0 0 0 ]
+               0   FE CA 5B DE  B1 08 04 00  02 30 7B EB  2C 34 5A 1D  [ 0 0 0 ]
+        </i>
+
+
+<b>Convert Hex to ASCII:</b>
+        <i>
+        4D 41 49 4E  46 52 41 4D  45 2D 48 41  43 4B 45 44
+        MAINFRAME-HACKED
+        </i>
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+<h2 class="sub">MIFARE 4K CARD - My UNSW card</h2>
+        <img src="../extra/unswID.png" alt="Arduno equipment" style="width:400;height:200px;">
+
+<u><b>Test 1:</b> Writing <b>block 65</b> on MIFARE 1K Card</u>
+        Scan a MIFARE Classic card
+        card selected
+        65 is a data block:
+        block was written
+        block was read
+        read block: MAINFRAME-HACKED
+
+<b>Result(dumpInfo):</b>
+
+        <i>
+        16     67   00 00 00 00  00 00 FF 07  80 69 FF FF  FF FF FF FF  [ 0 0 1 ]
+               66   00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00  [ 0 0 0 ]
+        <span style="background-color: #FFFF00;color:black">       65   4D 41 49 4E  46 52 41 4D  45 2D 48 41  43 4B 45 44  [ 0 0 0 ]</span>
+               64   00 00 00 00  00 00 00 00  00 00 00 00  00 00 00 00  [ 0 0 0 ]
+        15     63  PCD_Authenticate() failed: Error in communication.
+        14     59  PCD_Authenticate() failed: Timeout in communication.
+        13     55  PCD_Authenticate() failed: Timeout in communication.
+        12     51  PCD_Authenticate() failed: Timeout in communication.
+        11     47  PCD_Authenticate() failed: Timeout in communication.
+        10     43  PCD_Authenticate() failed: Timeout in communication.
+         9     39  PCD_Authenticate() failed: Timeout in communication.
+         8     35  PCD_Authenticate() failed: Timeout in communication.
+         7     31  PCD_Authenticate() failed: Timeout in communication.
+         6     27  PCD_Authenticate() failed: Timeout in communication.
+         5     23  PCD_Authenticate() failed: Timeout in communication.
+         4     19  PCD_Authenticate() failed: Timeout in communication.
+         3     15  PCD_Authenticate() failed: Timeout in communication.
+         2     11  PCD_Authenticate() failed: Timeout in communication.
+         1      7  PCD_Authenticate() failed: Timeout in communication.
+         0      3  PCD_Authenticate() failed: Timeout in communication.
+        </i>
+
+<b>Convert Hex to ASCII:</b>
+<i>
+        4D 41 49 4E  46 52 41 4D  45 2D 48 41  43 4B 45 44
+        MAINFRAME-HACKED
+</i>
+I was successfully able to write to a block on my UNSW ID, so my ID card now
+has the words "MAINFRAME-HACKED" on it, pretty cool.
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+<!-- +++++++++++++++++TODO+++++++++++++++++++++++++++++
+-   WRITR DOWN THE CODE USED AND WHOW YOU CAHANGE THE BLOCK AND SECTOR
+write down the Methodology if we had a proximity
+TALK ABOUT THE ECRYTION OF 1K VS 4K look at site below
+https://www.nxp.com/docs/en/data-sheet/MF1S70YYX_V1.pdf
+https://www.usenix.org/legacy/events/sec08/tech/full_papers/nohl/nohl.pdf - page 186
+https://www.blackhat.com/docs/sp-14/materials/arsenal/sp-14-Almeida-Hacking-MIFARE-Classic-Cards-Slides.pdf - ADD HISTORY FROM THIS SLIDE
+https://learn.adafruit.com/adafruit-pn532-rfid-nfc/mifare?source=post_page---------------------------
+
+- DO AN ANAYLSIS OF 1K VS 4K
+- FOR THIS TALK ABOUT THE SECURITY AND HOW CERTAIN BLOCKS ARE ENCRYPTEDs
+ -->
+
+</pre>
+
+<hr>
+
+<h5 class="date">18/07/19</h5>
+<h2 class="sub">Comparing different Mifare Cards</h2>
+<pre>
+
+    <!-- TALK ABOUT THE DIFFERENCE BETWEEN 1K AND 4K  -->
+(1) Write data to RFID card and scan the card again to see if we can see the data written
+
+(2) Scan the UNSW card so you can use this to compare- note what the UNSW card does (or doesn't) display
+
+<a href="/html/unswRFID.html">UNSW CARD DUMPINFO</a>
+
+From the info dump of my UNSW id card we can see that
+**** DO A COMPARISION OF UNSW VS BLANK CARD
+
+WRITE A SECTION ON THE BITS AND BYTE PRENETH
+INCLUDE ASCI
+
+(3) Now try to encrypt the card so you can't see the data written
+</pre>
+
+<hr>
+
+<h5 class="date" id="6" >18/07/19</h5>
+<h2 class="sub">Cloning Complications</h2>
+<pre>
+I will not be able to clone a card :(
+
+        <img src="../extra/cards.jpg" alt="My useless card/fob collection" style="width:500px;height:287px;">
+
+I have bought a bunch of new blank cards and fobs (shown above) since the last cards I tested didn't works.
+After testing each and every one of these new cards using the "ChangeUID" and "RFID-Cloner", NONE have been
+successful. This means I won't be able to copy another cards UID and information
+onto another card as the UID cannot be overridden. I think the reason these cards are non-writable
+is that when they are created the card the UID is written directly into hardware rather than the software.
+
+After looking online on why they are non-writable, the answer that kept popping up was that you need some
+Chinese "Magic" UID changeable card. These apparently are the only ones that can write
+using the Arduino reader and files.
+
+I was also talking to a tutor, Annie, about this problem and she mentioned that the way her
+friends got it working was using a ProxyMark 3.
+I don't have the money (ProxyMark 3 cost about $300) or time to order Chinese "Magic" UID changeable card
+(shipping from china will take weeks).
+
+I'll MUST still continue the project!!!
+
+As a result, I will now have a greater focus on writing data on cards as opposed to
+cloning and will also look more into the theory side of RFID security, such as encryption.
+
+rip all cloning hope.
+</pre>
+
+<hr>
+
+<h5 class="date" id="5" >6/07/19</h5>
+<h2 class="sub">Overwriting block 0?</h2>
+<pre>
+
+To be able to clone a card, you need 2 cards. The first is the card you want to clone
+and the second is the card that will become the duplicate- holding the all the first cards
+information.
+
+Before I begin cloning a card, I want to test is I can change the UID (Unique ID)
+of a card. For this I will use the "ChangeUID" file from the RFID Library. The file
+changes the UID by overwriting block 0 (Manufactures block).
+
+Serial Monitor OUTPUT:
+    <i>
+    Warning: this example overwrites the UID of your UID changeable card, use with care!
+    Card UID: D0 9D 92 25
+    <span style="background-color: #FFFF00;color:black">    MIFARE_Read() failed: The CRC_A does not match.</span>
+    Are you sure your KEY A for sector 0 is 0xFFFFFFFFFFFF?
+    </i>
+
+It didn't let me overwrite the UID, why??
+
+
+<b>SOLUTION 1:</b>
+
+I found this <a href="https://stackoverflow.com/questions/41326384/re-writing-uid-and-block-0-on-chinese-supposed-to-be-writable-mifare-1k-card-i">stackoverflow solution</a> online and will try.
+
+<i>"I was trying the same but in my case I'm using Arduino with an RFID-RC522 writer/reader and the same library.
+
+In my case I solved it modifying the UnbrickUid Example. I opened the library folder in my case:
+"\Documents\Arduino\libraries\rfid-master\src\MFRC522Hack.cpp" and changed the buffer (line 190).
+The default code is:
+<b>byte block0_buffer[] = {0x01, 0x02, 0x03, 0x04, 0x04, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00};</b>
+Here you can change this hex numbers to the ones you need. Keep in mind that the 4 first bytes are
+the UID(01,02,03,04) and the following one is the BCC(04). So if you change block 0 be careful to change the BCC accordingly.
+After having modified this, run the "FixBrickedUID" example and it will change the entire block 0."
+</i>
+
+I'm going to try this persons solution to see if I can overwrite Block 0.
+
+To test this I will be using this card:
+
+    <i>Card UID: FE CA 5B DE
+    Card SAK: 08
+    PICC type: MIFARE 1K</i>
+
+<!-- ADD PICTURE HERE OF TRYING OT OVEERWRITR THE UID -->
+Okay I tried the above on a card and it didn't do anything. I have a couple of other cards and fobs
+with me which I then also tested them all and none still worked. I need to order some new writable ones from
+eBay.
+
+<!-- There are 2 types of UID writable cards:
+
+Block 0 writable cards: you can write block 0 at any moment
+Backdoored cards
+If writing block 0 does not work, you probably have a backdoored card: To enable the backdoor, you need to send the following sequence to the card: (everything in hexadecimal)
+
+RC522 > Card: 50 00 57 cd (HLTA + CRC)
+RC522 > Card: 40 (7 bits only)
+Card > RC522: A (4 bits only)
+RC522 > Card: 43
+Card > RC522: A (4 bits only)
+Then you can write to block 0 without authentication. If it still does not work, your card is probably not UID changeable. -->
+
+</pre>
+
+<hr>
+
+<h5 class="date" id="4">5/06/19</h5>
+<h2 class="sub">MIFARE RFID cards and its memory</h2>
+<pre>
+    <!-- ADD MEMORY SRUFF HERE AND MORE DETAILED INFO IN RFID -->
+
+One of the most popular contactless smart cards used are the MIFARE RFID Classic cards.
+I'll be focusing mainly on this type of card.
+The MIFARE card is basically just a memory storage device, where the
+memory is divided into segments and blocks with simple security mechanisms for
+access control. They are ASIC-based and have limited computational power. It comes in 1K or 4K.
+
+The memory for a 1K card is divided in 16 sectors, each of these sectors have 4 blocks each (=1024 bytes).
+The most important block especially for cloning is block 0 (manufactures block).
+This is where the card Id is held and if cloning is successful is what should allow
+a duplicate card to bypass a reader.
+The sector trailer is a block which determines the access bit for a sector.
+
+<img src="../extra/memory.gif" alt="memory gif">
+
+
+Some more note on memory and one on crypto:
+
+        <img src="../extra/punMifare.jpg" alt="note on mifare" style="width:500px;height:600px;">
+
+        <img src="../extra/punBit.jpg" alt="note on bits" style="width:500px;height:600px;">
+
+        <img src="../extra/punCrypto.jpg" alt="crypto" style="width:400px;height:450px;">
+
+
+<a href="../extra/rfidmifare.pdf" target="_blank">This pdf goes into much more detail in MIFARE cards</a>
+https://hackmethod.com/hacking-mifare-rfid/
+</pre>
+
+<hr>
+
+<h5 class="date" id="3">5/06/19</h5>
+<h2 class="sub">More indepth look at RFID</h2>
+<pre>
+<b>RFID stands for RADIO FREQUENCY IDENTIFICATION</b>
+
+A RFID system communication relies on 3 things - the RFID Reader and the RFID Card,
+and the software.
+
+
+<b>RFID Card/fob</b>
+
+There are 3 types of cards/fobs out there:
+
+<b>Passive</b> - No battery therefore no power source.  These require an external electromagnetic
+field to initiate a signal transmission.
+
+<b>Active</b> - On-board battery that can transmit signals once an external RFID reader has been
+successfully identified.
+
+<b>Battery Assisted Passive</b>- These have a small battery on-board that is activated when in
+the presence of an RFID reader but has a significantly higher forward link capability providing greater range.
+
+The type I'll be using in my project the <b>passive</b> cards/fobs.
+The inside of a passive card/fob contains:
+
+Microchip (Integrated circuit): Stores / processes information, modulates / demodulates a RF signal
+Antenna (coil): Receives and transmits the signal
+
+This is shown in the card and fob I dissected below.
+
+        <img src="../extra/fobAnon.png" alt="inside a fob" style="width:500px;height:287px;">
+
+        <img src="../extra/cardinside.gif" alt="inside card">
+
+
+
+<b>RFID READER</b>
+
+The MFRC522 is a highly integrated reader/writer IC for contactless communication at 13.56
+MHz. The MFRC522 reader supports ISO/IEC 14443 A/MIFARE mode.
+The MFRC522’s internal transmitter is able to drive a reader/writer antenna designed to
+communicate with ISO/IEC 14443 A/MIFARE cards and transponders without additional active
+circuitry. The receiver module provides a robust and efficient implementation for
+demodulating and decoding signals from ISO/IEC 14443 A/MIFARE compatible cards and
+transponders. The digital module manages the complete ISO/IEC 14443 A framing and error
+detection (parity and CRC) functionality.
+
+This picture shows a reader I found at my place of study:
+
+        <img src="../extra/uniReader.jpg" alt="uni reader" style="width:500px;height:400px;">
+
+This picture shows the RDID- RC522 reader I bought to help me read and write cards:
+
+        <img src="../extra/ardReader.jpg" alt="arduino reader" style="width:400px;height:400px;">
+
+
+https://www.atlasrfidstore.com/rfid-beginners-guide/
+</pre>
+
+<hr>
+
+<h5 class="date" id="2">26/06/19</h5>
+<h2 class="sub"><strike>Raspberry Pi</strike> Arduino</h2>
+<pre>
+Scratch the last blog, I won't be using a Raspberry Pi anymore.
+After searching online, most tutorials and information for reading and writing
+data on cards utilise an Arduino. So its been quite difficult finding a library
+to help me do this. For this reason I'll be borrowing my friends Arduino and that
+will replace the Pi.
+
+<h2 class="sub" id="arduino">An Intro to Arduino</h2>
+
+Firstly an <a href="https://learn.sparkfun.com/tutorials/what-is-an-arduino/all">Arduino</a> refers to both the microcontroller and software, together they allow you build
+electronic projects. The software it uses is a simplified version of C++, since
+we use C here at uni, it shouldn't be too hard to read and understand the software.
+
+<!-- <b>SOURCES:</b>
+<a href=""></a> -->
+<b>Software Layout:</b>
+
+<table>
+<tr><td>
+  void setup() {
+      // put your setup code here, to run once:
+  }
+
+  void loop() {
+      // put your main code here, to run repeatedly:
+  }
+  </td>
+</tr>
+</table>
+
+<h2 class="sub">Connecting the RFID reader with the Arduino</h2>
+The equipment I'll be using are:
+
+- Arduino Uno
+- Arduino IDE
+- MFRC522 module (reader)
+- Jumper cables
+
+        <img src="../extra/arduinoSet.jpg" alt="Arduno equipment" style="width:500px;height:287px;">
+
+<b>Connect the pins:</b>
+
+        <img src="../extra/aduinoRFID.png" alt="Arduno conection diagram" style="width:500px;height:287px;">
+
+<table>
+<tr>
+<td><b>Reader Pins</b></td>
+<td><b>Arduino Pins</b></td>
+</tr>
+<tr>
+    <td><b>VCC</b></td>
+    <td>3.3v</td>
+</tr>
+<tr>
+    <td><b>RST</b></td>
+    <td>9</td>
+</tr>
+<tr>
+    <td><b>GND</b></td>
+    <td>GND</td>
+</tr>
+<tr>
+    <td><b>MISO</b></td>
+    <td>12</td>
+</tr>
+<tr>
+    <td><b>MOSI</b></td>
+    <td>11</td>
+</tr>
+<tr>
+    <td><b>SCK</b></td>
+    <td>12</td>
+</tr>
+<tr>
+    <td><b>NSS</b></td>
+    <td>10</td>
+</tr>
+</table>
+<a href="https://randomnerdtutorials.com/security-access-using-mfrc522-rfid-reader-with-arduino/">Source: https://randomnerdtutorials.com/security-access-using-mfrc522-rfid-reader-with-arduino/</a>
+
+
+        <img src="../extra/arduinoCon.jpg" alt="Arduno connected in real life" style="width:500px;height:400px;">
+
+        <img src="../extra/arduinoCon2.jpg" alt="Arduno connected in real life" style="width:500px;height:500px;">
+
+<h2 class="sub">Setting up the RFID library</h2>
+
+<b>RFID LIBRARY:</b> <a href="https://github.com/miguelbalboa/rfid">https://github.com/miguelbalboa/rfid</a>
+
+Nearly all projects on RFID's use this library, so I'll be doing the same.
+The library contains many files but I'm mostly interested in these below:
+<i>
+- ChangeUID
+- DumpInfo
+- FixBrickedUIs
+- RFID-Cloner
+- rfid_read_personal_data
+- rfid_write_personal_data
+</i>
+
+<h2 class="sub">Trying it all out</h2>
+
+<b>PROBLEM:</b>
+Every time I compile and try to run a file it gives me the error:
+
+        <img src="../extra/arduinoError1.png" alt="Arduno error" style="width:900px;height:80px;">
+
+SOLUTION: I couldn't find any solution online so I just deleted all the libraries
+saved to my Arduino and redownloaded them. That seemed to do the trick.
+
+Below is a dumpInfo I successfully got working:
+
+        <img src="../extra/dumpinfo.gif" alt="dumpInfo">
+
+The dumpInfo file gives us the UID and card type (what I highlighted in the video)
+and also displays what's stored on different blocks of memory in the card:
+
+The above dumpInfo gave me this:
+
+Card UID: FE CA 5B DE
+Card SAK: 08
+PICC type: MIFARE 1K
+
+
+<!-- **** TALK ABOUT what uid is what sak is and different types of mifare THE DIFFERENT PAPRTS OF MEMORYA ND BLOCK 0 -->
+
+</pre>
+
+<hr>
+
+<h5 class="date">18/06/19</h5>
+<h2 class="sub">Raspberry Setup</h2>
+<pre>
+<!-- TALK ANOUT HOW RASPBERRY IS SET UP and talk about the reader -->
+To start off I downloaded NOOB and Raspbian onto a micro usb card.Then I placed the usb
+into the Pi and connected all the wired components to the Pi and to a monitor, keyboard
+and mouse.
+
+After that it took a while to load, but when it did I had before me a mini computer.
+To connect to SSH, you had to go into settings to allow this type of connection on the Pi.
+After that I used ipconfig to help me connect to PuTTy.
+</pre>
+
+<hr>
+
+<h5 class="date" id="1">18/06/19</h5>
+<h2 class="sub">An Intro to RFID technology</h2>
+<pre>
+
+RFID is a type of wireless communication technology which uses technologically
+advanced components to make Authentication and identification possible.
+
+They are becoming more and more popular as evident in many products being moved from paper to cards eg opal card.
+This popularity is also evident as more than 1 Billion cards have been sold around the world.
+Over the last few years, more and more systems are adopted this technology as
+replacement for barcodes, magnetic stripe cards and paper tickets for a variety of applications
+source: http://www.proxmark.org/documents/mifare_weakness.pdf
+
+        <img src="../extra/rfidEG.jpg" alt="reader/card" style="width:378px;height:404px;">
+
+- Talk about how they are used in security and the security involves in using them
+- Costs, is more reliable, and has shorter reading times, providing higher throughput.
+On the other hand, it represents a potential threat to privacy [2] and it is susceptible
+to relay, replay and skimming attacks that were not possible before
+
+</pre>
+
+<hr>
+
+<h5 class="date">18/06/19</h5>
+<pre>
+<h2 class="sub">Pi is here</h2>
+
+Finally got my Pi from create UNSW, so I can begin the first step in my proposal -
+learning how to use the Pi.
+
+        <img src="../extra/pi.jpg" alt="My Pi" style="width:378px;height:404px;">
+
+Firstly connecting to the Pi, since I don't want the hassle of connecting or carrying around
+a monitor and want the freedom of being able to take the Pi to uni, I'll be running the Pi using SSH.
+I think I've only used PuTTy for ENGG1000.
+
+SSH- (SSH client) is a program for logging into a remote machine and for executing commands on a remote machine.
+
+This does mean I'll only have access to the terminal, but this way I'll be force to
+get use to it.
+
+</pre>
+
+<hr>
+
+<h5 class="date" id="proposal">18/06/19</h5>
+<h2 class="subHeader"><span style="background-color: #FFFF00;color:black"><u><strong>SOMETHING AWESOME PROJECT PROPOSAL</strong></u></span></h2>
+<pre>
+Bypassing the security authentication of a RFID - Radio Frequency Identification.
+RFID technology is used everywhere, from transport to credit cards to entering labs in Ainsworth.
+For the project I will purchase a cheap RFID system online and I will use a
+Raspberry Pi to build a RFID card cloner. If I am successful, I should be able to
+gain entry to the system. I’ll also like to go one step further and try to crack an encrypted card.
+This should help me understand the security and vulnerability of this widely used technology.
+I want to understand how secure our reliance on this technology and what the impact
+its vulnerability can cause.
+Furthermore, this project will help me be familiar with hardware components in the form of a Raspberry Pi.
+
+
+ 	<b>Marking Criteria</b>
+
+<b>HD</b>
+- Create a cloner, testing it legally on a few RFID readers and own reader.
+- Crack an encrypted non-blank Mifare card
+- Continually testing and improving the security of my reader
+- Reading data from a Mifare card using a RFID reader
+- Many insightful blogs, showing progress and analysis
+
+<b>DN</b>
+- Write to blank RFID cards and UNSW RFID cards
+- Creating a basic reader
+- Making my own cloner and testing it legally on a few RFID readers.
+- Reading data from a Mifare card using a RFID reader
+- Insightful blogs, showing progress and analysis
+
+<b>CR</b>
+- Write to blank RFID cards
+- Reading data from a Mifare card using a RFID reader
+- A few blogs showing progress, no analysis
+
+<b>PS</b>
+-  Reading data from a Mifare card using a RFID reader
+- The bare minimum of blogs talking about project
+
+<b>FL</b>
+- No blogs about progress
+- No project handed in
+
+	<b>Proposed Process</b>
+
+-	Learn how to use the Raspberry Pi - this includes understanding how it works and its components.
+-	Buy a cheap RFID system
+-	Research how RFID works – I should get a real-life example of a RFID card such
+  	as an opal card and open it up.
+-	Build and continuously test the cloner
+-   Create my own reader, and add security measures onto it
+-	Test the strength of my reader
+
+</pre>
+
+<hr>
+
+<h5 class="date">16/06/19</h5>
+<h2 class="subHeader"><u><b>*IVE UPDATED MY PROJECT IDEAS*</b></u></h2>
+<pre>
+I have finally started using slack and used it to message Jazz about my project
+(thx 4 quick response :).
+
+I've decided on my overall topic:
+
+	<b> Raspberry pi</b>
+
+So I need to buy one soon. I asked Jazz if using a pi to create a pi-hole,
+open vpn or something of that sort would be a good idea and he suggested that each of
+these on their own would most likely not be challenging enough. He recommended that I
+would group them along with other projects under the term “practical things you could
+do to improve your privacy”. So, this would include topics such as password managers,
+encryption etc.
+
+I also have another idea to do with RFID - Radio Frequency Identification, from my
+understanding so far its chips integrated into a card, which allows people to tap
+and pay and enter their cars, classrooms and houses. This is pretty interesting as
+the technology has greatly increased in popularity as its being used in credit card,
+Transport Opal card, to enter rooms in uni etc. Apple has also stared to integrate
+them into their phones, so you don’t even need a card to pay for goods at a shop.
+If I want to do this, I was told I have to buy my own card reader unless I enjoy
+getting expelled from uni for testing them on lab rooms.
+I will do research on both topics before I decide, but at this point the card reader
+sounds a little more intriguing.
+I have found a guide online on the topic-
+
+<a href="https://hackforums.net/showthread.php?tid=5842722" target="_blank"
+style="background-color:#ffffa0"> An Introduction to RFID/NFC v1.0 by Faith Connors</a>
+
+<a href="extra/An Introduction to RFID_NFC.pdf">click here if you don't want to login </a>
+
+<a href="https://www.youtube.com/watch?v=VsZLFqE_iLc" target="_blank" style="background-color:#ffffa0"> A video on RFID</a>
+
+MAYBE I CAN ALSO BUILD A SECURE LOCK THROUGHT THE PI
+If I do this topic some areas to cover:
+
+-	What is it
+-	How to bypass
+-	How we can improve this technology- maybe make more standardised way of creating them
+-	If they are secure enough
+-	Talk about how the one you used was a cheap one
+-	Future of RFID
+-	Include pictures
+-  aluminium sleeves
+
+</pre>
+
+<hr>
+
+<h5 class="date" id="project">11/06/19</h5>
+<h2 class="subHeader"><b><u>PROJECT IDEAS</u></b></h2>
+<pre>
+So i have come up with 3 project ideas so far and
+they all seem difficult to implement, but I guess its trying that matters.
+
+<b>(1) Testing security of Z ID's</b>
+
+	So i got this idea off a video I watch on YouTube. In the video he uses different
+	tools and methods to try to find out
+	peoples personal information such as name, address etc. using their mobile phone number.
+
+<b>(2) Break into my sisters laptop camera</b>
+
+<b>(3) Set up a raspberry pi </b>
+	- <strike>Deauth the WiFi</strike> way too ilegal,2 years in jail
+	- pi-hole
+	- openvpn
+</pre>
+
+	<!-- </div> WHEN I DONT COMMENT THIS OUT THE BORDER DISAPEARS-->
+	</div>
+	</div>
+
+
+		<div class="bordere">
+		<p id="comment" style ="font: 10px">If you're my tutor you can comment feedback below,	if you're just random also feel free to criticise my work or chuck a hello. </p>
+
+		<a href="#contents" class="top">&#9650; Top</a>
+		<!-- begin wwww.htmlcommentbox.com -->
+		<div id="HCB_comment_box"><a href="http://www.htmlcommentbox.com">HTML Comment Box</a> is loading comments...</div>
+		<link rel="stylesheet" type="text/css" href="https://www.htmlcommentbox.com/static/skins/bootstrap/twitter-bootstrap.css?v=0" />
+		<script type="text/javascript" id="hcb">
+		/*<!--*/ if(!window.hcb_user){hcb_user={};} (function(){var s=document.createElement("script"), l=hcb_user.PAGE ||
+		(""+window.location).replace(/'/g,"%27"), h="https://www.htmlcommentbox.com";s.setAttribute("type","text/javascript");
+		s.setAttribute("src", h+"/jread?page="+encodeURIComponent(l).replace("+","%2B")+"&mod=%241%24wq1rdBcg%24xp0cXw24E4AR9n7djMBPA."+"&opts=16862&num=10&ts=1560603664281");
+		if (typeof s!="undefined") document.getElementsByTagName("head")[0].appendChild(s);})(); /*-->*/ </script>
+		<!-- end www.htmlcommentbox.com -->
+
+		</div>
+		<pre style="font: 2px/1px monospace;">
+																																								++++++++++++++++++++++++##########++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+																																								+''''''''''''''''''+++++++++++++++++++++++'++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++''++++'''''++++++''+
+																																								+''''''''''''''''+''++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++''+''++''+++'''''''+++++
+																																								+''''''''''''''''++'++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+																																								+''''''''''''''''+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++''+''++++++++'++++++'++++
+																																								+'''''''''''''''+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+																																								+'''''''''''''''++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++'''+
+																																								+'''''''''''''''+++++++++++++++###++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+																																								+''''''''''''''++++++++++++++++###+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+																																								+''''''''''''''++++++++++++++++###+#++++++++++++++++++++++#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+																																								+'''''''''''''++++++++++++++#########+++++++++++++++##++++++#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++'+
+																																								+''''''''''''++++++++++++++###########+++++++++++++###########+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++'+
+																																								+''''''''''''++++++++++++++###########+++++++++++++####+######+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++'+
+																																								+''''''''''''++++++++++++##############+++++++++++++###########+++++++++++++++++++++++++++++++++++++++++++'+'+++++++                        IDEA DONATED BY DEBORAH 4CHANDRA
+																																								+''''''''''''++++++++++++###############++++++++###############+++++++++++++++++++++++++++++++++++++++++++'+'++++++++++++++++++++++++++++'+
+																																								+''''''''''''++++++++++############################################+++++++++++++++++####+++++++++++++++++'+++++++++++++++++++++++++++++++''
+																																								+''''''''''''++++++++++###################################################+##+++########+++++++++++++++++++'+++++++++++++++++++++++++++++''
+																																								+''''''''''''+++++++++++#################################################################++++++++++++++++++'+++++++++++++++++++++++++++++++++++++''++
+																																								+'''''''''''++++++++++###################################################################++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+																																								+''''''''''+++++++++#+##################################################################++#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+																																								+''''''''''++++++++#########################################################################++++++++++++++++++++++++++++++++++++++++++++++++++++++++++''+++'+''
+																																								+''''''''++++++++++#################################################################++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++'
+																																								+''''''''+++++++++#############################################+#+#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+																																								+'''''+++++++++++#################################++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++''''
+																																								+'''''+++++++++++###############################+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+																																								+''''+++++++++++############################++++++++++++++++++++'''''''''''''''''''''''''''+''++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+																																								+''''++++++++++########################+++++++++++'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''++++++++++++++++++++++++++++++++++++++++++++++++++
+																																								+''''+++++++++##################+++++++++++++''''''''''''''''''''''''';;;';;;;;;''''''''''''''''''''''''''''''''''++++++++++++++++''''''''++++++++++++++++++++++++++++
+																																								+''''+++++++++#############+++++++++++++++''''''';;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;''';''''''''''''''++++++++++++''''''''''''''+++++++++++++++++++++++++++''
+																																								+''''+++++++++#############+++++++++++++'''''';;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;''''''++++++++++'''''''''''''''''+++++++++++++++++++++++++++++++
+																																								+''''+++++++++############+++++++++++''''''';;;;;;;;;;;;;::::::;;::::::::;:;;::;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;''''++++++++''''';;;;'''''''''+++++++++++++++++++++++++++++++
+																																								+''''++++++++############+++++++++'''''''';;;;;;;::::::::::::::::::::::::::::::::;;;;;;;;;:;:;;;;;;;;;;;;;;;;;;;;''++++++++''''';;;;;;'''''''''++++++++++++++++++++++++++++++'
+																																								+'+++++++++++###########+++++++'''''''';;;;;;;;:::::::::::::::::::::::::::::::::;;;;;;;;;::::::::::;;;;;;;;;;;;;'''''++'''''';;;;;;;;;'''''+++++++++++++++++++++++++++++++++++
+																																								++++++++++++###########+++++'''''';;;;;;;;;;;;;;;:::::::::::::::::::::::::::::::;;;;;;;::::::::::::::;;;;;;;;;;''''++'''''';;;;;::;;;;''''++++++++++++++++++++++++++++++++++++
+																																								#+++++++++++###########+++++'''';;;;;;;;;;;;;;;;;;:::::::::::::::::::::::::::::;;;;;;;;;::::::::::::::;;;;;;;;;'''++++'';;;;:::::::;;;''''++++++++++++++++++++++++++++++++++++++
+																																								#+++++++++++###########++++'''';;;;;;;;;;;;;;;;;;;;;::::::::::::::::::::::::::;;;;;;;;;::::::::::::::::;;;;;;;''''+++''';;::::::::::;;''''++++++++++++++++++++++++++++++++++++++
+																																								#+++++++++++###########+++++''''';;;;;;;;;;;;;;;;;;;;;;:::;::::::::::::::::::;;;;;;;;;;:::::::::::::::::;;;;;''''''+''';;;;:::::::::;;''''++++++++++++++++++++++++++++++++++++++
+																																								#+++++++++++###########++++++'''''';;;;;;;;;;;;;;;;;;;:;::::::::::::::::::::::;;;;;;:::::::::::::::::::;;;;;;'''''''''';;;;:::::::::;;;''''+++++++++++++++++++++++++++++++++++++
+																																								#++++++++++++##########+++++++++'''''';;;;;;;;;;;;;;;;:;::::::::::::::::::::::;;;;;;::::::::::::::::::::;;;;;''''''''';;;::::::::::::;;;''''++++++++++++++++++++++++++++++++++++
+																																								#++++++++++++++#########++#+++++++'''''';;;;;;;;;;;;;;;;::::::::::::::::::::::;;;;;::::::::::::::::::::::;;;''''+'''';;;:::::::::::::;;;;'''+++++++++++++++++++++++++++++++++++'
+																																								#+++++++++++++++##+#+#######++++++++++'''';;;;;;;;;;;;;;::::::::::::::::::::::::;::::::::::::::::::::::::;;;''''+''';;;;:::::::::::::;;;;'''+++++++++++++++++++++++++++++++++++'
+																																								#++++++++++++++++++++##+#########++++++''''';;;;;;;;;;;;:::::::::::::::::::::::::::::::::::::::::::::::::;;;''''''';;;;:::::::::::::::;;;;''''++++++++++++++++++++++++++++++++'
+																																								#++++++++++++++++++++++###########++++++'''''';;;;;;;;;;:::::::::::::::::::::::::::::::::::::::::::::::::;;;'''''';;;;:::::::::::::::::::;;;'''''+++++++++++++++++++++++++++++'+
+																																								+++++++++++++++++++++++++++++++###++++++++''''';;;;;;;;;;::::::::::::::::::::::::::::::::::::::::::::::::;;;;''''';;;;::::::::::::::::::::;;;;'''''''+++++++++++++++++++++++++''
+																																								+''+++++++++++++++++++++++++++++######++++++'''';;;;;;;;;::::::::::::::::::::::::::::::::::::::::::::::::;;;;;''';;;;:::::::::::::::::::::::;;;;''''''+++++++++++++++++++++
+																																								+'''+++++++++++++++++++++++++++#########+++++'''';;;;;;;;;::::::::::::::::::::::::::::::::::::::::::::::::;;;;;'';;;;::::::::::::::::::::::::;;;;;'''''''''+++++++++++++++++++
+																																								+'''+++++++++++++++++++##+++++++#########+++++'''';;;;;;;;::::::::::::::::::::::::::::::::::::::::::::::::;;;;;;;;;;::::::::::::::::::::::::::;;;;;;'''''''''''''''''+''''''''
+																																								+''+++++++++++++#+######+++#++++##########+++++'''';;;;;;;:::::::::::::::::::::::::::::::::::::::::::::::::;;;;;;;;;:::::::::::::::::::::::::::::;;;;;''''''''''''''''''''''''''''';;;;
+																																								+'++++++++++++###################+########+++++'''';;;;;;;::::::::::::::::::::::::::::::::::::::::::::::::::;;;;;;;;::::::::::::::::::::::::::::::;;;;;;;;;'''''''''''''''''''''';;;;;;;;
+																																								+++++++++++++###############################++++'''';;;;;;;::::::::::::::::::::::::::::::::::::::::::::::::::;;;;;;;::::::::::::::::::::::::::::::::;;;;;;;;;;;;''''''''''''''';;;;;;:;;;;
+																																								++++++++++###################################++++'''';;;;;;::::::::::::::::::::::::::::::::::::::::::::::::::::::;;;::::::::::::::::::::::::::::::::::::;;;;;;;;;;;;;;;;;;;;;;;;;;;::::;;;;;
+																																								++++++++++#######################++++++++####++++'''';;;;;;:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::;;;;;;;;;;;;;;;;;;;;;;::::::;;
+																																								++++++++++######################++++++++++###++++''''';;;;;::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::;;;;;;;;;;;;;;;;;;;:::::::::;;;;
+																																								+++++++++######################++++++++++++++++++''''';;;;;:::::::::::::::::::::::::::::::::::::::::::::::::::::;;;;;;;:::::::::::::::::::::::::::::::::::::::;;;;;;;;;;;;;;;;::::::::::::;
+																																								+''++++++####################++++++++++++++++++++''''';;;;;::::::::::::::::::::::::::::::::::::::::::::::::::::;;;;;;;;;;;;;;:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::;;
+																																								+'''+++++++#################+++++++++++++++++++++''''';;;;;;:::::::::::::::::::::::::::::::::::::::::::::::::::;;;;;;;;;;;;;;;;;;:;;:::;;;;:::::::::::::::::::::::::::::::::::::::::::::::::;;;
+																																								+''''+++++++####+#####++++++++++++++++++++++++++'''''';;;;;:::::::::::::::::::::::::::::::::::::::::::::::::::;;;;;;;;;;;;;;;;;;;;;;:;;;;;;;::::::::::::::::::::::::::::::::::::::::::::::::;;;
+																																								+;'''+++++++++++++++++++++++++++++''''''''+++''''''''';;;;;::::::::::::::::::::::::::::::::::::::::::;;;;;:::;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:;;:::::::::::::::::::::::::::::::::::::::::::::;;;
+																																								';;;'''++++++++++++++++++++'''''''''''''''''''''''''';;;;;;:::::::::::::::::::::::::::::::;::;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;::::::::::::::::::::::::::::::::::::::;;;
+																																								':;;;;''''''''''''''''''''''''''';;;;;;'''''''''''''';;;;;;:::::::::::::::::::::;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::::::::::::::::::::::::::::::::::::::;;;
+																																								':::;;;;;'''''''';;;;;;;;;;;;;;;;;;;;;;;;;;;''''''''';;;;;;:::::::::::::::::::::;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;::::::::::::::::::::::::::::::::::::::::;;;
+																																								':::;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;''';;;;;;;:::::::::::::::::::;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::;;;;;;;;;;;;;;;;;;;;:::::::::::::::::::::::::::::::::::;;;
+																																								'::::;;;;;;;;;;;;;;;;;;;;;;;;;;;;:;;;;;;;;;;;;;;;;'';;;;;;;::::::::::::::::::;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::;;;;;:::::;;;;;;;;;;;;;;;;;;;;;;;;::::::::::::::::::::::::::::::::::;;;
+																																								':::::;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;::::::::::::::::::;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;::::::::::::::::::::::::;:;;;;;;;;;;;;;;;;;;;:::::::::::::::::::::::::::::::::;;;;
+																																								':::::;;;;;;;;;;;;;;;;:::;::;;;:;;;;;;;;;;;;;;;;;;;;;;;;;::::::::::::::::::;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;::::::::::::::::::::::::::::::::::;;;;;;;;;;;;;;;;::::::::::::::::::::::::::::::::::;;'
+																																								':::::::::;;:;;::::::::::::::::;;;;;;;;;;;;;;;;;;;;;;;;;::::::::::::::::::;;;;;;;;;;;;;;;;;;;;;;;;;;;::::::::::::::::::::::::::::::::::::::::::::;:;;;;;;;;;;;;;;::::::::::::::::::::::::::::::::;;;
+																																								'::::::::::::::::::::::::::;;;;;;;;;;;;;;;;;;;;;;;;;;;;::::::::::::::::::;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::::::::::::::::::::::::::::::::::::::::::::::;;;;;;;;;;;;;;;:::::::::::::::::::::::::::::::;;'
+																																								'::::::::::::::::::::::::::;;;;;;;;;;;;;;;;;;;;;;;;;;;:::::::::::::::::;;;;;;;;;;;;;;;;;;;;;;;;;;:::::::::::::::::::::::::::::::::::::::::::::::::::::;;;;;;;;;;;;;:::::::::::::::::::::::::::::::;;
+																																								'::::::::::::::::::::::::::::;;;;;;;;;;;;;;;;;;;;;;;;;:::::::::::::;::;;;;;;;;;;;;;;;;;;;;;;;;::::::::::::::::::::::::::::::::::::::::::::::::::::::::;;;;;;;;;;;;:::::::::::::::::::::::::::::::::;;;''
+																																								':::::::::::::::::::::::::::;;;;;;;;;;;;;;;;;;;;;;;;:::::::::::::;;;;:;;;;;;;;;;;;;;;;;;;;;;::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::;::;;;;::::::::::::::::::::::::::::::::::;;;;'
+																																								':::::::::::::::::::::::::::;;;;;;;;;;;;;;;;;;;;;;;::::::::::::;;;;;;;;;;;;;;;;;;;;;;;;;;;::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::;;;::::::::::::::::::::::;:::::::::::;;;;'
+																																								'::::::::::::::::::::::::::;;;;;;;;;;;;;;;;;;;;;;:::::::::::::;::;;;;;;;;;;;;;;;;;;;;;;;;:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::;:::::::::::::::::::;;;::::::::::::::;;'
+																																								':::::::::::::::::::::::::::;;;;;;;;;;;;;;;;;;;;:::::::::::::;::;;;;;;;;;;;;;;;;;::::::::::::::::::::::::::::::::::::::::::::::::;;;:::::::::::::::::::::::::::::::::::::::::::::;;;;;:::::::::::::::;;;
+																																								':::::::::::::::::::::::::::;;;;;;;;;;;;;;;;;;:::::::::::;;;;;;;;;;;;;;;;;;;;;::::::::::::::::::::::::::::::::::::::::::::::;;;;;;;;;;;::::::::::::::::::::::::::::::::::::::::::::::::;::::::::::::::;;
+																																								':::::::::::::::::::::::::;:;;;;;;;;;;;;;;;;;;;:::::;;;;;;;;;;;;;;;;;;;;;;;::::::::::::::::::::::::::::::::::::::::::;;;;;;;;;;;;;;;;;;;;;;;::::::::::::::::::::::::::::::::::::::::::::::::::::::::::;;
+																																								':::::::::::::::::::::::::::;;;;;;;;;::::;;;;;::::;;;;;;;;;;;;;;;;;;;;;;;;;::::::::::::::::::::::::::::::::::::;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;::::::::::::::::::::::::::::::::::::::::::::::::::::;
+																																								':::::::::::::::::::::::::::;;;;;;;;;:::::;;;:::;:;;;;;;;;;;;;;;;;;;;;;;;;;::::::::::::::::::::::::::::::::;;;;;;;;;;;;;;''''''''''''''''''';;;;;;;;;:::::::::::::::::::::::::::::::::::::::;::::::::::;
+																																								'::::::::::::::::::::::::;:::;;;::::::::;;;;;:::::;;;;;;;;;;;;;;;;;;;;;;;;::::::::::::::::::::::::::::::;;;;;;;;;;;;;;;'''''''''''''''''''''''';;;;;;;;::::::::::::::::::::::::::::::::::::::::::::::::;
+																																								':::::::::::::::::::::::::::::;:::::::::;;;;;;;:::;;;;;;;;;;;;;;;;;;;;::::::::::::::::::::::::::::::;;;;;;;;;;;;;;;;;;;;'''''''''''''''''''''''''';;;;;;;;:::::::::::::::::::::::::::::::::::::::::::::;
+																																								'::::::::::::::::;:;;;;;;;;::;:::;;;;;:;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::::::::::::::::::::::::;;;;;;;;;;;;;;;;;;;;;;;;;;;;;'''''''''''''''''''''''';;;;;;;:::::::::::::::::::::::::::::::::::::::::::;
+																																								'::::::::::::::::;;;;;;;;;;:;;:::;;;;;:;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::::::::::::::::::::;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;''''''''''''''''''''';;;;;;;:::::::::::::::::::::::::::::::::::::::::;
+																																								':::::::::::::;;;;;;;;;;:;;::;:::;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;::::::::::::::::::::;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;''''''''''''''''''';;;;;::::::::::::::::::::::::::::::::::::::::;
+																																								':::::::::::::;;;;;;;;;;;;;;;;::;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;::::::::::::::::::;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;'''''''''''''''''';;;;;;::::::::::::::::::::::::::::::::::::::::
+																																								'::::::::::::;;;;;;;;;:;;;;;;;;;:;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;::::::::::::::::::::;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;''''''''''''''''';;;;;;:::::::::::::::::::::::::::::::::::::::
+																																								':::::::::::;;;;;;;;;;;;;;;;;;;;:;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::::::::::::::::::;;;;;;;;;;;;;;;;;;;;;;;;;;;;;::::::::::::::::;;;;;;;;;;;''''''''''''''';;;;;;:::::::::::::::::::::::::::::::::::::
+																																								'::::::::;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::::::::::::::::::;;;;;;;;;;;;;;;;;;;;:::::::::::::::::::::::::::::::::::;;;;;;;'''''''''''''';;;;;:::::::::::::::::::::::::::::::::::
+																																								'::::::::;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::::::::::::::::;;;;;;;;;;;;;;;;:::::::::::::::::::::::::::::::::::::::::::::;;;;;;'''''''''''';;;;;::::::::::::::::::::::::::::::::::
+																																								':::::::;;;;;;;:;;:;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;::::::::::::::::::;;;;;;;;;;;;;;:::::::::::::::::::,:,,,,,,,,,,,,,,,,,,:::::::::::;;;;;''''''''''''';;;;:::::::::::::::::::::::::::::::::
+																																								'::::::::;:::;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;::::::::::::::::::;;;;;;;;;;;::::::::::::::::::,,,,,,,,,,,,,,,,,,,,,,,,,,,::::::::::;;;;;;'''''''''';;;;;::::::::::::::::::::::::::::::::
+																																								'::::::::;::::;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::::::::::::::::;;;;;;;;;:;::::::::::::::::,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,::::::::::;;;;;'''''''''';;;;;:::::::::::::::::::::::::::::::
+																																								':::::::::::::;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:;;::::::::::::::::;;;;;;;;;;;:::::::::::::::,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,:::::::::;;;;'''''''''';;;;;;:::::::::::::::::::::::::::::
+																																								':::::::::::::;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;::::::::::::::::;;;;;;;;;;;;:::::::::::::,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,:::::::;;;;;'''''''''';;;;:::::::::::::::::::::::::::::
+																																								':::::::::::::;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;::::::::::::::;;;;;;;;;;::::::::::::::,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,::::::;;;''''''''''';;;;::::::::::::::::::::::::::::
+																																								':::::;::;:::;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;::::::::::::::;;;;;;;;;;;:::::::::,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,:::::;;;'''''''''';;;;:::::::::::::::::::::::::::
+																																								':::::;::;:::;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::::::::::::::;;;;;;;;;::::::::,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,::::;;;''''''''';;;;;::::::::::::::::::::::::::
+																																								'::::::::;::;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::::::::::::;;;;;;;:;:::::::::,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,:::;;;;'''''''';;;;;:::::::::::::::::::::::::
+																																								'::::::::;:;;;;;;;;;;;;;;;;;;;;;;;;;;:::::::::;;;;;;;::::::::::::::::;;;;;;::::::::::::,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,:::;;;;'''''''';;;;;::::::::::::::::::::::::
+																																								':::::::;;;;;;;;;;;;;;;;;;;;;;;;;;;;::::::::::::;;;;:::::::::::::::::;;;;;;:::::::::,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,::::;;;'''''''';;;;;:::::::::::::::::::::::
+																																								':;::::;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::::::::::::::::::::::::::::::::;;;;;;:::::::,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,::::;;;''''''''';;;;:::::::::::::::::::::::
+																																								':;::::;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::::::::::::::::::::::::::::::::;;;;::::::::,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,::::;;;''''''''';;;;;;;::::::::::::::::::::
+																																								':;::::;;;;;;;;;;;;;;;;;;;;;;;;;;;;;::::::::::::::::::::::::::::::::;;::::::::,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,:::::::::::::::::::::::::::::::::::::::::::;;;'''''''''';;;;;;;:::::::::::::::::::
+																																								':::::;;;;;;;;;;;;;;;;;;;;;;;;;;;::::::::::::::::;::::::::::::::;;;;;:::::::,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,::::::::::::::::::::::::::::::::::::::::::::::::::::::;;;;'''''''''';;;;;;;;::;::::::::::::::
+																																								':::::;;;;;;;;;;;;;;;;;;;;;;;;;;;:;:::::::::::::;:::::::::::::::;;;;::::::,,,,,,,,,,.,..,,,,,,,,,,,,,:::::::::::::::::;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::::::::;;;;;;;''''''+'''';;;;;;;;;;:;;:::::::::::
+																																								'::::;;;;;;;;;;;;;;;;;;;;;;;;;;;:::::::::::;:::;;;::::::::::::::;;;::::::,,,,,,,,,,,,,,,,,,,,,,,,,:::::::::::::;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;''''''''''''';;;;;;;;;;;;;:::::::::
+																																								':::;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::::::::::;::;;;:::::::::::::::::::::::,,,,,,,,,,,,,,,,,,,,:::::::::::;;;;;;;;;;;;;;;;;;;;''';;';;;''''''''''''''';;;;;;;;;;;;;;;;;;''''''''''''';;;;;;;;;;;;::::::::::
+																																								':;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::::::::::;::;;:::::::::::::::::::::,,,,,,,,,,,,,,,,,,,::::::::;;;;;;;;;;;;;;;;;'''''';''''''''''''''''''''''''''''';';;;;;;;;;;''''''''''''''''''';;;;;;;;;;::::::::::
+																																								';;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;::::::::::::::;::::::::::::::::::::::,,,,,,,,,,,,,,,::::::::;;;;;;;;;;;;'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''';;;;;;;;;;;:::::::::
+																																								';;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::::::::::::::::::::::::::::::::::,,,,,,,,,,,,,,::::::::;;;;;;;;;;'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''';;;;;;;;;;:::::::::
+																																								';;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::::::::::::::::::::::::::::::::::,,,,,,,,,,,,::::::::;;;;;;;''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''';;;;;;;;;;;::::::::
+																																								':::;;;;;;;;;;;;;;;;;;;;;;;;;;;:::::::::::::::::::::::::::::::::::,,,,,,,,,::::::::;;;;;;;;'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''+''''''';;;;;;;;;;::::::::
+																																								':::;;;;;;;;;;;;;;;;;;;;;;;;;;;::::::::::::::::::::::::::::::::::::::::::::::::;;;;;;;;;''''''''''''+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''++'''''';;;;;;;;;;::::::::
+																																								';;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::::::::::::::::::::::::::::::::::::::::::;;;;;;;;'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''+++''''''';;;;;;;;;:::::::
+																																								';;;;;;;;;;;;;;;;;;;;;;;;;;;;;::::::::::::::::::::::::::::::::::::::::;;;;;;;'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''+++''''''';;;;;;;;;:::::::
+																																								';;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::::::::::::::::::::::::::::::::::::;;;;;;'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''+++++''''';;;;;;;;;:::::::
+																																								';;;;;;;;;;;;;;;;;;;;;;;;;;;:::::::::::::::::::::::::::::::::::::;;;;;;;'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''++++++''''';;;;;;;;::::::::
+																																								';;;;;;;;;;;;;;;;;;;;;;;;;;;:::::::::::::::::::::::::::::;;;:;;;;;;;;'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''+++''''';;;;;;;;::::::::
+																																								';;;;;;;;;;;;;;;;;;;;;;;;;;;:::::::::::::::::::::::::::;;;;;;;;;;;;''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''++++''''';;;;;;;;::::::::
+																																								'::;;;;;;;;;;;;;;;;;;;;;;:;::::::::::::::::::::::::;;;;;;;;;;;;;'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''++'''''';;;;;;;::::::::
+																																								'::;;;;;;;;;;;;;;;;;;;;;;:;::::::::::::::::::::::::;;;;;;;;;;''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''++'''''';;;;;;;::::::::
+																																								'::;;;;;;;;;;;;;;;;;;;;;;:;::::::::::::::::::::::;;;;;;;;''''''''''''+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''+++'''''';;;;;;;::::::::
+																																								'::;;;;;;;;;;;;;;;;;;;:;;;;:::::::::::::::::::::;;;;;;'''''''''''''''+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''++++''''';;;;;;;::::::::
+																																								'::;;;;;;;;;;;;;;;;;;;::;;;:::::::::::::::::::;;;;;''''''''''''''''''+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''++++'''''';;;;;;::::::::
+																																								':::;;;;;;;;;;;;;;;;;:::::;;::::::::::::::::::;;;;;''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''++++++''''';;;;;;::::::::
+																																								':::;;;;;;;;;;;;;;;;;:::::;;::::::::::::::::;;;;;;'''''''''+'''++++''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''++++++''''';;;;;;::::::::
+																																								':::;;;;;;;;;;;;;;;;;;;;;:;;::::::::::::::::;;;;;''''''''''++''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''+++++++'''';;;;;;::::::::
+																																								';;;;;;;;;;;;;;;;;;;;;;;;:::;::::::::::::::;;;;'''''''''''+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''+++++++'''';;;;;;:;;;::::
+																																								';;;;;;;;;;;;;;;;;;;;;;;;:::;::::::::::::;;;;;'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''+++++++'''';;;;;;:;;;::::
+																																								':::;;;;;;;;;;;;;;;;;;;;;::::::::::::::;;;;;;'''''''+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''+++++++''''';;;;;;:::::::
+																																								':::;;;;;;;;;;;;;;;;;;;;;::::::::::::::;;;;;'''''''+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''+++++++''''';;;;;::::::::
+																																								':::;;;;;;;;;;;;;;;;;;;;;::::::::::::::;;;;;''''''+++'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''++++++''''';;;;;::::::::
+																																								':::;;;;;;;;;;;;;;;;;;;;;::::::::::::::;;;;;'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''+++++++''''';;;;;::::::::
+																																								':::;;;;;;;;;;;;;;;;;;;;::::::::::::::;;;;;;'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''+++++++''''';;;;;::::::::
+																																								':::;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;::;;;;;'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''++++++'''';;;;;;::::::::
+																																								'::;;;;;;;;;;;;;;;;;;;;;;;;;;;::;;;;:::;;;;;''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''++++''''';;;;;;:::::::
+																																								'::;;;;;;;;;;;;;;;;;;;;;;;;;;;::;;;;:::;;;;;''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''++++''''';;;;;;:::::::
+																																								':::;;;;;;;;;;;;;;;;;;;;;;;;;;::;;;;;::;;;;;''''''''+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''++''''''';;;;;;:::::::
+																																								':::;;;;;;;;;;;;;;;;;;;;;;;;;;::;;;;;::;;;;;;'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''+'''''''';;;;;;:::::::
+																																								':::;;;;;;;;;;;;;;;;;;;;;;;;;;::;;;;;::;;;;;;;;''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''';;;;;;::::::::
+																																								':;;;;;;;;;;;;;;;;;;;;;;;;;::::::;;;;;;;;;;;;;;;''''''''''++'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''';;;;;;;:::::::
+																																								':;;;;;;;;;;;;;;;;;;;;;;;;;::::::;;;;;;;;;;;;;;;;;'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''';;;;;;;:::::::
+																																								':;;;;;;;;;;;;;;;;;;;;;;;;;:::::::;;:;;;;;;;;;;;;;;''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''';;;;;;::::::::
+																																								':::;;;;;;;;;;;;;;;;;;;;;:;::::::::::;;;;;;;;;;;;;;''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''';;;;;;;;::::::::
+																																								':::;;;;;;;;;;;;;;;;;;;;;:;:::::::::::;;;;;;;;;;;;;;;''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''';;;;;;;;::::::::
+																																								'::;;;;;;;;;;;;;;;;;;;;;;:::::::::::::;;;;;;;;;;;;;;;;;''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''';;;;;;::::::::::
+																																								':::;;;;;;;;;;;;;;;;;;;;;:::::::::::::;;;;;;;;;;;;;;;;;;;;'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''';;;;;;::::::::::
+																																								'::;;;;;;;;;;;;;;;;;;;;;;:::::::::::::;;;;;;;;;;;;;;;;;;;;;;;'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''';;;;;;:::::::::::
+																																								':::;;;;;;;;;;;;;;;;;;;;;:::::::::::::;;;;;;;;;;;;;;;;;;;;;;;;;''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''';;;;;;;:::::::::::::
+																																								'::;;;;;;;;;;;;;;;;;;;;;;:::::;;;::;::;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''';;;;;;;;:::::::::::::
+																																								'::;;;;;;;;;;;;;;;;;;;;;;:::;;;;;;;;:;;;;;;;;;;;;;;:::::;;;;;;;;;;;;;;;;;''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''';;;;;;;:::::::::::::::
+																																								'::::;;;;;;;;:::;;;;;;;;;:;:;::;;;;;;;;;;;;;;;;;;;;;:::::::;;;;;;;;;;;;;;;'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''';;;;;;;;;;::::::::::::::::
+																																								'::::;;;;;;;;:::;:;;;;;;;:;::::;;;;;;;;;;;;;;;;;;;;;:::::::;;;;;;;;;;;;;;;;;;;''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''';''''''''''''''''''''''''''''';;;;;;;;;;;::::::::::::::::::
+																																								'::;;;;;;;;;;::::;;;;;;;:::::::::::::::::;;:;;;;;;;;;::::::::::;;;;;;;;;;;;;;;;;;;;''''''''''''''''''''''''''''''''''''''''''';;;;;;;;;;;;;;;'''';;;'''''''''''''''''''';;;;;;;;;;;;;:::::::::::::::::::
+																																								'::;;;;;;;;;;:::;;;;;;;;:::::::::::::::::;;:;;;;;;;;;::::::::::::;;;;;;;;;;;;;;;;;;;;;;'''''''''''''''''''''''''''''''''''''';;;;;;;;;;;;;;;;;;;;;;;;;;''''''''';;;;;;;;;;;;;;;;;;;:::::::::::::::::::::
+																																								'::;;;;;;;;;;;::;;;;;::;:::::::::::::::::;;;;;;;;;;;;:::::::::::::::::;;;;;;;;;;;;;;;;;;;;;;;;''''''''''''''''''''''''';;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;::::::::::::::::::::::::::::
+																																								':::;;;;;;;;::::::;;;;;;::::::;;::::::::;;:::;;;;;;;;;;::::::::::::::::::;:::;;;;;;;;;;;;;;;;;;;;;;;''''''''''''''';;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;::::::::::::::::::::::::::::::::::
+																																								':::;;:::::::::::;;;;;;;:::::::::::::::;;;:::;;;;;;;;;;::::::::::::::::::::::::::;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::::::::::::::::::::::::::::::::::::
+																																								':::;;::::;::::::;;;;;;;:::::::::::::::;;;:::;;;;;;;;;;::::::::::::::::::::::::::::::::;;:;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;::::::;;;;;;;;;;;;;;:::::::::::::::::::::::::::::::::::::::::::
+																																								':::::::::;::::::::::::;::::::::::::::::::;;;;;;;;;;;;;::::;:::::::::::::::::::::::::::::::;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+																																								'::::::::;;::::::::::::;::::::::::::::::::;;;;;;;;;;;;;::::;:::::::::::::::::::::::::::::::::::::::;;;;;::;;::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+																																								':::::::;::::::::::::::::::::::::::::::::::::;:::;:;;;;;;:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+																																								'::::::::::::::::::::::::::::::::::::::::::::;:::;;;;;;;;:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+																																														 Note this site was made solely so i dont have to expose myself to tumblr and for those juicy comp marks.
+																																								'::::::::;;:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+		</pre>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script>
+    $(function(){
+        // Click the link starting with #
+        $('a[href^="#"]').click(function(){
+
+            // Scroll speed (ms)
+            var speed = 500;
+
+            // Get href
+            var href = $(this).attr("href");
+
+            // Change backcolor
+            $(".link").css('background-color', '#6F2232');
+
+            if (href != "#contents") {
+                $(this).parent("li").css('background-color', '#390F10');
+            }
+
+            // Set target
+            var target = $(href == "#" || href == "" ? "html" : href);
+
+            // Get the position of target
+            var position = target.offset().top;
+
+            // Start animation
+            $("body,html").animate({scrollTop:position}, speed, 'swing');
+
+            return false;
+        });
+    });
+    </script>
+  </body>
+</html>

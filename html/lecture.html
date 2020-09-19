@@ -1,0 +1,1121 @@
+<!--SOME CODE USED IN THIS FILE IS FROM 'CODINGWITHSARA'
+http://codingwithsara.com/how-to-create-a-simple-website-with-html-css-and-jquery-typeb-fixed-header-footer/#Sample_Code -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-142492871-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-142492871-1');
+</script>
+
+	<meta charset="utf-8">
+	<title>Sarah - Comp6441 Blog</title>
+  <!-- helps to scale for phones and tables -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../style.css">
+  <link href="https://fonts.googleapis.com/css?family=Staatliches&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<!-- favicon below -->
+<link href="data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAA
+AAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAUSS9AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABEREQAAAAABEREREAAAAA
+ERERERAAAAAQAAABEAAAAAAAAAEQAAAAAAAAARAAAAAAEREREAAAABEREREAAAAAEQAAAAAAAAARAAA
+AAAAAABEAAAAAAAAAEQAAARAAAAABERERAAAAAAERERAAAAAAAAAAAAAADgPwAAwB8AAMAPAADABwAA
+wAcAAO/HAAD4BwAA4AcAAMAPAADAHwAAw/8AAMOPAADABwAA4A8AAOAfAADwPwAA" rel="icon"
+ type="image/x-icon" />
+
+</head>
+		<body>
+    <div class="header">
+		  <h1 style="font-size: 50px;"><a href="../index.html" style="text-decoration: none; color:#F3E0DC">LECTURE</a></h1>
+			<h1 style="font-size: 8px;"> sarah_alamedDine</h1>
+      <!-- <p1>Put links to different site pages here</p1> -->
+    </div>
+
+			<!-- ================= EDIT THE SIDEBAR HERE!!!!! =================== -->
+  	<div class="container">
+  		<div class="sidebar">
+				<h2 class="sitename" style="font-size: 20px;">About this Site</h2>
+				<p style="text-align: center;font-size: 13px;">Currently this site is just my Comp6441 blogs.</p>
+				<p style="text-align: center;font-size: 13px;">In the future it might hold my resume and/or projects,
+					unless I go broke and cant pay my $6 yearly host, idk.</p>
+					<!-- &nbsp; Creates blank space  -->
+					&nbsp;
+  			<h2 class="sitename" style="font-size: 20px;">Categories</h2>
+            <ul>
+			<li class="link"><a href="../index.html">&diams; HOME</a></li>
+            <li class="link"><a href="/html/jobApp.html">&diams; Job Application</a></li>
+            <li class="link"><a href="/html/project.html">&diams; Awesome Project</a></li>
+            <li class="link"><a href="/html/lab.html">&diams; Labs</a></li>
+            <li class="link"><a href="/html/misc.html">&diams; Linux/misc.</a></li>
+            <li class="link"><a href="#comment">&diams; Comments</a></li>
+  			</ul>
+				<pre style="font: 6px/3px monospace;color: #F3E0DC;">
+      					<!-- "You know we had to do it to them" was generated using https://picascii.com/ -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                             '#+++'''
+                            ;########'.
+                           ;#############@#`
+                          .+##########@##@@#
+                          ;####@####@@@@##@@;
+                          '##########@@@@#@@@,
+                         ,#####++++#+###@@@@@#
+                         ,###+';;;;''+###@@#@@.
+                          ++';;;:;;;;''+##@@@@.
+                          '';:::::;;;''++#@@@@.
+                          .:::::::;;;;''+##@@@.
+                          .,::::::::;;''+####@.
+                          ,,:::::::;;;''+####@.
+                          ,,::,:::::;;''+####@,
+                          ,,:,,:::::;;''++###@;
+                          ,,:;;::::'+++'++###@;
+                          ,+##+'::'+##+#++###@+
+                          :;;'+';;''''''+++###:
+                         `:;''++:;'++++''++##@.
+                         `:++##+:;+++##+''+###.
+                         `:;;''':;'''''+''+###
+                         `::;'';:;''''''''+@+'
+                         `,::;:::;'';;;;''+#'+
+                         .:::::::;';;;;;''++''
+                         :,,,:::::'':::;''++''
+                         ;,,:;;';'+';;:;;'+'''
+                         ::::;:'+''';;;;;'+'';
+                         ,:::;::;;;;;;;;''+;',
+                         ,:;:':::;;;;;;;''';:
+                         ,:;;+''+'''#';';'';,
+                          ,:;;''::;'';;;;+:
+                          `;;:::;;;';;;;'+`
+                           ;;::;''';;;;;'+`
+                           ;;::;;;;;;;''''`
+                           :;::::::;;;''''`
+                           `;;:,:::;;'''''`
+                            :;;::;;;'''';'`
+                            :;;;;;;;''';;'.
+                           `:;;''''+'';;;'':
+                           .:;;;'''''';;;'+'`
+                           '::::;'''';;;;'+,.
+                           .:::::;;;;;;;;'+,,`
+                           :::::;:;;;;;;;+..,`
+                           .;::;;;;;;;;;'...,.
+                          ``+:::;';;;;;;.......`
+                          ``+;::;;;;;;;........,.`
+                         ```.;::;;;;;:............,``
+                        ```,,;;:;:;;,```...........,,.
+                       ````:..'::;;,.;.................`
+                      ````,:..;::;;..,:...................
+                   ````.``,,,,:;;;;..,,....................`
+                 `.```````.....;:::.........................`
+                ```````````.`...::.```.........`.``..........`
+               `````````````````::``````.......`````.`....`...
+               ````````````.````;:`````:..`.`.``````.``........
+              ``````````````````;:`````...```.`````````......,,`
+             ```````````````````;.````..````.``````````......,,.
+            ````````````````````:`````.`````.`````````..`.`...,,
+            ````````````````````:````..`````.`````````.....`,.,,
+            ````````````````````,````.``````.`````````....`...,,`
+            `````````````````````````.``````.`````````.`..`..,,,.
+            ````````````````````````.````````````````..`.`..,,...
+            `.``````````````````````.````````````````..``..,,....`
+            ````````````````````````````````````````,..`..,,.....`
+            ````````````````````````````````````````,..`..,......`
+            ```````````````````````````````````````.,....,.......`
+           ``.````````````````````````````````````..,....,........
+           ```.``````````````````````````````...,,..,...,......`:.
+           ``..`````````````````````````````.......,,,..,......,,`
+          ```..````````````````````````````...``...,:,,........,,,
+          ```.,`..`````````````````````````..``.`..,::,,.......,,,.
+          ```...,,.``````````````.````````...`.,:::,;:.,......,..,.
+           ```.:,.``.`````````` `.````````````....,:+,.....`.......
+          ````,,,``,.``````````````````````.`....,,,',....`......,.
+          `.``...,,.`````````.```.```````````....,,,':....,........
+          `.```,:,,``````````.```.```````````....,,,::,..,....`...,
+          ```.`,,:,``````````.```.`````````......,,:;:..,...``....,`
+          ``.....,.`````````..```````````........,,,',,,...``.....,.
+          ````..,:.```.`..`..```````````.`......,,.,;,,,...`.......,
+         ```..``,,:.``...``..`````````````..........:,.,..`........,
+         ````.,,,,;.`........```````````````....,...,:,............,`
+         ````..,,,:......`..```````````````..........;,,...........,`
+         ````.,.,,:.`...``..``````````````...........;,,,,.........,,
+         ``....,.,;`....`..```````````````...........,;,,...........,.
+        ````..,,,,;`....``````````````..`.............;;,.....`...,,:`
+        ````...,,,:`...``````````````````.........`...:',,.....```..,`
+        `..``...,:;....```````````````````...........,:+:,.,.````...,`
+        ````.,..,,;`...```````````````````...........,:++:,.`....`...`
+        ``````.,,:;`.```````````.````````..........`.,;++;.,.````...,.
+       `````...,,,;....`````````.````````.........`.,,;++';.```````...
+       ```.``...,:;`..```````,,;,`.```.``.........`.,,;++';;;;:..`...,
+      `,,..,,,.,,:;...`````,,:::::,.`.`..........``,,:'+';;;;;;;;....,
+      `..,:::;;::;'...`````::;;:::::```.........``,,,,';;;;;;;;;;':..,
+       ,::::::;;::;````````.'';;;::::`.```......`.,,;:;;;;;;;;;;;';':,
+       ;::::::;;;;',````..,::::::,::::........``.,,;;;;;;;;;;;;;;'''::
+       :::::::::::;:,...,,::::::,:';:;;.......`.::;;;;;;;;;;;;;;''''':
+       :;;::::::::::,,,::::::;'';;;;;::;:,:,::;;:;;;;;;;;;;;;;;;''''':
+       ,';:::::::::::::,::::,,:::::;;;;;:;:;;;;;;;;;;;;;;;;;;;;''''''
+       `';;;::::::::::::::';:::,:;;;;;;:::;;::;;;;;;;;;;;;;;;;'''''''
+        ;';;;:;:;;;;:::,;::'';;:;;;;;;;;:::;''';;;;;;;;;;;;;''''''''.
+        ;'';;;;;;;;;:;:,:;:;+';;;;;;;;;;;;;;.';;';;;;;;;;;''''''''':
+        :'''';;;;;;;;;;:,,:::,,::;;;;;;;;;;.'';;;;;;;;;''''''''''';
+         '''''''''''';';:::::::,:;;;;;;;;'+;';:';;;;''''''''''+';.
+         ,+'''''''''''',';;;;;;;;;;;;;''';'''';'''''''''''''++,
+          .'+++++++'''',:''+++''''';''''''+;:',''''''''''++,.`
+            '++++++++++':,;';:;;;'''''''''+,;;:''''''''++;.
+             ,++++++++'';:::::::;'''''''''#+::'''''''''+.
+               ...:'+';:;;;;;'++''';''';;;';;;;;;;;''';.
+                   :':,,,:'++';;;''';:,,,,:,,,,..,,,:::
+                   .:,,,.:;;;;;;'';:,,.,,.,,.....,.,,,,
+                   `,,,.,:,:'';;;::,,..................`
+                   `....,..,,:::::,,..................,,`
+                    ..`,.`..,,,,,,,,...................,,
+                    `.`.`.,...,,,,,.....................,
+                    ``..,,``....,,,......................
+                    `.,,.``.....,,,....................,
+                   `.,,......``.,...........`````.......
+                   `````````...............````..`...,,
+                    ````````..`....,..``..``.,..,:..`,:
+                    ```````.,......,..`....,.,:,:;;+##,.
+                    `:.....,:....,.....,.:,:;#+#+++##,,,
+                    `;##:,,.,,,,,,,,::,,,.;##+++##+#,.,,
+                   ```+#.+#;,,......,,:.+##+++#####..`.,`
+                   ```:#,#+++':;;';'+#+`+++######+,....,.
+                  `````;.###,;'###+'#++`#######++,.....,.
+                  ```````+##++'#+##;+##.'#####',```....,,`
+                 ```````.,+#'@#####;###:,##+'.````......,,
+                 ``````````;:.#####;###+.+,`.``````.....,:
+                 ````````.``;+#####'#+';,..````````......,
+                ``````````.`,''+##+';,....``````````......
+                ````````````.,;;,,,.....````````````..`...
+                `````````````...``....``````````````...,..
+                ```````````````.``.`````````````````...,.`
+                ````````````````````````````````````......
+                `.``````````````````````.````````````.....`
+                 ,``````````````````````````````````......`
+                 ``````````````````````````````````.......`
+                  ```````````````````````````````........,`
+                  ```````````````````````````````......,.,`
+                   `.`````````````````````````.``````....,`
+                   This idea was  donated by an Adam Walker.
+                  ``````````````````````.```````````.....,`
+                  `` ````````...````````````````````.....,`
+			</pre>
+  		</div>
+			</div>
+
+			<!-- ================= EDIT THE BLOG HERE!!!!! =================== -->
+
+			<div class="main">
+			<div class="content">
+			<h1 style="color:#F3E0DC;font-size: 20px;">Comp6441 - Security engineering and c*ber security   </h1>
+			<div id="contents"> <!-- This is used to go back to top dont delete - i should fix this tho --> </div>
+			<div class="bordere">
+
+        <!-- =================================================================
+							LECTURE STUFF
+				================================================================= -->
+        <h2 class="Header" id="lecture">Lectures</h2>
+        <hr>
+<h5 class="date" id="ben">5/07/19</h5>
+<pre>
+<b>Benford's Law</b> - How mathematics can detect fraud!
+
+So this was mentioned in the chat by ryanb in response to how to do politician question (midterm 2017 q5).
+I looked it up and it's pretty interesting math.
+
+If you were looking at a newspaper and you listed all the numbers that appeared on the front page,
+most would assume that the number 1 would appear as the first digit 11% of the time (i.e., one of nine possible numbers).
+
+However, it was found that numbers starting with a 1 will turned up <b>30%</b> of the time.
+This is true for things like addresses, populations, constants etc.
+As you go up in numbers, this percentage would decrease, as shown in the table below:
+
+	<img src="../extra/benford.jpg" alt="Benford's law" style="width:700px;height:300px">
+
+Note: If your choices are too random or too restricted this law wouldn't be true,
+An example of this is looking at height of people.
+
+<b><u>Now how does this relate to the six politicians question i.e. fraud detection.?</u></b>
+If you look at the first point, I wrote that most people won't realise that 1 is a dominant
+starting number in in data sets. So if you calculate the frequency of the of the different
+politicians first digit, the ones with 1 occurring more times (or around 30%) would be
+the ones more honest about their  expense claims.
+
+Source:<a href="https://www.youtube.com/watch?v=vIsDjbhbADY">https://www.youtube.com/watch?v=vIsDjbhbADY</a>
+:<a href="https://www.isaca.org/Journal/archives/2011/Volume-3/Pages/Understanding-and-Applying-Benfords-Law.aspx?utm_referrer="">
+https://www.isaca.org/Journal/archives/2011/Volume-3/Pages/Understanding-and-Applying-Benfords-Law.aspx?utm_referrer=</a>
+</pre>
+
+<hr>
+<h5 class="date" id="mid2">5/07/19</h5>
+<pre>
+  MID-SEM PRACTICE CONTINUED
+
+  COMP9/3441 Midsemester Exam : 2016s1 =
+
+ ==== Part A ====
+ This part is worth 12 marks and consists of 6 two mark questions. Answer all questions.
+
+ === Question 0 ===
+ (2 Marks)
+ Which of the below best describes the concept of a NONCE?
+
+ .[A] A key which is only guessable by brute force
+ .[B] A number which is not used again
+ .[C] A random number or phrase
+ .[D] A salt value for a hash
+ .[E] An idiot
+
+
+<b><u>ANSWER:</u> B - N ONCE</b>
+
+ === Question 1 ===
+ (2 Marks)
+ Buffer overflows can affect the control flow of a program by?
+ .[A] Storing a negative number in an integer
+ .[B] Changing a loop counter
+ .[C] Overwriting a return access in the stack frame
+ .[D] Changing data in the heap
+ .[E] All of the above
+
+<b><u>ANSWER:</u> C</b>
+
+ === Question 2 ===
+ (2 Marks)
+ A MAC is designed to provide
+ .[A] Neither Confidentiality nor Authentication
+ .[B] Authentication but not Confidentiality
+ .[C] Confidentiality but not Authentication
+ .[D] Confidentiality and Authentication
+ .[E] A small hamburger
+
+<b><u>ANSWER:</u> B - MACS is designed to provide AUTHENTICATION (the message came from the owner)
+AND INTEGRITY (maintaining trustworthiness of message, i.e. hasn't been tampered with)</b>
+
+ === Question 3 ===
+ (2 Marks)
+ Given a cryptographic hash function, which is most likely easier:
+ .[A] Finding two different messages with identical hash values
+ .[B] Given the hash of a message, finding the original message
+ .[C] Given a hash value, finding a message which hashes to that value
+ .[D] Given the hash of a long message, and the contents of the second half of the message, finding the first half of the message.
+ .[E] It's not this one
+
+<b><u>ANSWER:</u>IDK D </b>
+
+ === Question 4 ===
+ (2 Marks)
+ If all of the 100 agents in a system need to be able to communicate with each other
+ confidentially using an asymmetric cipher, how many distinct private keys would be needed?
+ Note: only enter DIGITS in your answer (or else the automarker will mark it wrong.)
+
+<b><u>ANSWER:</u> 100 - Some notes on Asymmetric cryptography:
+
+It uses public and private keys to encrypt and decrypt data.
+The keys are large numbers that have been paired together but are not
+identical (asymmetric).
+One key in the pair can be shared with everyone; it is
+called the public key. The other key in the pair is kept secret; it is called
+the private key. Either of the keys can be used to encrypt a message; the opposite
+key from the one used to encrypt the message is used for decryption. </b>
+
+asymmetric encryption are designed to provide confidentiality, integrity & authenticity (Digital Signatures)
+
+source:<a href="https://searchsecurity.techtarget.com/definition/asymmetric-cryptography">
+https://searchsecurity.techtarget.com/definition/asymmetric-cryptography</a>
+
+ === Question 5 ===
+ (2 Marks)
+You are going to use a system based on Merkle Puzzles to allow other people to communicate
+with you securely even if you have never met or shared a secret before. You encode 1,000,000
+messages, each consisting of a different 200 character english phrase and a different 80 bit
+Merkle key, each message encoded using a different 40 bit CDMF key.
+If someone has a system which can decode an CDMF ciphertext into a plaintext using a given 40
+bit CDMF key in 1 billionth of a second, roughly how many seconds will it take them to discover
+a Merkle key to use to privately communicate with you on averge?
+Give your answer in digits only, and rounded to the nearest power of 2. So if you thought the
+answer was 70 seconds you would enter 64.
+Note: only enter DIGITS in your answer (or else the automarker will mark it wrong.) except you
+may use scientific notation for very big numbers if needed.
+
+<b><u>ANSWER: </u></b>
+
+ ==== Part B ====
+ This part is worth 12 marks and consists of 1 question.
+ Working is not marked, only your final answer.
+ Note: only enter DIGITS in your answer (or else the automarker will mark it wrong.)
+ === Question 6 ===
+ (12 Marks)
+ A bank has invented a new way of turning a message into a number - called a CDC code, and uses this as part of a procress to verify messages with so called VERIFY codes.
+ The bank authenticates and protects the integrity of its messages by computing a VERIFY CODE which is the CDC code of {password,message}
+ I.E. The CDC code of a secret password with the message appended to then end of it.
+ The Bank sends the resultant VERIFY CODE along with the message (but does not send the password of course!) All messages each day use the same password.
+ Below is how a CDC code is computed:
+ Start with the first character of the message, convert it into a code using the following table (only some values shown)
+ {{{
+ A-23
+ B-47
+ I-397
+ L-507
+ O-581
+ P-635
+ R-687
+ U-763
+ Y-901
+ 0-405
+ 1-73
+ }}}
+ Then multiply this by 521, mod it by 10,000, add 450,
+ mod it by 967, then add in the code for the next character, and repeat...
+ For example the CDC code for the message "AU" is 216.
+ Working:
+ {{{
+ 'A' 23x521 = 11983
+ mod 10,000 = 1983
+ +450 = 2433
+ mod 967 = 499
+ +763 'U' = 1262
+ x521 = 657502
+ mod 10,000 = 7502
+ +450 = 7952
+ mod 967 = 216
+ }}}
+ You have intercepted the following messages and VERIFY CODES:
+ {{{
+ "PAYBOB100" has VERIFY CODE of 481
+ "BILLBOB1000" has VERIFY CODE of 573
+ "PAYROB1000" has VERIFY CODE of 301
+ }}}
+ What is the VERIFY code for
+ "PAYBOB1000" ? (enter digits only in your answer)
+ Notice this question is asking for the VERIFY code not the CDC code.
+ _______
+
+ <b><u>ANSWER: </u></b>
+</pre>
+
+<hr>
+<h5 class="date">5/07/19</h5>
+<pre>
+  MID SEM PRACTICE
+  Identifying ciphers:
+
+The following ciphers use substitution, transposition, or the enigma machine to encrypt the plain text. Each cipher has the same plain text. For each cipher, identify which method was used to encrypt it. Find the plain text by breaking one of the ciphers.
+
+<b>Cipher A</b>
+ENIGMA MACHINE??
+wdlxnofderfxtiuewggiigugtgdeoaqcghwhxgqjsfuhibkflyzsponmxkepddfvpgrgoqxmdiphaqwlulddlte
+wadaoojpyucihpubpikwogzgalbnkqpsjmhpdlovamktzdtvawlojodpncgvfksbxzziiwvhrqusebenddum
+ihsccvwuqvhdxgncryakekpypdmwklbowxvurfuxsvqdywkfjgooiulktskzjoihmerqcihwvahxvskgfflmon
+uexalbzevzydotnzjpllebtivstmsaoffwokqyhgtqvztcsryxyrbvqfqsakiswrksthrslareuacgiqeamcygveyrx
+
+<b>Cipher B </b>
+TRANSPOSITION??
+tbuhtoewsrntemeoyycumaneeitwllwalyaesboysurleofyluiiewntaioforyrulseifancevsrnnaodfersstoll
+neoyyneuoearogginhtaewtyooyrulseafynduoarwgysoeapystuoersfldanapystuoersevendivylsuolwi
+blheareiettcooyrulseafwndtiachdnosohtysaredanofaoldnudotbaerdnhunlonyoaevndliilaynmousu
+etberyadotrbuynrouesilfynrouwolnfmaoehcwlouydbouceeomenfwioyauhndfotribstceeomsashexx
+
+<b>Cipher C </b>-I'm guessing this one cant be transposition as a word with 'zwmmi' etc is unlikely.
+SUBSTITUTION??
+zwmmitcgklmtftdbbgweafdttmcossascablztbgwkltsybgwsotofcaomygkbgwkltsyofeaxtkflafrygktlmlsg
+ftsbgftbgwaktugofumitcabmgbgwkltsyafrbgwkcabugtlhalmbgwkltsyafrhalmbgwkltxtfrtxoslbgwcossz
+taitktmoemgbgwkltsyafrcomeiafrlggmilabtkafryggsafrrgwzmtkafrwfigsbgftafrxossaofbgwdwlmztktar
+bmgzwkfbgwkltsyofbgwkgcfysadtigcegwsrbgwztegdtftcoybgwiarfgmyoklmztegdtalitl
+</pre>
+
+<hr>
+<h5 class="date" id="mid1">3/07/19</h5>
+<pre>
+MID-SEM PRACTICE CONTINUED
+I have gone over and revised the notes written by the course, so ill try the 2017
+exam first, then ill go over my answers comparing to Jazz answers.
+
+
+= COMP6441 Midsemester Exam : 2017s1 =
+
+==== Part A ====
+This part is worth 18 marks and consists of 6 three mark questions. Answer all questions. Spend about 3 minutes on each.
+
+=== Question 0 ===
+(3 Marks)
+
+What is the most important property for a cryptographic hash function to have to make it as resistant as possible to birthday attacks?
+
+.[A] Preimage resistance
+.[B] Collision resistance
+.[C] Confidentiality
+.[D] Symmetry
+.[E] Second-preimage resistance
+.[F] Non-determinism
+
+<b><u>ANSWER:B - As a birthday attack is basically a collision in hashing </u></b>
+CORRECT
+
+=== Question 1 ===
+(3 Marks)
+
+You are a developer of opensource fake-news software called "The trumpet shall sound",
+or "Trumpet" for short. You wish to use a cryptographic algorithm to generate a 64 character
+"digital fingerprint" of the "Trumpet" binary, which you will display on your web site so
+that people can check that they have downloaded a legitimate and unaltered copy of "Trumpet".
+
+What is the most important property for this cryptographic fingerprint algorithm to have?
+
+.[A] Preimage resistance
+.[B] Collision resistance
+.[C] Confidentiality
+.[D] Symmetry
+.[E] Second-preimage resistance
+.[F] Non-determinism
+
+<b><u>ANSWER:A cause you have the output (fingerprint) and you don't want anyone
+to use that to get the input </u></b>
+WRONG
+=== Question 2 ===
+(3 Marks)
+
+A MAC is designed to provide
+.[A] Neither Integrity nor Authentication
+.[B] Authentication but not Integrity
+.[C] Integrity but not Authentication
+.[D] Integrity and Authentication
+.[E] A Very Fashionable Device
+
+<b><u>ANSWER: D </u></b>
+CORRECT
+=== Question 3 ===
+(3 Marks)
+
+You have a password file of 1,000 password hashes. Assuming that 50% of the passwords
+used were weak passwords which can be found in a dictionary of 1,000,000 common passwords,
+and that hashing a password takes 12 bits of work on average, roughly how many
+bits of work would it take to discover all these 500 or so weak passwords?
+
+Note: only enter DIGITS in your answer (or else the automarker will mark it wrong.)
+_____
+
+<b><u>ANSWER: 2^11 (11 bits) </u></b>
+WRONG
+=== Question 4 ===
+(3 Marks)
+
+As for Question 3 but now assume that each password is appended to a different 32 bit
+number (a salt) before the hash was computed, and that the salt number for each
+password hash is stored, unencrypted, next to the hash in the password file.
+
+Roughly how many bits of work would it take to discover all the 500 or so weak passwords in this case?
+
+Note: only enter DIGITS in your answer (or else the automarker will mark it wrong.)
+
+<b><u>ANSWER: 2^128 - forever, I'm not sure GO OVER SALT </u></b>
+WRONG
+=== Question 5 ===
+(3 Marks)
+<h1 id="politician"></h1>
+Below are six lists of expenses submitted by six politicians. Sadly 3 of the politicians
+are dishonest and submitted made-up fake expense claims, not costs that they really incurred. :(
+
+{{{
+Albus Bert Carl Dave Egon Fred
+
+269 6,296 543 1,137 503 206
+1,428 3,217 220 638 4,195 74
+3,840 520 3,080 696 5,780 257
+2,163 456 5,070 543 7,774 350
+165 111 108 113 986 50
+2,701 2,176 8,078 145 884 426
+339 476 7,963 313 6,530 3,226
+64 2,607 68 236 50 108
+942 824 2,457 701 9,801 94
+17 10 7,952 422 5,717 17
+423 112 5,332 5,723 29 158
+37 13 5,705 964 3,933 609
+723 9,048 8,851 750 6,122 5,769
+172 295 99 7,905 91 19
+498 165 6,424 9,953 89 275
+5,583 3,008 48 491 19 898
+56 1,396 8,339 2,675 758 506
+158 19 1,945 8,212 427 3,467
+1,244 238 916 897 8,503 9,217
+2,445 51 3,618 392 3,617 26
+866 921 4,219 941 338 1,349
+
+}}}
+
+Correctly identify the status of each politician.
+<b><u>ANSWER:</u>
+I'll use Benford's law to answer this (look up for what that is).
+
+==== 5.1 Albus ====
+Frequency of first digit 1 : 6
+<b>.[A] Honest</b>
+.[B] Dishonest
+
+==== 5.2 Bert ====
+Frequency of first digit 1 : 7
+<b>.[A] Honest</b>
+.[B] Dishonest
+
+==== 5.3 Carl ====
+Frequency of first digit 1 : 2
+.[A] Honest
+<b>.[B] Dishonest</b>
+
+==== 5.4 Dave ====
+Frequency of first digit 1 : 3
+.[A] Honest
+<b>.[B] Dishonest</b>
+
+==== 5.5 Egon ====
+Frequency of first digit 1 : 1
+.[A] Honest
+.<b>[B] Dishonest</b>
+
+==== 5.6 Fred ====
+Frequency of first digit 1 : 5
+<b>.[A] Honest</b>
+.[B] Dishonest
+
+That's my guess, don't know if its true or not.
+
+</b>
+
+==== Part B ====
+This part is worth 10 marks and consists of 1 question. Spend about 10 minutes on it.
+
+=== Question 6 ===
+(10 Marks)
+
+What is the 5th word in the plaintext for the ciphertext below?
+
+{{{
+HHPET IAESR DTEHN SRAKA UASMI UEOYR CNWOK FNERA TRONE TNYLO
+SOENO OHDAS RYUSW DONUR BNSGI STLAU HTTOO DSAHE EWSYO SRTEC
+IFHWO EHNOC TIHGM AENUB EAERW DEYRV EYHTA OUGNS WSODE ROEVN
+HLTLA ESSEE SRTEC ONSDA YVREE SNIEO ENHTI IAKRD WOENN AYROA
+EOHTN OIYFR SAERU TNABU IIGNH RAAPN IFROK NSATN TEUBC OODUY
+NOKTN AWHTO CAOLT AECDK TIENB RSUBI IEFDI ETFYF NTEBE YAHTE
+LUBRO TNEKA YHNET EURAO ENHTI EAKRD HETNV YUHGO EURAO COATN
+LULAT HITNY KDRAE
+}}}
+
+<b><u>ANSWER: </u></b>
+12345 = 42531 OR 52431
+YVREE = EVERY
+
+
+HHPET IAESR DTEHN SRAKA UASMI UEOYR CNWOK FNERA TRONE TNYLO
+12345 =  42531 OR 52431?
+HHPET =  <strike>EHTPH</strike> THEPH - therefore its 52431
+IAESR = RASEI
+DTEHN = NTHED
+SRAKA = ARKAS
+UASMI = IAMSU
+UEOYR = REYOU ?
+THEPHRASEINTHE<b>DARK</b>ASIAMSUREYOU
+
+DARK is the fifth word.
+
+This was similar to the challenge cipher we were given in week 3 in that
+just try to look for patterns and apply trial and error.
+
+(==== Part C ====
+This part is worth 20 Marks and consists of 1 question. Spend about 20 minutes on it.
+
+=== Question 7 ===
+(20 Marks)
+
+Suppose we convert letters and other characters into numbers in the range 1..54 using
+the following table and then separately encipher each of these numbers using RSA with
+a public encryption key of 23 and a modulus of 55.
+
+{{{
+1 <         21 L       41 4
+2 >         22 M     42 5
+3 ?         23 N      43 6
+4 /         24 O      44 7
+5 :         25 P       45 8
+6 ;         26 Q      46 9
+7 “         27 R      47 (
+8 '         28 S       48 )
+9 @       29 T      49 *
+10 A      30 U     50 +
+11 B      31 V      51 ,
+12 C      32 W     52 -
+13 D     33 X       53 .
+14 E      34 Y       54 /
+15 F      35 Z
+16 G     36 SPACE
+17 H     37 0
+18 I      38 1
+19 J      39 2
+20 K     40 3
+}}}
+
+For example the plaintext ":)" would be converted into 5,48, and then each of these
+numbers would be individually encrypted using RSA to produce the cipertext 15,42.
+
+The remainder of this question has been encrypted using RSA with an encryption key
+of 23 and a modulus of 55.
+
+{{{
+24,18,49,16,48,49,33,10, 2,12,
+52,49,48,16,19,20,16,24,18, 2,
+7,16,31,50,49, 7,24, 2,19,12,
+16,18,10, 7,16,11,49,49,12,16,
+49,12,23,48,34, 5,24,49,52,16,
+50, 7, 2,12,26,16,48, 7,10,16,
+43, 2,24,18,16,10,12,16,49,12,
+23,48,34, 5,24, 2,19,12,16,25,
+49,34,16,19,20,16,29,35,16,10,
+12,52,16,10,16,33,19,52,50,21,
+50, 7,16,19,20,16, 3, 3,47,16,
+16,24,18,49,16,10,12, 7,43,49,
+48,16,23,19,52,49,43,19,48,52,
+16, 2, 7,16,53,53,53,53,53,53,
+53,53.
+}}}
+
+What is the answer codeword?
+
+<b><u>ANSWER: </u></b>
+I don't know how to answer this so LET RESEARCH.
+
+source:
+
+EDDIE WOO MADE A VIDEO ON RSA!!!!BLESS  https://www.youtube.com/watch?v=4zahvcJ9glg
+https://www.youtube.com/watch?v=z6_A6_BQgLs
+https://www.youtube.com/watch?v=kYasb426Yjk
+
+</pre>
+
+<hr>
+<h5 class="date">1/07/19</h5>
+<pre>
+In preparation for the Midsem exam I am going through all online challenge/activities.
+
+WEEK 3 MODULUS - CIPHER
+
+<table>
+  <td>
+Type: Crypto
+Description: Decrypt the cipher-text below to find the flag.
+
+TGPRGWTADEKI HI3OYNODONAT ES4LOCIINTB} FC4LURSDTHO_ LO1IRYAEEIU_ AM{NOPBAVNT_
+Format: Enter the flag with no spaces.  The flag looks like:
+
+COMP3441{...}
+</td>
+</table>
+
+<ol>
+<li>First thing I tried was to highlight what we know - the flag starts with 'COMP3441{...}'.
+So I know we must use this to decipher the pattern.
+</li>
+TGPRGWTADEKI HI<b>3</b>OYNODONAT ES<b>4</b>LOCIINTB} FC<b>4</b>LURSDTHO_ LO<b>1</b>IRYAEEIU_ AM{NOPBAVNT_
+
+<li>I found the '3441' characters in the cipher and realised there is a 11 letter
+gap between each and from that I got this:
+
+3441{OLLINYOURONCRYPOISABDIDEAONTEVNTHINABOUTT}___EFLATSCOMG
+
+As you can see it is clearly wrong and I didn’t consider the ‘comp’ in the flag.
+When I tried to count between the letters in ‘comp’  the letters in between each letter didn’t
+Add to 11.
+</li>
+
+<li>Now I tried to consider the whole flag, so I went and highlighted all the letters
+in the flag. One problem I faced was that there were 2 c’s to choose from.
+
+TGPRGWTADEKI HI3OYNODONAT ES4LO<b>C</b>IINTB} F<b>C</b>4LURSDTHO_ LO1IRYAEEIU_ AM{NOPBAVNT_
+</li>
+
+<li>THIS IS WHEN I  REALISED THE PATTERN – the “M{” gave it away- the letter that
+comes next in the sentence is the letter directly after the letter- that doesn’t make sense – so let me show you :
+</li>
+
+<li>I have done something wrong, so I don’t have the answer- why is it wrong??
+
+COMP3441{ROLLINGYOUROWNCRYPTOISABADIDEADONTEVENTHINKABOUTIT}___theflagis
+</li>
+
+<li>I HAVE GOT IT!! THE SENTENCE DOESN’T START AT “COMP3441” – IT STARTS AT “THEFLAGIS” :
+
+THEFLAGISCOMP3441{ROLLINGYOUROWNCRYPTOISABADIDEADONTEVENTHINKABOUTIT }___
+</li>
+</ol>
+	<img src="../extra/wk3crypto.png" alt="cipher app" style="width:700px;height:150px">
+
+  </pre>
+
+<hr>
+<h5 class="date">26/06/19</h5>
+<pre>
+  So I was able to solve 2 more substitution ciphers today and what has really
+  helped was following this method:
+
+  (1) Find the most frequent letters, do this by literally counting each letter and
+  finding the two most frequent letters - you can use this to guess "e" and "t"
+
+  (2) look for "the" - popular word so try looking for it especially since we would
+  have "e" and "t" from above step
+
+  (3) look for double letters eg "ee", "ii"
+
+	<img src="../extra/crypt4.png" alt="cipher app" style="width:350px;height:150px"> <img src="../extra/crpt6.png" alt="cipher app" style="width:350px;height:150px">
+
+</pre>
+
+<hr>
+<h5 class="date">21/06/19</h5>
+<pre>
+<u><b>MIDTERM PRAC - SUBSTITUTION CIPHER #2</b></u>
+
+	<img src="../extra/crypt3.png" alt="cipher app" style="width:700px;height:287px">
+
+<u><b>MIDTERM PRAC - THEORY QUESTIONS</b></u>
+
+<i>What are the six most common letters in English text?</i>
+E T A O I N <i>(Estimated Time Of Arrival Is Now)</i>
+
+<i>What are the important properties of a cryptographic hash function?</i>
+
+
+<i>What are the CIA properties?</i>
+
+<p><strong><u>CONFIDENTIALITY:</u>&nbsp;</strong>Ensuring that only authorised people can access certain information.</p>
+<p><strong><span style="text-decoration: underline;">I</span>NTEGRITY:&nbsp;</strong>Maintaning the "trustworthiness" of a message</p>
+<p><strong><span style="text-decoration: underline;">A</span>UTHENTICATION:&nbsp;</strong>An act, or process of showing something to be real, true, or genuine.</p>
+<p>&nbsp;</p>
+
+</pre>
+
+<h5 class="date" id="mid">21/06/19</h5>
+<pre>
+<u><b>MIDTERM PRAC - SUBSTITUTION CIPHER #1</b></u>
+
+FINISHED THE FIRST CIPHER, the table below really helped but also just guessing
+can make it easier to get the cipher.
+I need to slowly stop using the table below and start solving by hand to prepare for the midsem.
+
+	<img src="../extra/crypchal.png" alt="cipher app" style="width:700px;height:287px;">
+</pre>
+
+<hr>
+<h5 class="date" id="ciph">17/06/19</h5>
+<pre>
+<u><b>CIPHER - FREQUENCY ANALYSIS</b></u>
+
+It’s currently the start of week 3 and I still have not completed a single cipher.
+I’m at the uni right now and I will not leave until I <strike>complete</strike> attempt one cipher.
+I will start off with the Crypto Challenge #1 that jazz posted under the midterm page.
+BUT FIRST SOME BACKGROUND INFORMATION TO HELP ME (copied from <a href="http://practicalcryptography.com/ciphers/simple-substitution-cipher/" target="_blank" style="background-color:#ffffa0">HERE</a>)
+
+<b>Frequency analysis</b>
+
+The most common letters in the English alphabet are <u><strong>ETAOIN</strong></u>.
+If the first and last letters are the same eg "xoxl" look for letter "e"
+
+<table>
+<tr>
+<td>One-Letter Words</td>
+<td>a, I.</td>
+</tr>
+<tr>
+<td>Frequent Two-Letter Words</td>
+<td>of, to, in, it, is, be, as, at, so, we, he, by, or, on, do, if, me, my, up, an, go, no, us, am</td>
+</tr>
+<tr>
+<td>One-Letter WordsFrequent Three-Letter Words</td>
+<td>the, and, for, are, but, not, you, all, any, can, had, her, was, one, our, out, day, get, has, him, his, how, man, new, now, old, see, two, way, who, boy, did, its, let, put, say, she, too, use</td>
+</tr>
+<tr>
+<td>Frequent Four-Letter Words</td>
+<td>that, with, have, this, will, your, from, they, know, want, been, good, much, some, time</td>
+</tr>
+</table>
+
+<table>
+<tr>
+<td>Most Frequent Single Letters</td>
+<td>E T A O I N S H R D L U</td>
+</tr>
+<tr>
+<td>Most Frequent Digraphs</td>
+<td>th er on an re he in ed nd ha at en es of or nt ea ti to it st io le is ou ar as de rt ve</td>
+</tr>
+<tr>
+<td>Most Frequent Trigraphs</td>
+<td>the and tha ent ion tio for nde has nce edt tis oft sth men</td>
+</tr>
+<tr>
+<td>Most Common Doubles</td>
+<td>ss ee tt ff ll mm oo</td>
+</tr>
+<tr>
+<td>Most Frequent Initial Letters</td>
+<td>T O A W B C D S F M R H I Y E G L N P U J K</td>
+</tr>
+<tr>
+<td>Most Frequent Final Letters</td>
+<td>E S T D N R Y F L O G H A K M P U W</td>
+</tr>
+	</table>
+
+UPDATE - I ended up not doing Crypto Challenge #1 and just doing one I got from a cipher app
+
+		<img src="../extra/cryp1.png" alt="cipher app" style="width:206px;height:287px;">
+</pre>
+
+<h5 class="date" id="secure">9/06/19</h5>
+<pre>
+  <u>WEEK1</u>
+In the lecture we were taught a very important lesson:
+				<br>
+		<i><strong> DON'T TRUST ANYBODY - ESPECIALLY DON'T TRUST <ins>YOURSELF</ins></strong></i>
+</pre>
+
+	<!-- </div> WHEN I DONT COMMENT THIS OUT THE BORDER DISAPEARS-->
+	</div>
+	</div>
+
+
+		<div class="bordere">
+		<p id="comment" style ="font: 10px">If you're my tutor you can comment feedback below,	if you're just random also feel free to critcise my work or chuck a hello. </p>
+
+		<a href="#contents" class="top">&#9650; Top</a>
+		<!-- begin wwww.htmlcommentbox.com -->
+		<div id="HCB_comment_box"><a href="http://www.htmlcommentbox.com">HTML Comment Box</a> is loading comments...</div>
+		<link rel="stylesheet" type="text/css" href="https://www.htmlcommentbox.com/static/skins/bootstrap/twitter-bootstrap.css?v=0" />
+		<script type="text/javascript" id="hcb">
+		/*<!--*/ if(!window.hcb_user){hcb_user={};} (function(){var s=document.createElement("script"), l=hcb_user.PAGE ||
+		(""+window.location).replace(/'/g,"%27"), h="https://www.htmlcommentbox.com";s.setAttribute("type","text/javascript");
+		s.setAttribute("src", h+"/jread?page="+encodeURIComponent(l).replace("+","%2B")+"&mod=%241%24wq1rdBcg%24xp0cXw24E4AR9n7djMBPA."+"&opts=16862&num=10&ts=1560603664281");
+		if (typeof s!="undefined") document.getElementsByTagName("head")[0].appendChild(s);})(); /*-->*/ </script>
+		<!-- end www.htmlcommentbox.com -->
+
+		</div>
+		<pre style="font: 2px/1px monospace;">
+																																								++++++++++++++++++++++++##########++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+																																								+''''''''''''''''''+++++++++++++++++++++++'++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++''++++'''''++++++''+
+																																								+''''''''''''''''+''++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++''+''++''+++'''''''+++++
+																																								+''''''''''''''''++'++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+																																								+''''''''''''''''+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++''+''++++++++'++++++'++++
+																																								+'''''''''''''''+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+																																								+'''''''''''''''++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++'''+
+																																								+'''''''''''''''+++++++++++++++###++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+																																								+''''''''''''''++++++++++++++++###+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+																																								+''''''''''''''++++++++++++++++###+#++++++++++++++++++++++#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+																																								+'''''''''''''++++++++++++++#########+++++++++++++++##++++++#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++'+
+																																								+''''''''''''++++++++++++++###########+++++++++++++###########+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++'+
+																																								+''''''''''''++++++++++++++###########+++++++++++++####+######+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++'+
+																																								+''''''''''''++++++++++++##############+++++++++++++###########+++++++++++++++++++++++++++++++++++++++++++'+'+++++++                        IDEA DONATED BY DEBORAH 4CHANDRA
+																																								+''''''''''''++++++++++++###############++++++++###############+++++++++++++++++++++++++++++++++++++++++++'+'++++++++++++++++++++++++++++'+
+																																								+''''''''''''++++++++++############################################+++++++++++++++++####+++++++++++++++++'+++++++++++++++++++++++++++++++''
+																																								+''''''''''''++++++++++###################################################+##+++########+++++++++++++++++++'+++++++++++++++++++++++++++++''
+																																								+''''''''''''+++++++++++#################################################################++++++++++++++++++'+++++++++++++++++++++++++++++++++++++''++
+																																								+'''''''''''++++++++++###################################################################++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+																																								+''''''''''+++++++++#+##################################################################++#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+																																								+''''''''''++++++++#########################################################################++++++++++++++++++++++++++++++++++++++++++++++++++++++++++''+++'+''
+																																								+''''''''++++++++++#################################################################++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++'
+																																								+''''''''+++++++++#############################################+#+#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+																																								+'''''+++++++++++#################################++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++''''
+																																								+'''''+++++++++++###############################+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+																																								+''''+++++++++++############################++++++++++++++++++++'''''''''''''''''''''''''''+''++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+																																								+''''++++++++++########################+++++++++++'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''++++++++++++++++++++++++++++++++++++++++++++++++++
+																																								+''''+++++++++##################+++++++++++++''''''''''''''''''''''''';;;';;;;;;''''''''''''''''''''''''''''''''''++++++++++++++++''''''''++++++++++++++++++++++++++++
+																																								+''''+++++++++#############+++++++++++++++''''''';;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;''';''''''''''''''++++++++++++''''''''''''''+++++++++++++++++++++++++++''
+																																								+''''+++++++++#############+++++++++++++'''''';;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;''''''++++++++++'''''''''''''''''+++++++++++++++++++++++++++++++
+																																								+''''+++++++++############+++++++++++''''''';;;;;;;;;;;;;::::::;;::::::::;:;;::;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;''''++++++++''''';;;;'''''''''+++++++++++++++++++++++++++++++
+																																								+''''++++++++############+++++++++'''''''';;;;;;;::::::::::::::::::::::::::::::::;;;;;;;;;:;:;;;;;;;;;;;;;;;;;;;;''++++++++''''';;;;;;'''''''''++++++++++++++++++++++++++++++'
+																																								+'+++++++++++###########+++++++'''''''';;;;;;;;:::::::::::::::::::::::::::::::::;;;;;;;;;::::::::::;;;;;;;;;;;;;'''''++'''''';;;;;;;;;'''''+++++++++++++++++++++++++++++++++++
+																																								++++++++++++###########+++++'''''';;;;;;;;;;;;;;;:::::::::::::::::::::::::::::::;;;;;;;::::::::::::::;;;;;;;;;;''''++'''''';;;;;::;;;;''''++++++++++++++++++++++++++++++++++++
+																																								#+++++++++++###########+++++'''';;;;;;;;;;;;;;;;;;:::::::::::::::::::::::::::::;;;;;;;;;::::::::::::::;;;;;;;;;'''++++'';;;;:::::::;;;''''++++++++++++++++++++++++++++++++++++++
+																																								#+++++++++++###########++++'''';;;;;;;;;;;;;;;;;;;;;::::::::::::::::::::::::::;;;;;;;;;::::::::::::::::;;;;;;;''''+++''';;::::::::::;;''''++++++++++++++++++++++++++++++++++++++
+																																								#+++++++++++###########+++++''''';;;;;;;;;;;;;;;;;;;;;;:::;::::::::::::::::::;;;;;;;;;;:::::::::::::::::;;;;;''''''+''';;;;:::::::::;;''''++++++++++++++++++++++++++++++++++++++
+																																								#+++++++++++###########++++++'''''';;;;;;;;;;;;;;;;;;;:;::::::::::::::::::::::;;;;;;:::::::::::::::::::;;;;;;'''''''''';;;;:::::::::;;;''''+++++++++++++++++++++++++++++++++++++
+																																								#++++++++++++##########+++++++++'''''';;;;;;;;;;;;;;;;:;::::::::::::::::::::::;;;;;;::::::::::::::::::::;;;;;''''''''';;;::::::::::::;;;''''++++++++++++++++++++++++++++++++++++
+																																								#++++++++++++++#########++#+++++++'''''';;;;;;;;;;;;;;;;::::::::::::::::::::::;;;;;::::::::::::::::::::::;;;''''+'''';;;:::::::::::::;;;;'''+++++++++++++++++++++++++++++++++++'
+																																								#+++++++++++++++##+#+#######++++++++++'''';;;;;;;;;;;;;;::::::::::::::::::::::::;::::::::::::::::::::::::;;;''''+''';;;;:::::::::::::;;;;'''+++++++++++++++++++++++++++++++++++'
+																																								#++++++++++++++++++++##+#########++++++''''';;;;;;;;;;;;:::::::::::::::::::::::::::::::::::::::::::::::::;;;''''''';;;;:::::::::::::::;;;;''''++++++++++++++++++++++++++++++++'
+																																								#++++++++++++++++++++++###########++++++'''''';;;;;;;;;;:::::::::::::::::::::::::::::::::::::::::::::::::;;;'''''';;;;:::::::::::::::::::;;;'''''+++++++++++++++++++++++++++++'+
+																																								+++++++++++++++++++++++++++++++###++++++++''''';;;;;;;;;;::::::::::::::::::::::::::::::::::::::::::::::::;;;;''''';;;;::::::::::::::::::::;;;;'''''''+++++++++++++++++++++++++''
+																																								+''+++++++++++++++++++++++++++++######++++++'''';;;;;;;;;::::::::::::::::::::::::::::::::::::::::::::::::;;;;;''';;;;:::::::::::::::::::::::;;;;''''''+++++++++++++++++++++
+																																								+'''+++++++++++++++++++++++++++#########+++++'''';;;;;;;;;::::::::::::::::::::::::::::::::::::::::::::::::;;;;;'';;;;::::::::::::::::::::::::;;;;;'''''''''+++++++++++++++++++
+																																								+'''+++++++++++++++++++##+++++++#########+++++'''';;;;;;;;::::::::::::::::::::::::::::::::::::::::::::::::;;;;;;;;;;::::::::::::::::::::::::::;;;;;;'''''''''''''''''+''''''''
+																																								+''+++++++++++++#+######+++#++++##########+++++'''';;;;;;;:::::::::::::::::::::::::::::::::::::::::::::::::;;;;;;;;;:::::::::::::::::::::::::::::;;;;;''''''''''''''''''''''''''''';;;;
+																																								+'++++++++++++###################+########+++++'''';;;;;;;::::::::::::::::::::::::::::::::::::::::::::::::::;;;;;;;;::::::::::::::::::::::::::::::;;;;;;;;;'''''''''''''''''''''';;;;;;;;
+																																								+++++++++++++###############################++++'''';;;;;;;::::::::::::::::::::::::::::::::::::::::::::::::::;;;;;;;::::::::::::::::::::::::::::::::;;;;;;;;;;;;''''''''''''''';;;;;;:;;;;
+																																								++++++++++###################################++++'''';;;;;;::::::::::::::::::::::::::::::::::::::::::::::::::::::;;;::::::::::::::::::::::::::::::::::::;;;;;;;;;;;;;;;;;;;;;;;;;;;::::;;;;;
+																																								++++++++++#######################++++++++####++++'''';;;;;;:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::;;;;;;;;;;;;;;;;;;;;;;::::::;;
+																																								++++++++++######################++++++++++###++++''''';;;;;::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::;;;;;;;;;;;;;;;;;;;:::::::::;;;;
+																																								+++++++++######################++++++++++++++++++''''';;;;;:::::::::::::::::::::::::::::::::::::::::::::::::::::;;;;;;;:::::::::::::::::::::::::::::::::::::::;;;;;;;;;;;;;;;;::::::::::::;
+																																								+''++++++####################++++++++++++++++++++''''';;;;;::::::::::::::::::::::::::::::::::::::::::::::::::::;;;;;;;;;;;;;;:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::;;
+																																								+'''+++++++#################+++++++++++++++++++++''''';;;;;;:::::::::::::::::::::::::::::::::::::::::::::::::::;;;;;;;;;;;;;;;;;;:;;:::;;;;:::::::::::::::::::::::::::::::::::::::::::::::::;;;
+																																								+''''+++++++####+#####++++++++++++++++++++++++++'''''';;;;;:::::::::::::::::::::::::::::::::::::::::::::::::::;;;;;;;;;;;;;;;;;;;;;;:;;;;;;;::::::::::::::::::::::::::::::::::::::::::::::::;;;
+																																								+;'''+++++++++++++++++++++++++++++''''''''+++''''''''';;;;;::::::::::::::::::::::::::::::::::::::::::;;;;;:::;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:;;:::::::::::::::::::::::::::::::::::::::::::::;;;
+																																								';;;'''++++++++++++++++++++'''''''''''''''''''''''''';;;;;;:::::::::::::::::::::::::::::::;::;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;::::::::::::::::::::::::::::::::::::::;;;
+																																								':;;;;''''''''''''''''''''''''''';;;;;;'''''''''''''';;;;;;:::::::::::::::::::::;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::::::::::::::::::::::::::::::::::::::;;;
+																																								':::;;;;;'''''''';;;;;;;;;;;;;;;;;;;;;;;;;;;''''''''';;;;;;:::::::::::::::::::::;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;::::::::::::::::::::::::::::::::::::::::;;;
+																																								':::;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;''';;;;;;;:::::::::::::::::::;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::;;;;;;;;;;;;;;;;;;;;:::::::::::::::::::::::::::::::::::;;;
+																																								'::::;;;;;;;;;;;;;;;;;;;;;;;;;;;;:;;;;;;;;;;;;;;;;'';;;;;;;::::::::::::::::::;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::;;;;;:::::;;;;;;;;;;;;;;;;;;;;;;;;::::::::::::::::::::::::::::::::::;;;
+																																								':::::;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;::::::::::::::::::;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;::::::::::::::::::::::::;:;;;;;;;;;;;;;;;;;;;:::::::::::::::::::::::::::::::::;;;;
+																																								':::::;;;;;;;;;;;;;;;;:::;::;;;:;;;;;;;;;;;;;;;;;;;;;;;;;::::::::::::::::::;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;::::::::::::::::::::::::::::::::::;;;;;;;;;;;;;;;;::::::::::::::::::::::::::::::::::;;'
+																																								':::::::::;;:;;::::::::::::::::;;;;;;;;;;;;;;;;;;;;;;;;;::::::::::::::::::;;;;;;;;;;;;;;;;;;;;;;;;;;;::::::::::::::::::::::::::::::::::::::::::::;:;;;;;;;;;;;;;;::::::::::::::::::::::::::::::::;;;
+																																								'::::::::::::::::::::::::::;;;;;;;;;;;;;;;;;;;;;;;;;;;;::::::::::::::::::;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::::::::::::::::::::::::::::::::::::::::::::::;;;;;;;;;;;;;;;:::::::::::::::::::::::::::::::;;'
+																																								'::::::::::::::::::::::::::;;;;;;;;;;;;;;;;;;;;;;;;;;;:::::::::::::::::;;;;;;;;;;;;;;;;;;;;;;;;;;:::::::::::::::::::::::::::::::::::::::::::::::::::::;;;;;;;;;;;;;:::::::::::::::::::::::::::::::;;
+																																								'::::::::::::::::::::::::::::;;;;;;;;;;;;;;;;;;;;;;;;;:::::::::::::;::;;;;;;;;;;;;;;;;;;;;;;;;::::::::::::::::::::::::::::::::::::::::::::::::::::::::;;;;;;;;;;;;:::::::::::::::::::::::::::::::::;;;''
+																																								':::::::::::::::::::::::::::;;;;;;;;;;;;;;;;;;;;;;;;:::::::::::::;;;;:;;;;;;;;;;;;;;;;;;;;;;::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::;::;;;;::::::::::::::::::::::::::::::::::;;;;'
+																																								':::::::::::::::::::::::::::;;;;;;;;;;;;;;;;;;;;;;;::::::::::::;;;;;;;;;;;;;;;;;;;;;;;;;;;::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::;;;::::::::::::::::::::::;:::::::::::;;;;'
+																																								'::::::::::::::::::::::::::;;;;;;;;;;;;;;;;;;;;;;:::::::::::::;::;;;;;;;;;;;;;;;;;;;;;;;;:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::;:::::::::::::::::::;;;::::::::::::::;;'
+																																								':::::::::::::::::::::::::::;;;;;;;;;;;;;;;;;;;;:::::::::::::;::;;;;;;;;;;;;;;;;;::::::::::::::::::::::::::::::::::::::::::::::::;;;:::::::::::::::::::::::::::::::::::::::::::::;;;;;:::::::::::::::;;;
+																																								':::::::::::::::::::::::::::;;;;;;;;;;;;;;;;;;:::::::::::;;;;;;;;;;;;;;;;;;;;;::::::::::::::::::::::::::::::::::::::::::::::;;;;;;;;;;;::::::::::::::::::::::::::::::::::::::::::::::::;::::::::::::::;;
+																																								':::::::::::::::::::::::::;:;;;;;;;;;;;;;;;;;;;:::::;;;;;;;;;;;;;;;;;;;;;;;::::::::::::::::::::::::::::::::::::::::::;;;;;;;;;;;;;;;;;;;;;;;::::::::::::::::::::::::::::::::::::::::::::::::::::::::::;;
+																																								':::::::::::::::::::::::::::;;;;;;;;;::::;;;;;::::;;;;;;;;;;;;;;;;;;;;;;;;;::::::::::::::::::::::::::::::::::::;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;::::::::::::::::::::::::::::::::::::::::::::::::::::;
+																																								':::::::::::::::::::::::::::;;;;;;;;;:::::;;;:::;:;;;;;;;;;;;;;;;;;;;;;;;;;::::::::::::::::::::::::::::::::;;;;;;;;;;;;;;''''''''''''''''''';;;;;;;;;:::::::::::::::::::::::::::::::::::::::;::::::::::;
+																																								'::::::::::::::::::::::::;:::;;;::::::::;;;;;:::::;;;;;;;;;;;;;;;;;;;;;;;;::::::::::::::::::::::::::::::;;;;;;;;;;;;;;;'''''''''''''''''''''''';;;;;;;;::::::::::::::::::::::::::::::::::::::::::::::::;
+																																								':::::::::::::::::::::::::::::;:::::::::;;;;;;;:::;;;;;;;;;;;;;;;;;;;;::::::::::::::::::::::::::::::;;;;;;;;;;;;;;;;;;;;'''''''''''''''''''''''''';;;;;;;;:::::::::::::::::::::::::::::::::::::::::::::;
+																																								'::::::::::::::::;:;;;;;;;;::;:::;;;;;:;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::::::::::::::::::::::::;;;;;;;;;;;;;;;;;;;;;;;;;;;;;'''''''''''''''''''''''';;;;;;;:::::::::::::::::::::::::::::::::::::::::::;
+																																								'::::::::::::::::;;;;;;;;;;:;;:::;;;;;:;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::::::::::::::::::::;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;''''''''''''''''''''';;;;;;;:::::::::::::::::::::::::::::::::::::::::;
+																																								':::::::::::::;;;;;;;;;;:;;::;:::;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;::::::::::::::::::::;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;''''''''''''''''''';;;;;::::::::::::::::::::::::::::::::::::::::;
+																																								':::::::::::::;;;;;;;;;;;;;;;;::;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;::::::::::::::::::;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;'''''''''''''''''';;;;;;::::::::::::::::::::::::::::::::::::::::
+																																								'::::::::::::;;;;;;;;;:;;;;;;;;;:;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;::::::::::::::::::::;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;''''''''''''''''';;;;;;:::::::::::::::::::::::::::::::::::::::
+																																								':::::::::::;;;;;;;;;;;;;;;;;;;;:;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::::::::::::::::::;;;;;;;;;;;;;;;;;;;;;;;;;;;;;::::::::::::::::;;;;;;;;;;;''''''''''''''';;;;;;:::::::::::::::::::::::::::::::::::::
+																																								'::::::::;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::::::::::::::::::;;;;;;;;;;;;;;;;;;;;:::::::::::::::::::::::::::::::::::;;;;;;;'''''''''''''';;;;;:::::::::::::::::::::::::::::::::::
+																																								'::::::::;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::::::::::::::::;;;;;;;;;;;;;;;;:::::::::::::::::::::::::::::::::::::::::::::;;;;;;'''''''''''';;;;;::::::::::::::::::::::::::::::::::
+																																								':::::::;;;;;;;:;;:;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;::::::::::::::::::;;;;;;;;;;;;;;:::::::::::::::::::,:,,,,,,,,,,,,,,,,,,:::::::::::;;;;;''''''''''''';;;;:::::::::::::::::::::::::::::::::
+																																								'::::::::;:::;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;::::::::::::::::::;;;;;;;;;;;::::::::::::::::::,,,,,,,,,,,,,,,,,,,,,,,,,,,::::::::::;;;;;;'''''''''';;;;;::::::::::::::::::::::::::::::::
+																																								'::::::::;::::;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::::::::::::::::;;;;;;;;;:;::::::::::::::::,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,::::::::::;;;;;'''''''''';;;;;:::::::::::::::::::::::::::::::
+																																								':::::::::::::;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:;;::::::::::::::::;;;;;;;;;;;:::::::::::::::,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,:::::::::;;;;'''''''''';;;;;;:::::::::::::::::::::::::::::
+																																								':::::::::::::;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;::::::::::::::::;;;;;;;;;;;;:::::::::::::,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,:::::::;;;;;'''''''''';;;;:::::::::::::::::::::::::::::
+																																								':::::::::::::;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;::::::::::::::;;;;;;;;;;::::::::::::::,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,::::::;;;''''''''''';;;;::::::::::::::::::::::::::::
+																																								':::::;::;:::;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;::::::::::::::;;;;;;;;;;;:::::::::,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,:::::;;;'''''''''';;;;:::::::::::::::::::::::::::
+																																								':::::;::;:::;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::::::::::::::;;;;;;;;;::::::::,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,::::;;;''''''''';;;;;::::::::::::::::::::::::::
+																																								'::::::::;::;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::::::::::::;;;;;;;:;:::::::::,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,:::;;;;'''''''';;;;;:::::::::::::::::::::::::
+																																								'::::::::;:;;;;;;;;;;;;;;;;;;;;;;;;;;:::::::::;;;;;;;::::::::::::::::;;;;;;::::::::::::,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,:::;;;;'''''''';;;;;::::::::::::::::::::::::
+																																								':::::::;;;;;;;;;;;;;;;;;;;;;;;;;;;;::::::::::::;;;;:::::::::::::::::;;;;;;:::::::::,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,::::;;;'''''''';;;;;:::::::::::::::::::::::
+																																								':;::::;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::::::::::::::::::::::::::::::::;;;;;;:::::::,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,::::;;;''''''''';;;;:::::::::::::::::::::::
+																																								':;::::;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::::::::::::::::::::::::::::::::;;;;::::::::,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,::::;;;''''''''';;;;;;;::::::::::::::::::::
+																																								':;::::;;;;;;;;;;;;;;;;;;;;;;;;;;;;;::::::::::::::::::::::::::::::::;;::::::::,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,:::::::::::::::::::::::::::::::::::::::::::;;;'''''''''';;;;;;;:::::::::::::::::::
+																																								':::::;;;;;;;;;;;;;;;;;;;;;;;;;;;::::::::::::::::;::::::::::::::;;;;;:::::::,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,::::::::::::::::::::::::::::::::::::::::::::::::::::::;;;;'''''''''';;;;;;;;::;::::::::::::::
+																																								':::::;;;;;;;;;;;;;;;;;;;;;;;;;;;:;:::::::::::::;:::::::::::::::;;;;::::::,,,,,,,,,,.,..,,,,,,,,,,,,,:::::::::::::::::;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::::::::;;;;;;;''''''+'''';;;;;;;;;;:;;:::::::::::
+																																								'::::;;;;;;;;;;;;;;;;;;;;;;;;;;;:::::::::::;:::;;;::::::::::::::;;;::::::,,,,,,,,,,,,,,,,,,,,,,,,,:::::::::::::;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;''''''''''''';;;;;;;;;;;;;:::::::::
+																																								':::;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::::::::::;::;;;:::::::::::::::::::::::,,,,,,,,,,,,,,,,,,,,:::::::::::;;;;;;;;;;;;;;;;;;;;''';;';;;''''''''''''''';;;;;;;;;;;;;;;;;;''''''''''''';;;;;;;;;;;;::::::::::
+																																								':;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::::::::::;::;;:::::::::::::::::::::,,,,,,,,,,,,,,,,,,,::::::::;;;;;;;;;;;;;;;;;'''''';''''''''''''''''''''''''''''';';;;;;;;;;;''''''''''''''''''';;;;;;;;;;::::::::::
+																																								';;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;::::::::::::::;::::::::::::::::::::::,,,,,,,,,,,,,,,::::::::;;;;;;;;;;;;'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''';;;;;;;;;;;:::::::::
+																																								';;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::::::::::::::::::::::::::::::::::,,,,,,,,,,,,,,::::::::;;;;;;;;;;'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''';;;;;;;;;;:::::::::
+																																								';;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::::::::::::::::::::::::::::::::::,,,,,,,,,,,,::::::::;;;;;;;''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''';;;;;;;;;;;::::::::
+																																								':::;;;;;;;;;;;;;;;;;;;;;;;;;;;:::::::::::::::::::::::::::::::::::,,,,,,,,,::::::::;;;;;;;;'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''+''''''';;;;;;;;;;::::::::
+																																								':::;;;;;;;;;;;;;;;;;;;;;;;;;;;::::::::::::::::::::::::::::::::::::::::::::::::;;;;;;;;;''''''''''''+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''++'''''';;;;;;;;;;::::::::
+																																								';;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::::::::::::::::::::::::::::::::::::::::::;;;;;;;;'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''+++''''''';;;;;;;;;:::::::
+																																								';;;;;;;;;;;;;;;;;;;;;;;;;;;;;::::::::::::::::::::::::::::::::::::::::;;;;;;;'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''+++''''''';;;;;;;;;:::::::
+																																								';;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::::::::::::::::::::::::::::::::::::;;;;;;'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''+++++''''';;;;;;;;;:::::::
+																																								';;;;;;;;;;;;;;;;;;;;;;;;;;;:::::::::::::::::::::::::::::::::::::;;;;;;;'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''++++++''''';;;;;;;;::::::::
+																																								';;;;;;;;;;;;;;;;;;;;;;;;;;;:::::::::::::::::::::::::::::;;;:;;;;;;;;'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''+++''''';;;;;;;;::::::::
+																																								';;;;;;;;;;;;;;;;;;;;;;;;;;;:::::::::::::::::::::::::::;;;;;;;;;;;;''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''++++''''';;;;;;;;::::::::
+																																								'::;;;;;;;;;;;;;;;;;;;;;;:;::::::::::::::::::::::::;;;;;;;;;;;;;'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''++'''''';;;;;;;::::::::
+																																								'::;;;;;;;;;;;;;;;;;;;;;;:;::::::::::::::::::::::::;;;;;;;;;;''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''++'''''';;;;;;;::::::::
+																																								'::;;;;;;;;;;;;;;;;;;;;;;:;::::::::::::::::::::::;;;;;;;;''''''''''''+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''+++'''''';;;;;;;::::::::
+																																								'::;;;;;;;;;;;;;;;;;;;:;;;;:::::::::::::::::::::;;;;;;'''''''''''''''+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''++++''''';;;;;;;::::::::
+																																								'::;;;;;;;;;;;;;;;;;;;::;;;:::::::::::::::::::;;;;;''''''''''''''''''+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''++++'''''';;;;;;::::::::
+																																								':::;;;;;;;;;;;;;;;;;:::::;;::::::::::::::::::;;;;;''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''++++++''''';;;;;;::::::::
+																																								':::;;;;;;;;;;;;;;;;;:::::;;::::::::::::::::;;;;;;'''''''''+'''++++''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''++++++''''';;;;;;::::::::
+																																								':::;;;;;;;;;;;;;;;;;;;;;:;;::::::::::::::::;;;;;''''''''''++''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''+++++++'''';;;;;;::::::::
+																																								';;;;;;;;;;;;;;;;;;;;;;;;:::;::::::::::::::;;;;'''''''''''+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''+++++++'''';;;;;;:;;;::::
+																																								';;;;;;;;;;;;;;;;;;;;;;;;:::;::::::::::::;;;;;'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''+++++++'''';;;;;;:;;;::::
+																																								':::;;;;;;;;;;;;;;;;;;;;;::::::::::::::;;;;;;'''''''+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''+++++++''''';;;;;;:::::::
+																																								':::;;;;;;;;;;;;;;;;;;;;;::::::::::::::;;;;;'''''''+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''+++++++''''';;;;;::::::::
+																																								':::;;;;;;;;;;;;;;;;;;;;;::::::::::::::;;;;;''''''+++'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''++++++''''';;;;;::::::::
+																																								':::;;;;;;;;;;;;;;;;;;;;;::::::::::::::;;;;;'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''+++++++''''';;;;;::::::::
+																																								':::;;;;;;;;;;;;;;;;;;;;::::::::::::::;;;;;;'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''+++++++''''';;;;;::::::::
+																																								':::;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;::;;;;;'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''++++++'''';;;;;;::::::::
+																																								'::;;;;;;;;;;;;;;;;;;;;;;;;;;;::;;;;:::;;;;;''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''++++''''';;;;;;:::::::
+																																								'::;;;;;;;;;;;;;;;;;;;;;;;;;;;::;;;;:::;;;;;''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''++++''''';;;;;;:::::::
+																																								':::;;;;;;;;;;;;;;;;;;;;;;;;;;::;;;;;::;;;;;''''''''+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''++''''''';;;;;;:::::::
+																																								':::;;;;;;;;;;;;;;;;;;;;;;;;;;::;;;;;::;;;;;;'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''+'''''''';;;;;;:::::::
+																																								':::;;;;;;;;;;;;;;;;;;;;;;;;;;::;;;;;::;;;;;;;;''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''';;;;;;::::::::
+																																								':;;;;;;;;;;;;;;;;;;;;;;;;;::::::;;;;;;;;;;;;;;;''''''''''++'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''';;;;;;;:::::::
+																																								':;;;;;;;;;;;;;;;;;;;;;;;;;::::::;;;;;;;;;;;;;;;;;'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''';;;;;;;:::::::
+																																								':;;;;;;;;;;;;;;;;;;;;;;;;;:::::::;;:;;;;;;;;;;;;;;''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''';;;;;;::::::::
+																																								':::;;;;;;;;;;;;;;;;;;;;;:;::::::::::;;;;;;;;;;;;;;''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''';;;;;;;;::::::::
+																																								':::;;;;;;;;;;;;;;;;;;;;;:;:::::::::::;;;;;;;;;;;;;;;''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''';;;;;;;;::::::::
+																																								'::;;;;;;;;;;;;;;;;;;;;;;:::::::::::::;;;;;;;;;;;;;;;;;''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''';;;;;;::::::::::
+																																								':::;;;;;;;;;;;;;;;;;;;;;:::::::::::::;;;;;;;;;;;;;;;;;;;;'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''';;;;;;::::::::::
+																																								'::;;;;;;;;;;;;;;;;;;;;;;:::::::::::::;;;;;;;;;;;;;;;;;;;;;;;'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''';;;;;;:::::::::::
+																																								':::;;;;;;;;;;;;;;;;;;;;;:::::::::::::;;;;;;;;;;;;;;;;;;;;;;;;;''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''';;;;;;;:::::::::::::
+																																								'::;;;;;;;;;;;;;;;;;;;;;;:::::;;;::;::;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''';;;;;;;;:::::::::::::
+																																								'::;;;;;;;;;;;;;;;;;;;;;;:::;;;;;;;;:;;;;;;;;;;;;;;:::::;;;;;;;;;;;;;;;;;''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''';;;;;;;:::::::::::::::
+																																								'::::;;;;;;;;:::;;;;;;;;;:;:;::;;;;;;;;;;;;;;;;;;;;;:::::::;;;;;;;;;;;;;;;'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''';;;;;;;;;;::::::::::::::::
+																																								'::::;;;;;;;;:::;:;;;;;;;:;::::;;;;;;;;;;;;;;;;;;;;;:::::::;;;;;;;;;;;;;;;;;;;''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''';''''''''''''''''''''''''''''';;;;;;;;;;;::::::::::::::::::
+																																								'::;;;;;;;;;;::::;;;;;;;:::::::::::::::::;;:;;;;;;;;;::::::::::;;;;;;;;;;;;;;;;;;;;''''''''''''''''''''''''''''''''''''''''''';;;;;;;;;;;;;;;'''';;;'''''''''''''''''''';;;;;;;;;;;;;:::::::::::::::::::
+																																								'::;;;;;;;;;;:::;;;;;;;;:::::::::::::::::;;:;;;;;;;;;::::::::::::;;;;;;;;;;;;;;;;;;;;;;'''''''''''''''''''''''''''''''''''''';;;;;;;;;;;;;;;;;;;;;;;;;;''''''''';;;;;;;;;;;;;;;;;;;:::::::::::::::::::::
+																																								'::;;;;;;;;;;;::;;;;;::;:::::::::::::::::;;;;;;;;;;;;:::::::::::::::::;;;;;;;;;;;;;;;;;;;;;;;;''''''''''''''''''''''''';;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;::::::::::::::::::::::::::::
+																																								':::;;;;;;;;::::::;;;;;;::::::;;::::::::;;:::;;;;;;;;;;::::::::::::::::::;:::;;;;;;;;;;;;;;;;;;;;;;;''''''''''''''';;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;::::::::::::::::::::::::::::::::::
+																																								':::;;:::::::::::;;;;;;;:::::::::::::::;;;:::;;;;;;;;;;::::::::::::::::::::::::::;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::::::::::::::::::::::::::::::::::::
+																																								':::;;::::;::::::;;;;;;;:::::::::::::::;;;:::;;;;;;;;;;::::::::::::::::::::::::::::::::;;:;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;::::::;;;;;;;;;;;;;;:::::::::::::::::::::::::::::::::::::::::::
+																																								':::::::::;::::::::::::;::::::::::::::::::;;;;;;;;;;;;;::::;:::::::::::::::::::::::::::::::;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+																																								'::::::::;;::::::::::::;::::::::::::::::::;;;;;;;;;;;;;::::;:::::::::::::::::::::::::::::::::::::::;;;;;::;;::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+																																								':::::::;::::::::::::::::::::::::::::::::::::;:::;:;;;;;;:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+																																								'::::::::::::::::::::::::::::::::::::::::::::;:::;;;;;;;;:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+																																														 Note this site was made solely so i dont have to expose myself to tumblr and for those juicy comp marks.
+																																								'::::::::;;:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+		</pre>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script>
+    $(function(){
+        // Click the link starting with #
+        $('a[href^="#"]').click(function(){
+
+            // Scroll speed (ms)
+            var speed = 500;
+
+            // Get href
+            var href = $(this).attr("href");
+
+            // Change backcolor
+            $(".link").css('background-color', '#6F2232');
+
+            if (href != "#contents") {
+                $(this).parent("li").css('background-color', '#390F10');
+            }
+
+            // Set target
+            var target = $(href == "#" || href == "" ? "html" : href);
+
+            // Get the position of target
+            var position = target.offset().top;
+
+            // Start animation
+            $("body,html").animate({scrollTop:position}, speed, 'swing');
+
+            return false;
+        });
+    });
+    </script>
+  </body>
+</html>
